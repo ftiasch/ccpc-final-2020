@@ -13,11 +13,11 @@ int main(int argc, char *argv[]) {
     int m = inf.readInt(2, 500, "m");
     inf.readEoln();
     snm += std::max(n, m);
-    // ensuref(snm <= 500, "sum of max(n, m) <= 500");
-    if (n > 200 || m > 200) {
-      cnt += 1;
-    }
-    ensuref(cnt <= 3, "number large case <= 3");
+    ensuref(snm <= 500, "sum of max(n, m) <= 500");
+    // if (n > 200 || m > 200) {
+    //   cnt += 1;
+    // }
+    // ensuref(cnt <= 3, "number large case <= 3");
     for (int i = 0; i < n; ++i) {
       for (int j = 0; j < m; ++j) {
         if (j) {

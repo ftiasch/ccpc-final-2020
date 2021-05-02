@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../common'
 
 sample '001.hand'
@@ -13,13 +15,13 @@ test :gen, 10, 10, 10
 test :gen, 2, 10, 100
 test :gen, 10, 20, 100
 test :gen, 90, 110, 100
-test :gen, 90, 110, 10000
-test :gen, 90, 110, 1000000
+test :gen, 90, 110, 10_000
+test :gen, 90, 110, 1_000_000
 test :gen, 100, 200, 100
-test :gen, 100, 200, 10000
-test :gen, 100, 200, 1000000
+test :gen, 100, 200, 10_000
+test :gen, 100, 200, 1_000_000
 test :gen, 400, 500, 100
-test :gen, 480, 500, 10000
-test :gen, 500, 500, 1000000
+test :gen, 480, 500, 10_000
+test :gen, 500, 500, 1_000_000
 
 add_target :slow
