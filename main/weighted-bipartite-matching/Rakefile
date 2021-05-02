@@ -1,0 +1,28 @@
+require_relative '../../common'
+
+packed {
+  sample '001.hand'
+  test :gen, 2, 2, 10
+  test :gen, 3, 3, 10
+  test :gen, 4, 4, 10
+  test :gen, 5, 5, 10
+  test :gen, 6, 6, 10
+  test :gen, 7, 7, 10
+  test :gen, 8, 8, 10
+  test :gen, 9, 9, 10
+  test :gen, 10, 10, 10
+  test :gen, 2, 10, 100
+  test :gen, 10, 20, 100
+  test :gen, 90, 110, 100
+  test :gen, 90, 110, 10000
+  test :gen, 90, 110, 1000000
+  test :gen, 100, 200, 100
+  test :gen, 100, 200, 10000
+  test :gen, 100, 200, 1000000
+  test :gen, 400, 500, 100
+  test :gen, 480, 500, 10000
+  test :gen, 500, 500, 1000000
+}
+
+add_target :slow
+add_target :solution
