@@ -1,3 +1,8 @@
+.ccls-cache/
+aux/
 samples/
 tests/
 *.exe
+input
+output
+answer
