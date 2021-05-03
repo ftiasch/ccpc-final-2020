@@ -1,9 +1,10 @@
-.ccls-cache/
-aux/
-samples/
-tests/
 *.exe
+.ccls-cache/
+answer
+aux/
 input
 output
-answer
 .DS_Store
+release/
+samples/
+tests/
