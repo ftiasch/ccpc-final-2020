@@ -4,7 +4,7 @@ int main() {
   registerValidation();
   int sum_n = 0;
   while (!inf.eof()) {
-    int n = inf.readInt(1, 100000, "n");
+    int n = inf.readInt(1, 200000, "n");
     inf.readEoln();
     std::vector<std::pair<int, int>> points(n);
     for (int i = 0; i < n; ++i) {
@@ -16,7 +16,7 @@ int main() {
     std::sort(points.begin(), points.end());
     ensuref(std::unique(points.begin(), points.end()) == points.end(),
             "points are not distcint.");
-    ensuref((sum_n += n) <= 100000, "sum of n > 10 ** 5");
+    ensuref((sum_n += n) <= 200000, "sum of n > 10 ** 5");
   }
   inf.readEof();
 }
