@@ -7,7 +7,7 @@
 #include <numeric>
 #include <vector>
 
-static constexpr int N = 1000;
+static constexpr int N = 1000 + 10;
 
 template <class cost_t = int64_t> struct KuhnMunkres {
   static constexpr cost_t inf = std::numeric_limits<cost_t>::max();
