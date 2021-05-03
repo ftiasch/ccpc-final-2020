@@ -25,3 +25,4 @@ test :gen, 480, 500, 10_000
 test :gen, 500, 500, 1_000_000
 
 add_target :slow
+add_target :solution_nero
