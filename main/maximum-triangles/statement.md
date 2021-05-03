@@ -24,5 +24,4 @@ For each test cases, output an integer which denotes the result.
 
 ## Note
 
-TODO
-
+For the third test case, if Bobo chooses to remove the triangle $\{(0, 1), (1, 1), (1, 2)\}$ first, there will be no other triangles to remove. Alternatively, Bobo can remove the triangle $\{(0, 0), (0, 1), (1, 1)\}$ first and then $\{(0, 2), (0, 3), (1, 2)\}$.
