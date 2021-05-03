@@ -55,6 +55,6 @@ int main() {
         i = j;
       }
     }
-    printf("%d\n", std::min(n / 3, n - colinear));
+    printf("%d\n", n - std::min(n / 3, n - colinear) * 3);
   }
 }

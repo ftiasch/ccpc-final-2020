@@ -69,6 +69,6 @@ int main() {
       scanf("%d%d", &p[i].x, &p[i].y);
     }
     Solver solver{n, std::move(p)};
-    printf("%d\n", solver.result);
+    printf("%d\n", n - solver.result * 3);
   }
 }

@@ -46,6 +46,6 @@ int main() {
       }
       result = std::min(n / 3, n - colinear);
     }
-    printf("%d\n", result);
+    printf("%d\n", n - result * 3);
   }
 }
