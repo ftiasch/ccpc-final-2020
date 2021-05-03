@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+
+require_relative '../../common'
+
+sample '001.hand'
+[4, 5, 6, 7, 8, 9].each do |size|
+  test :small_grid, size: size, count: 100_000 / (size * size)
+end
+[10, 100, 1000, 10_000].each do |n|
+  test :random, T: 100_000 / n, n: n, v: 100_000, vt: 5000
+end
+10.times do
+  test :random, T: 1, n: 100_000, v: 100_000, vt: 5000, colinear: true
+end
+
+add_target :very_slow
+add_target :slow
+add_target :wrong
