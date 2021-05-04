@@ -40,7 +40,7 @@ void solve() {
       int val = 0;
       for (int r = 0; r < k; ++r) {
         CHECK(!best_ks.empty());
-        int& id = updated[r];
+        int &id = updated[r];
         std::tie(val, id) = *best_ks.begin();
         best_ks.erase(best_ks.begin());
         CHECK(last_iter[id] != sets[id].end());
@@ -78,12 +78,12 @@ void solve() {
   }
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
-  std::istream& reader = std::cin;
+  std::istream &reader = std::cin;
 
   while (reader >> n >> m >> h >> w >> k) {
     for (int i = 0; i < n; ++i) {

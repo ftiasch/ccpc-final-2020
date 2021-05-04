@@ -16,7 +16,7 @@ int main() {
     inf.readInt(1, std::min(h * w, K), "k");
     inf.readEoln();
     for (int i = 0; i < n; ++i) {
-      inf.readInts(m, 1, A, format("a[%d]", i));
+      inf.readInts(m, 1, A, format("a[%d]", i + 1));
       inf.readEoln();
     }
   }
