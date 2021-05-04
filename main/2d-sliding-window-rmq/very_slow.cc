@@ -17,7 +17,7 @@ int main() {
           for (int y = j; y < j + w; ++y) {
             int current = a[x][y];
             for (int z = 0; z < k; ++z) {
-              if (candidates[z] < current) {
+              if (candidates[z] == 0 || candidates[z] > current) {
                 std::swap(candidates[z], current);
               }
             }
