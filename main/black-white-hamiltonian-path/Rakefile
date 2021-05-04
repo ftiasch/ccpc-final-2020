@@ -1,0 +1,22 @@
+# frozen_string_literal: true
+
+require_relative '../../common'
+
+sample '001.hand'
+test :gen, 3, 10, 0
+test :gen, 10, 10, 0, 0
+test :gen, 10, 10, 0, 1
+test :gen, 10, 50, 0
+test :gen, 50, 100, 0
+test :gen, 100, 200, 0
+test :gen, 200, 500, 0
+test :gen, 1000, 2000, 0, 0
+test :gen, 1000, 2000, 0, 1
+test :gen, 1000, 2000, 0, 2
+test :gen, 1000, 2000, 0, 3
+test :gen, 2000, 2000, 0, 0
+test :gen, 2000, 2000, 0, 1
+test :gen, 2000, 2000, 0, 2
+test :gen, 2000, 2000, 0, 3
+test :gen, 2000, 2000, 1
+test :gen, 2000, 2000, 2
