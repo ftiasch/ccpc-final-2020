@@ -3,8 +3,8 @@
 require_relative '../../common'
 
 sample '001.hand'
-test :random, T: 1, n: 100, m: 100, k: 10, w: 10, h: 10, v: 50
-test :random, T: 1, n: 1000, m: 1000, k: 10, w: 500, h: 500, v: 1000000000
+test :random, T: 1, n: 100, m: 100, k: 5, w: 10, h: 10, v: 50
+test :random, T: 1, n: 2000, m: 2000, k: 5, w: 1000, h: 1000, v: 1_000_000_000
 
 add_target :slow_rmq
 add_target :slow_set
