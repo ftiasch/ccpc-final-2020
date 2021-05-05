@@ -10,10 +10,10 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 The first line contains an integer $n$.
 
-The $i$-th of the next $n$ lines contains two integers $x_i, y_i$.
+For the following $n$ lines, the $i$-th line contains two integers $x_i, y_i$.
 
 * $1 \leq n \leq 2 \times 10^5$
-* $0 \leq x_i, y_i \leq 10^9$ for every $1 \leq i \leq n$
+* $0 \leq x_i, y_i \leq 10^9$ for each $1 \leq i \leq n$
 * The sum of $n$ $\leq 2 \times 10^5$
 
 ## Output

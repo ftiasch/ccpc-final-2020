@@ -1,27 +1,34 @@
-# Hamiltonian Path
+# Almost Monochromatic Permutation
 
-Given a complete undirected graph with $n$ vertices, each edge is colored either black or white.
+Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a permutation $p_1, \dots, p_n$ of $1, \dots, n$, let 
+$$
+c_i = \begin{cases}
+C[p_i][p_{i + 1}] & \text{for } 1 \leq i < n \\
+C[p_n][p_1] & \text{for } i = n \\
+\end{cases}
+$$
+The permutation $p$ is *almost monochromatic* if and only if the number of indices $i$ ($1 \leq i < n$) where $c_i \neq c_{i + 1}$ is at most one.
 
-Please find a permutation $p_0, p_1, \cdots, p_{n-1}$ of $\{1,2,\cdots,n\}$ such that there is at most one index $i$ ($1 \le i < n$) satisfying that the color of the edge connecting vertices $p_{i-1}$ and $p_i$ is different from the color of the edge connecting vertices $p_i$ and $p_{(i + 1) \bmod n}$.
+Find an *almost monochromatic* permutation $p_1, \dots, p_n$ for the given matrix $C$.
 
 ## Input
 
 The input consists of several test cases terminated by end-of-file. For each test cases,
 
-The first line contains an integer $n$ indicating the number of vertices.
+The first line contains an integer $n$.
 
-For the following $n$ lines, the $i$-th line contains a string $c_{i,1}, c_{i,2}, \cdots, c_{i,n}$ where $c_{i,j}$ indicates the color of the edge connecting vertices $i$ and $j$ (`0` for black and `1` for white).
+For the following $n$ lines, the $i$-th line contains $n$ integers $C[i][1], \dots, C[i][n]$.
 
 * $3 \le n \le 2000$
-* $c_{i,j} \in \{\text{0}, \text{1}\}$
-* $\forall 1 \le i, j \le n$, $c_{i,j}=c_{j,i}$
-* $\forall 1 \le i \le n$, $c_{i,i}=0$
+* $C[i][j] \in \{0, 1\}$ for each $1 \leq i, j \leq n$
+* $C[i][j] = C[j][i]$ for each $1 \leq i, j \leq n$
+* $C[i][i] = 0$ for each $1 \leq i \leq n$
 * The sum of $n$ $\leq 2000$
 
 ## Output
 
-For each test case, output a permutation $p_0,p_1,\cdots,p_{n-1}$ separated in a single line if you can find any solutions. Otherwise, output $-1$ in a single line.
+For each test case, if there exists an *almost monochromatic* permutation, output $n$ integers $p_1, \dots, p_n$ which denotes the permutation. Otherwise, output `-1`.
 
-If there are multiple solutions, you can output any of them.
+If there are multiple *almost monochromatic* permutations, any of them is acceptable.
 
 <!--SAMPLES-->

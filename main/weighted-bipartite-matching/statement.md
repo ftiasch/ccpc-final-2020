@@ -19,10 +19,10 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 The first line contains two integers $n$ and $m$.
 
-The $i$-th of the next $n$ lines contains $m$ integers $w_{i, 1}, \dots, w_{i, m}$.
+For the following $n$ lines, the $i$-th line contains $m$ integers $w_{i, 1}, \dots, w_{i, m}$.
 
 * $2 \le n, m \le 500$
-* $0 \le w(i, j) \le 10^6$
+* $0 \le w(i, j) \le 10^6$ for each $1 \leq i \leq n$, $1 \leq j \leq m$
 * The sum of $\max\{n, m\}$ $\leq 500$
 
 ## Output
