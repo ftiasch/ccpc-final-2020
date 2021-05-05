@@ -4,6 +4,7 @@
 
 int main() {
   registerValidation();
+  int sum_nm = 0;
   while (!inf.eof()) {
     int n = inf.readInt(1, N, "n");
     inf.readSpace();
@@ -19,6 +20,7 @@ int main() {
       inf.readInts(m, 1, A, format("a[%d]", i + 1));
       inf.readEoln();
     }
+    ensuref((sum_nm += n * m) <= N * N, "the sum of n * m exceeds");
   }
   inf.readEof();
 }

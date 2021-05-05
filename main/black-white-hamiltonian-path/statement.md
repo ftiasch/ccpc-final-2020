@@ -3,8 +3,8 @@
 Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a permutation $p_1, \dots, p_n$ of $1, \dots, n$, let 
 $$
 c_i = \begin{cases}
-C[p_i][p_{i + 1}] & \text{for } 1 \leq i < n \\
-C[p_n][p_1] & \text{for } i = n \\
+C_{p_i, p_{i + 1}} & \text{for } 1 \leq i < n \\
+C_{p_n, p_1} & \text{for } i = n \\
 \end{cases}
 $$
 The permutation $p$ is *almost monochromatic* if and only if the number of indices $i$ ($1 \leq i < n$) where $c_i \neq c_{i + 1}$ is at most one.
@@ -17,12 +17,12 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 The first line contains an integer $n$.
 
-For the following $n$ lines, the $i$-th line contains $n$ integers $C[i][1], \dots, C[i][n]$.
+For the following $n$ lines, the $i$-th line contains $n$ integers $C_{i, 1}, \dots, C_{i, n}$.
 
 * $3 \le n \le 2000$
-* $C[i][j] \in \{0, 1\}$ for each $1 \leq i, j \leq n$
-* $C[i][j] = C[j][i]$ for each $1 \leq i, j \leq n$
-* $C[i][i] = 0$ for each $1 \leq i \leq n$
+* $C_{i, j} \in \{0, 1\}$ for each $1 \leq i, j \leq n$
+* $C_{i, j} = C_{j, i}$ for each $1 \leq i, j \leq n$
+* $C_{i, i} = 0$ for each $1 \leq i \leq n$
 * The sum of $n$ $\leq 2000$
 
 ## Output
