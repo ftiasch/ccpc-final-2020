@@ -20,3 +20,5 @@ test :gen, 2000, 2000, 0, 2
 test :gen, 2000, 2000, 0, 3
 test :gen, 2000, 2000, 1
 test :gen, 2000, 2000, 2
+
+add_target :solution_nero
