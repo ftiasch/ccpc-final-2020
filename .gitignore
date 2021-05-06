@@ -8,3 +8,4 @@ output
 release/
 samples/
 tests/
+*.swp
