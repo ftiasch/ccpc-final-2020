@@ -2,4 +2,7 @@
 
 require_relative '../../common'
 
+# sample '001.hand'
+
 add_target :random
+add_target :solution_nero
