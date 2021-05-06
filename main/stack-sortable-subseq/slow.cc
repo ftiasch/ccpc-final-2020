@@ -11,6 +11,7 @@ int main() {
     std::vector<int> stack;
     stack.reserve(n);
     for (uint64_t mask = 1; mask < 1ULL << n; ++mask) {
+      stack.clear();
       bool ok = true;
       int last = 0;
       for (int i = 0; i < n && ok; ++i) {
