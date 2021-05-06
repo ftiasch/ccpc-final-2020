@@ -1,14 +1,12 @@
-# Root
+# Rational Root
 
-For a fixed $n$ and integers $p$ and $q$ such that $|p| \le m$ and $|q| \le m$, how many equations of the form
+Given $n$, $m$, $k$, find the number of pairs $(a, b)$ such that
 
-$$
-x^n+px+q=0
-$$
+* $a, b \in \mathbb{Z}$, i.e., $a$ and $b$ are integers
+* $|a|, |b| \leq m$
+* $|S| = k$, where $S$ be the set of rational roots of the equation $x^n + a \cdot x + b = 0$. In particular, there exists exactly $k$ *distinct* *rational* numbers $x$ which solves the last equation.
 
-have exactly $k$ rational root?
-
-Note that $x$ is a rational root of $x^n+px+q=0$, if it can be written in the form $\frac{a}{b}$ ($b \ne 0$), where $a$ and $b$ are integers.
+Note that $x$ is a rational number if and only if there exists integers $p$ and $q$ ($q \neq 0$) where $x = \frac{p}{q}$.
 
 ## Input
 
@@ -21,7 +19,7 @@ The first line contains three integers $n$, $m$ and $k$.
 
 ## Output
 
-For each test case, output an integer denoting the answer.
+For each test case, output an integer which denotes the answer.
 
 <!--SAMPLES-->
 
