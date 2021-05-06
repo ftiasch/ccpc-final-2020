@@ -27,3 +27,4 @@ test :gen, 500000, 500000, 499999, 500000, 2
 test :gen, 500000, 500000, 499999, 500000, 3
 
 add_target :slow
+add_target :solution_nero

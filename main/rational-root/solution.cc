@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <cstdio>
 #include <vector>
-#include <algorithm>
 
 using i64 = long long;
 
@@ -59,26 +59,27 @@ i64 solve(int n, int m, int k) {
     }
     if (k == 1 && q == 0) {
       ret += 2 * m + 1;
-      for (auto &p: ps) {
+      for (auto &p : ps) {
         ret -= !mark[p + m];
         mark[p + m] = 1;
       }
-      for (auto &p: ps) {
+      for (auto &p : ps) {
         mark[p + m] = 0;
       }
     } else {
-      for (auto &p: ps) {
+      for (auto &p : ps) {
         cnt[p + m]++;
         mark[p + m] = 1;
       }
-      for (auto &p: ps) if (mark[p + m]) {
-        mark[p + m] = 0;
-        if (cnt[p + m] == k - (q == 0)) {
-          //printf("%d %d\n", p, q);
-          ++ret;
+      for (auto &p : ps)
+        if (mark[p + m]) {
+          mark[p + m] = 0;
+          if (cnt[p + m] == k - (q == 0)) {
+            // printf("%d %d\n", p, q);
+            ++ret;
+          }
+          cnt[p + m] = 0;
         }
-        cnt[p + m] = 0;
-      }
     }
   }
   return ret;
