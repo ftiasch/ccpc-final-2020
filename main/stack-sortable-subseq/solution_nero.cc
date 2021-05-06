@@ -45,7 +45,7 @@ void calc(int l, int r) {
       }
     }
     if (l <= m - 1 && m + 1 <= r) {
-      static int right[kN];
+      static LL right[kN];
       memset(right, 0, sizeof(right));
       for (int low = m + 1; low <= r; ++low) {
         for (int high = m + 1; high <= r; ++high)
