@@ -2,15 +2,14 @@
 
 require_relative '../../common'
 
-# sample '001.hand'
-
+sample '001.hand'
 test :random, T: 10, n: 5
 test :random, T: 5, n: 10
-9.times do
-  test :random, T: 1, n: 50
+10.times do |w|
+    test :long, T: 1, n: 50, w: w + 1
 end
-10.times do |i|
-    test :random, T: 1, n: 50 - i, id: true
-end
+test :random, T: 1, n: 50
+test :random, T: 1, n: 50, id: true
 
 add_target :slow
+add_target :slow_231
