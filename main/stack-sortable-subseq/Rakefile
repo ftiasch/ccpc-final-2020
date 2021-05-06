@@ -4,5 +4,13 @@ require_relative '../../common'
 
 # sample '001.hand'
 
-add_target :random
-add_target :solution_nero
+test :random, T: 10, n: 5
+test :random, T: 5, n: 10
+9.times do
+  test :random, T: 1, n: 50
+end
+10.times do |i|
+    test :random, T: 1, n: 50 - i, id: true
+end
+
+add_target :slow
