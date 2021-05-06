@@ -1,0 +1,29 @@
+# frozen_string_literal: true
+
+require_relative '../../common'
+
+sample '001.hand'
+test :gen_all, 99, 1
+test :gen_all, 99, 2
+test :gen_all, 99, 3
+test :gen_all, 99, 4
+test :gen_all, 99, 100
+test :gen_all, 99, 500000
+test :gen, 1, 999, 1, 999, 1
+test :gen, 1, 999, 1, 999, 2
+test :gen, 1, 999, 1, 999, 3
+test :gen, 1, 500000, 1, 500000, 2
+test :gen, 1, 500000, 1, 500000, 3
+test :gen, 1, 500000, 1, 500000, 10
+test :gen, 1, 500000, 1, 500000, 5000
+test :gen, 1, 500000, 400000, 500000, 1
+test :gen, 2, 2, 499999, 500000, 2
+test :gen, 2, 2, 499999, 500000, 3
+test :gen, 3, 3, 499999, 500000, 2
+test :gen, 3, 3, 499999, 500000, 3
+test :gen, 4, 4, 499999, 500000, 2
+test :gen, 4, 4, 499999, 500000, 3
+test :gen, 500000, 500000, 499999, 500000, 2
+test :gen, 500000, 500000, 499999, 500000, 3
+
+add_target :slow
