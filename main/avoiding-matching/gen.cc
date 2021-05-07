@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
   auto max_w = std::atoi(argv[3]);
   min_n = std::max(2, min_n);
   max_n = std::max(2, max_n);
-  int N = 500;
+  int N = 250;
   std::vector<std::pair<int, int>> ns;
   while (N) {
     int n = rnd.next(min_n, max_n);

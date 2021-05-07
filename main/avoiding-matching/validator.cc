@@ -8,12 +8,12 @@ int main(int argc, char *argv[]) {
   registerValidation(argc, argv);
   int snm = 0, cnt = 0;
   while (!inf.eof()) {
-    int n = inf.readInt(2, 500, "n");
+    int n = inf.readInt(2, 250, "n");
     inf.readSpace();
-    int m = inf.readInt(2, 500, "m");
+    int m = inf.readInt(2, 250, "m");
     inf.readEoln();
     snm += std::max(n, m);
-    ensuref(snm <= 500, "sum of max(n, m) <= 500");
+    ensuref(snm <= 250, "sum of max(n, m) <= 250");
     // if (n > 200 || m > 200) {
     //   cnt += 1;
     // }

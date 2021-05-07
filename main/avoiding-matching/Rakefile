@@ -17,12 +17,12 @@ test :gen, 10, 20, 100
 test :gen, 90, 110, 100
 test :gen, 90, 110, 10_000
 test :gen, 90, 110, 1_000_000
-test :gen, 100, 200, 100
-test :gen, 100, 200, 10_000
-test :gen, 100, 200, 1_000_000
-test :gen, 400, 500, 100
-test :gen, 480, 500, 10_000
-test :gen, 500, 500, 1_000_000
+test :gen, 50, 100, 100
+test :gen, 50, 100, 10_000
+test :gen, 50, 100, 1_000_000
+test :gen, 200, 250, 100
+test :gen, 240, 250, 10_000
+test :gen, 250, 250, 1_000_000
 
 add_target :slow
 add_target :solution_nero
