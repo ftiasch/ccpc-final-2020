@@ -4,12 +4,14 @@ require_relative '../../common'
 
 sample '001.hand'
 
-test :generate, type: :random, T: 100, n: 10**3, maxw: 10**4, q: 10**3, k: 10**3, kw: 0
-test :generate, type: :path,   T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 0
-test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 0
-test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 10
-test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 100
-test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 10**5
+test :generate, type: :random, T: 100, n: 1000, maxw: 10_000, q: 100, k: 1000, kw: 0
+test :generate, type: :random, T: 100, n: 100, maxw: 10_000, q: 1000, k: 1000, kw: 0
+test :generate, type: :random, T: 100, n: 1000, maxw: 10_000, q: 1000, k: 1000, kw: 0
+test :generate, type: :path,   T: 1,   n: 100_000, maxw: 10_000, q: 100_000, k: 100_000, kw: 0
+test :generate, type: :random, T: 1,   n: 100_000, maxw: 10_000, q: 100_000, k: 100_000, kw: 0
+test :generate, type: :random, T: 1,   n: 100_000, maxw: 10_000, q: 100_000, k: 100_000, kw: 10
+test :generate, type: :random, T: 1,   n: 100_000, maxw: 10_000, q: 100_000, k: 100_000, kw: 100
+test :generate, type: :random, T: 1,   n: 100_000, maxw: 10_000, q: 100_000, k: 100_000, kw: 100_000
 
 add_target :slow
 add_target :solution_nero
