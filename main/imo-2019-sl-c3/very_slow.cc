@@ -4,16 +4,17 @@ namespace {
 
 static const int MOD = 998244353;
 
-long long steps(int n, const std::vector<int> &s) {
+long long steps(int n, std::vector<int> s) {
   long long result = 0;
-  int heads = 0;
-  for (int i = 0; i < n; ++i) {
-    if (s[i] == 1) {
-      heads++;
-      result += 2 * (i + 1);
+  while (true) {
+    int heads = std::accumulate(s.begin(), s.end(), 0);
+    if (heads == 0) {
+      break;
     }
+    result++;
+    s[heads - 1] ^= 1;
   }
-  return result - static_cast<long long>(heads) * heads;
+  return result;
 }
 
 } // namespace
