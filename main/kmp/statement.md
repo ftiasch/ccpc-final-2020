@@ -47,10 +47,10 @@ func match2(s: string, t: string, j: integer)
     return j
 ```
 
-Given two strings $s$ and $t$, Bobo would like to know the value of 
+Given two strings $s$ and $t$, Bobo would like to know the value of
 
 $$
-\sum_{k=0}^{|s|-1} \mathrm{match2}(s, t, j) \oplus j
+\sum_{j=0}^{|s|-1} \mathrm{match2}(s, t, j) \oplus j
 $$
 
 where $\oplus$ is the exclusive or (XOR) bitwise operation.
