@@ -87,6 +87,7 @@ int main() {
   std::cin.tie(nullptr);
   std::istream &reader = std::cin;
 
+  const int MOD = 998244353;
   int n, q;
   while (reader >> n >> q) {
     std::string s;
@@ -101,7 +102,7 @@ int main() {
       tree.flip(l, r, 0, n - 1);
       const Node &node = tree.nodes[SegmentTree::get_id(0, n - 1)];
       LL result = node.sum[1] - LL(node.cnt[1]) * node.cnt[1];
-      printf("%lld\n", result);
+      printf("%lld\n", result % MOD);
     }
   }
 }
