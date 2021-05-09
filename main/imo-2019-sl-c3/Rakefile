@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+require_relative '../../common'
+
+# sample '001.hand'
+#
+# test :random, T: 10_000, maxn: 10, maxk: 5, v: 10
+# test :random, T: 100, maxn: 100, maxk: 5, v: 100
+# test :random, T: 4, maxn: 1000, maxk: 5, v: 1_000
+# test :random, T: 1, n: 2000, m: 2000, k: 5, w: 1000, h: 1000, v: 1_000
+# test :random, T: 1, n: 2000, m: 2000, k: 5, w: 1000, h: 1000, v: 1_000_000_000
+# test :random, T: 1, n: 2000, m: 2000, k: 5, w: 100, h: 100, v: 1_000
+# test :random, T: 1, n: 2000, m: 2000, k: 5, w: 1500, h: 1500, v: 1_000
+
+add_target :random
+add_target :slow
+add_target :very_slow
