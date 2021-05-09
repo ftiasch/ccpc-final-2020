@@ -14,3 +14,4 @@ test :random, T: 1, n: 200_000, q: 200_000
 
 add_target :slow
 add_target :very_slow
+add_target :solution_nero
