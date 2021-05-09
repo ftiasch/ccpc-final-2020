@@ -57,8 +57,8 @@ struct Radius {
 int main(int argc, char *argv[]) {
   registerGen(argc, argv, 1);
   ensure(argc > 7);
-  const std::string& tree_type = opt<std::string>("type");
-  const int T = opt<int>("T");
+  const std::string &tree_type = opt<std::string>("type");
+  int T = opt<int>("T");
   const int n = opt<int>("n");
   const int maxw = opt<int>("maxw");
   const int q = opt<int>("q");
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
       printf("%d%c", rnd.next(1, maxw), " \n"[i + 1 == n]);
     }
     std::vector<std::pair<int, int>> edges;
-    if (strcmp(tree_type, "path") == 0) {
+    if (tree_type == "path" == 0) {
       std::vector<int> vertex(n);
       std::iota(vertex.begin(), vertex.end(), 0);
       shuffle(vertex.begin(), vertex.end());

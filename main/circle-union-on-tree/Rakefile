@@ -2,12 +2,12 @@ require_relative '../../common'
 
 sample '001.hand'
 
-test :generate, :random, 100, 10 ** 3, 10 ** 4, 10 ** 3, 10 ** 3, 0
-test :generate, :path, 1, 10 ** 5, 10 ** 4, 10 ** 5, 10 ** 5, 0
-test :generate, :random, 1, 10 ** 5, 10 ** 4, 10 ** 5, 10 ** 5, 0
-test :generate, :random, 1, 10 ** 5, 10 ** 4, 10 ** 5, 10 ** 5, 10
-test :generate, :random, 1, 10 ** 5, 10 ** 4, 10 ** 5, 10 ** 5, 100
-test :generate, :random, 1, 10 ** 5, 10 ** 4, 10 ** 5, 10 ** 5, 10 ** 5
+test :generate, type: :random, T: 100, n: 10 ** 3, maxw: 10 ** 4, q: 10 ** 3, k: 10 ** 3, kw: 0
+test :generate, type: :path,   T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 0
+test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 0
+test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 10
+test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 100
+test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 10 ** 5
 
 add_target :slow
 add_target :solution_nero
