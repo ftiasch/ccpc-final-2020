@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../common'
 
 sample '001.hand'
@@ -6,6 +8,6 @@ test :sequence, 1000
 test :random, 1000, 5
 test :random, 100, 50
 test :random, 10, 500
-10.times {
-    test :random, 1, 5000
-}
+10.times do
+  test :random, 1, 5000
+end

@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require_relative '../../common'
 
 sample '001.hand'
 
-test :generate, type: :random, T: 100, n: 10 ** 3, maxw: 10 ** 4, q: 10 ** 3, k: 10 ** 3, kw: 0
-test :generate, type: :path,   T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 0
-test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 0
-test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 10
-test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 100
-test :generate, type: :random, T: 1,   n: 10 ** 5, maxw: 10 ** 4, q: 10 ** 5, k: 10 ** 5, kw: 10 ** 5
+test :generate, type: :random, T: 100, n: 10**3, maxw: 10**4, q: 10**3, k: 10**3, kw: 0
+test :generate, type: :path,   T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 0
+test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 0
+test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 10
+test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 100
+test :generate, type: :random, T: 1,   n: 10**5, maxw: 10**4, q: 10**5, k: 10**5, kw: 10**5
 
 add_target :slow
 add_target :solution_nero
