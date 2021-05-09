@@ -56,8 +56,10 @@ int main() {
     }
     ret[0] = 0;
     for (int i = 0; i < n; ++i) {
-      if (occ[i + 1]) ret[i] = m + i;
-      else ret[i] = i ? ret[ps[i]] : 0;
+      if (occ[i + 1])
+        ret[i] = m + i;
+      else
+        ret[i] = i ? ret[ps[i]] : 0;
     }
     i64 sum = 0;
     for (int i = 0; i < n; ++i) {
