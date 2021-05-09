@@ -1,80 +1,45 @@
-# KMP Algorithm
+# Prefix Suffix
 
-In the classic string matching problem, a (short) pattern string $s$ and a (long) text string $t$ are given. It is required to determine whether the pattern appears somewhere in the text.
+For a string $u = u_1 \dots u_n$, Bobo denotes the prefix $u_1 \dots u_i$ by $\mathrm{pre}(u, i)$. Similarly, he denotes the suffix $u_{n - i + 1} \dots u_n$ by $\mathrm{suf}(u, i)$. In particular, $\mathrm{pre}(u, 0)$ and $\mathrm{suf}(u, 0)$ are empty strings. 
 
-The KMP algorithm (Knuth-Morris-Pratt algorithm) is a well-known string matching algorithm to solve this problem. The key idea is to build a *prefix function* $\pi$ for the pattern string $s$, where $\pi(i)$ $(1 \le i \le |s|)$ is the length of the longest proper prefix of the substring $s[1..i]$. A proper prefix of a string is a prefix that is not equal to the string itself. By definition, $\pi(1) = 0$.
-
-More formally,
-
+For two strings $u = u_1 \dots u_n$ and $v = v_1 \dots v_m$, Bobo denotes denotes the concatenation of  $u_1 \dots u_n v_1 \dots v_m$ by $u + v$. Also, 
 $$
-\pi(i)=\max_{0 \le k < i} \{k: s[1..k] = s[i-k+1..i]\}
+\mathrm{presuf}(u, v) = \max\{i \mid i < n \text{ and } \mathrm{pre}(u, i) = \mathrm{suf}(v, i) \}
 $$
+Given two strings $s = s_1 \dots s_n$ and $t = t_1 \dots t_m$, let $f(i) = \mathrm{presuf}(s, \mathrm{pre}(s, i) + t)$. 
 
-With this prefix function $\pi$, we can find all occurrences of $s$ in $t$ by the following pseudocode:
-
-```
-func match(s: string, t: string)
-    let pi be the prefix function of s
-    let occ be a bool array of length |t|
-    i := 1
-    j := 0
-    while i <= |t|
-        while j != 0 and s[j + 1] != t[i]
-            j := pi[j]
-        if s[j + 1] == t[i]
-            j := j + 1
-        if j == |s|
-            occ[i - j + 1] := True
-            j := pi[j]
-        i := i + 1
-    return occ
-```
-
-Bobo, a well-known string algorithm master, he has modified the algorithm above as follows:
-
-```
-func match2(s: string, t: string, j: integer)
-    let pi be the prefix function of s
-    i := 1
-    while i <= |t|
-        while j != 0 and s[j + 1] != t[i]
-            j := pi[j]
-        if s[j + 1] == t[i]
-            j := j + 1
-        if j == |s|
-            j := pi[j]
-        i := i + 1
-    return j
-```
-
-Given two strings $s$ and $t$, Bobo would like to know the value of
-
-$$
-\sum_{j=0}^{|s|-1} \mathrm{match2}(s, t, j) \oplus j
-$$
-
-where $\oplus$ is the exclusive or (XOR) bitwise operation.
+Find the value of $\sum_{i = 0}^{n - 1} f(i) \oplus i$ where $\oplus$ denotes the bitwise exclusive-or (XOR).
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file.
+The input consists of several test cases terminated by end-of-file. For each test cases,
 
-The first line of each test case contains an string $s$ and the second line contains a string $t$.
+The first line contains a string $s_1 \dots s_n$.
 
-* $1 \leq |s|, |t| \leq 10^6$
-* Both $s$ and $t$ consist only of lowercase English letters.
-* The sum of $\max(|s|, |t|)$ does not exceed $10^6$.
+The second line contains a string $t_1 \dots t_m$.
+
+* $1 \leq n, m \leq 10^6$
+* $s_i \in \{a, \dots, z\}$ for each $1 \leq i \leq n$
+* $t_i \in \{a, \dots, z\}$ for each $1 \leq i \leq m$
+* The sum of $\max(n, m)$ $\leq 10^6$.
 
 ## Output
 
-For each test case, print an integer which denotes the result.
+For each test case, print an integer which denotes the result. 
 
 <!--SAMPLES-->
 
 ## Note
 
-For the first test case, the values of $\mathrm{match2}(s, t, j)$ are: $3\ 3\ 5\ 3\ 5\ 3\ 3\ 3\ 3\ 3$.
+For the first test case, the value of $f$ is shown below.
 
-For the second test case, the values of $\mathrm{match2}(s, t, j)$ are: $6\ 6\ 6\ 6\ 6\ 6\ 6\ 6$.
-
-For the third test case, the values of $\mathrm{match2}(s, t, j)$ are: $4\ 4\ 4\ 4\ 4\ 4\ 10\ 4\ 4\ 4\ 4\ 4\ 16\ 4\ 4\ 4\ 4$
+* $f(0) = 3$
+* $f(1) = 3$
+* $f(2) = 5$
+* $f(3) = 3$
+* $f(4) = 5$
+* $f(5) = 3$
+* $f(6) = 3$
+* $f(7) = 3$
+* $f(8) = 3$
+* $f(9) = 3$
