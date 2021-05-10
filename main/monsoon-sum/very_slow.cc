@@ -29,11 +29,11 @@ int power(int a, int n) {
   return result;
 }
 
-int solve(int n, int x, int a, int b) {
+int solve(int n, int x, int y, int a, int b) {
   int result = 0;
   for (int i = a; i <= n - b; ++i) {
     result += static_cast<long long>(power(x, i - a)) * binom(i, a) % MOD *
-              power(x + 1, n - i - b) % MOD * binom(n - i, b) % MOD;
+              power(y, n - i - b) % MOD * binom(n - i, b) % MOD;
     if (result >= MOD) {
       result -= MOD;
     }
@@ -42,12 +42,29 @@ int solve(int n, int x, int a, int b) {
 }
 
 int main() {
-  int n, x, q;
-  while (scanf("%d%d%d", &n, &x, &q) == 3) {
+  int n, x, y, q;
+  while (scanf("%d%d%d%d", &n, &x, &y, &q) == 4) {
+    // int delta = (y - x) % MOD;
+    // if (delta < 0) {
+    //   delta += MOD;
+    // }
+    // for (int i = 0; i <= n; ++i) {
+    //   for (int j = 0; j <= n; ++j) {
+    //     printf("%10d", solve(n, x, y, i, j));
+    //     if (i && j) {
+    //       assert((static_cast<long long>(delta) * solve(n, x, y, i, j) +
+    //               solve(n, x, y, i, j - 1)) %
+    //                  MOD ==
+    //              solve(n, x, y, i - 1, j));
+    //     }
+    //   }
+    //   puts("");
+    // }
+    // puts("");
     while (q--) {
       int a, b;
       scanf("%d%d", &a, &b);
-      printf("%d\n", solve(n, x, a, b));
+      printf("%d\n", solve(n, x, y, a, b));
     }
   }
 }

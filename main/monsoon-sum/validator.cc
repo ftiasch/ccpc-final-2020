@@ -1,5 +1,7 @@
 #include "testlib.h"
 
+static const int MOD = 998244353;
+
 int main() {
   registerValidation();
   int sum_q = 0;
@@ -7,7 +9,9 @@ int main() {
   while (!inf.eof()) {
     int n = inf.readInt(2, 1000000000, "n");
     inf.readSpace();
-    int x = inf.readInt(0, 1000000000, "x");
+    int x = inf.readInt(0, MOD - 1, "x");
+    inf.readSpace();
+    int y = inf.readInt(0, MOD - 1, "y");
     inf.readSpace();
     int q = inf.readInt(1, 200000, "q");
     inf.readEoln();

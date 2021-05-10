@@ -4,13 +4,15 @@ require_relative '../../common'
 
 sample '001.hand'
 
-test '002.hand'
-test '003.hand'
-test :random, T: 100, v: 100, q: 2000, m: 50, random: true
-test :random, T: 100, v: 1_000_000_000, q: 2000, m: 50, random: true
-test :random, T: 100, v: 1_000_000_000, q: 2000, m: 50
-test :random, T: 10, v: 1_000_000_000, q: 20_000, m: 500
-test :random, T: 1, v: 1_000_000_000, q: 200_000, m: 5000
+mod = 998_244_353 - 1
+
+test :random, T: 100, n: 1_000_000_000, xy: 10, q: 2000, m: 5
+test :random, T: 100, n: 1_000_000_000, xy: 100, q: 2000, m: 50
+test :random, T: 100, n: 1_000_000_000, xy: mod, q: 2000, m: 50
+test :random, T: 100, n: 1_000_000_000, xy: mod, q: 2000, m: 50
+test :random, T: 10,  n: 1_000_000_000, xy: mod, q: 20_000, m: 500
+test :random, T: 1,   n: 1_000_000_000, xy: mod, q: 200_000, m: 5000
 
 add_target :slow
 add_target :very_slow
+add_target :wrong

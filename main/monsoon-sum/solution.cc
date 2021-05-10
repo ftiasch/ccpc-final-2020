@@ -20,40 +20,52 @@ int power(int a, int n) {
   return result;
 }
 
-int buffer[N + 2][N + 2], inv_fact[N + 2];
+int inverse(int a) { return power(a, MOD - 2); }
+
+int buffer[N + 2][N + 2];
 
 int &dp(int a, int b) { return buffer[a + 1][b + 1]; }
 
 } // namespace
 
 int main() {
-  inv_fact[0] = inv_fact[1] = 1;
-  for (int i = 2; i <= N; ++i) {
-    inv_fact[i] =
-        static_cast<long long>(MOD - MOD / i) * inv_fact[MOD % i] % MOD;
-  }
-  for (int i = 1; i <= N; ++i) {
-    inv_fact[i] = static_cast<long long>(inv_fact[i - 1]) * inv_fact[i] % MOD;
-  }
-  int n, x, q;
-  while (scanf("%d%d%d", &n, &x, &q) == 3) {
+  int n, x, y, q;
+  while (scanf("%d%d%d%d", &n, &x, &y, &q) == 4) {
     int m = 0;
     std::vector<int> a(q), b(q);
     for (int i = 0; i < q; ++i) {
       scanf("%d%d", &a[i], &b[i]);
       m = std::max(m, std::max(a[i], b[i]));
     }
-    int falling_fact = 1;
-    for (int i = 0; i <= m; ++i) {
-      long long binom =
-          static_cast<long long>(falling_fact) * inv_fact[i] % MOD;
-      dp(i, -1) = binom * power(x, n + 1 - i) % MOD;
-      dp(-1, i) = binom * power(x + 1, n + 1 - i) % MOD;
-      falling_fact = static_cast<long long>(falling_fact) * (n + 1 - i) % MOD;
-    }
-    for (int i = 0; i <= m; ++i) {
-      for (int j = 0; j <= m; ++j) {
-        dp(i, j) = (dp(i - 1, j) + MOD - dp(i, j - 1)) % MOD;
+
+    if (x == y) {
+      int binom = 1;
+      for (int k = 0; k <= m + m; ++k) {
+        binom = static_cast<long long>(binom) * (n + 1 - k) % MOD *
+                inverse(k + 1) % MOD;
+        int result = static_cast<long long>(power(x, n - k)) * binom % MOD;
+        for (int i = std::max(0, k - m); i <= m && i <= k; ++i) {
+          dp(i, k - i) = result;
+        }
+      }
+    } else {
+      int binom = 1;
+      for (int i = 0; i <= m; ++i) {
+        dp(i, -1) = static_cast<long long>(binom) * power(x, n + 1 - i) % MOD;
+        dp(-1, i) = static_cast<long long>(binom) * power(y, n + 1 - i) % MOD;
+        binom = static_cast<long long>(binom) * (n + 1 - i) % MOD *
+                inverse(i + 1) % MOD;
+      }
+      int delta = y + MOD - x;
+      if (delta >= MOD) {
+        delta -= MOD;
+      }
+      int inv_delta = inverse(delta);
+      for (int i = 0; i <= m; ++i) {
+        for (int j = 0; j <= m; ++j) {
+          dp(i, j) = static_cast<long long>(inv_delta) *
+                     (dp(i - 1, j) + MOD - dp(i, j - 1)) % MOD;
+        }
       }
     }
     for (int i = 0; i < q; ++i) {

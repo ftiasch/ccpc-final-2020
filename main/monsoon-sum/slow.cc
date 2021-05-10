@@ -53,23 +53,26 @@ Matrix power(Matrix a, int n) {
 } // namespace
 
 int main() {
-  int n, x, q;
-  while (scanf("%d%d%d", &n, &x, &q) == 3) {
-    while (q--) {
-      int a, b;
-      scanf("%d%d", &a, &b);
-      int v = a + b + 2;
-      Matrix mat{v};
-      for (int i = 0; i + 1 < v; ++i) {
-        mat[i][i + 1] = 1;
-      }
-      for (int i = 0; i <= a; ++i) {
-        mat[i][i] = x % MOD;
-      }
-      for (int i = a + 1; i <= a + 1 + b; ++i) {
-        mat[i][i] = (x + 1) % MOD;
-      }
-      printf("%d\n", power(mat, n + 1)[0][v - 1]);
+  int n, x, y, q;
+  while (scanf("%d%d%d%d", &n, &x, &y, &q) == 4) {
+    std::vector<int> a(q), b(q);
+    int m = 0;
+    for (int i = 0; i < q; ++i) {
+      scanf("%d%d", &a[i], &b[i]);
+      m = std::max(m, std::max(a[i], b[i]));
+    }
+    int v = (m + 1) << 1;
+    Matrix mat{v};
+    for (int i = 0; i + 1 < v; ++i) {
+      mat[i][i + 1] = 1;
+    }
+    for (int i = 0; i <= m; ++i) {
+      mat[i][i] = x;
+      mat[m + 1 + i][m + 1 + i] = y;
+    }
+    mat = power(mat, n + 1);
+    for (int i = 0; i < q; ++i) {
+      printf("%d\n", mat[m - a[i]][m + 1 + b[i]]);
     }
   }
 }
