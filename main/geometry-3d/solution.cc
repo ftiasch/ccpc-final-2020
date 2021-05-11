@@ -51,6 +51,7 @@ Point normalized(const Point &p) {
 }
 
 bool cross(const Point &P, const Point &Q, const Point &A, const Point &B) {
+  if (P == Q || A == Q || B == Q) return true;
   const Point PQ = normalized(P - Q);
   const Point AQ = normalized(A - Q);
   const Point BQ = normalized(B - Q);
