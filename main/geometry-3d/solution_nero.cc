@@ -33,7 +33,7 @@ Point operator * (DType a, const Point& p) {
 }
 
 Point normalized(const Point& p) {
-  const double len = length(p);
+  const DType len = length(p);
   return Point{.x = p.x / len, .y = p.y / len, .z = p.z / len};
 }
 
@@ -58,7 +58,7 @@ int main() {
     const Point QQ = Q - B;
     const Point AA = normalized(A - B);
 
-    const double dis = length(PP - dot(PP, AA) * AA);
+    const DType dis = length(PP - dot(PP, AA) * AA);
     const Point R = normalized(QQ - dot(QQ, AA) * AA);
     const Point PPP = dot(PP, AA) * AA - dis * R;
 
