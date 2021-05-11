@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <iostream>
 #ifdef ALGO
 #include "el_psy_congroo.hpp"
 #else
@@ -102,19 +103,15 @@ double solve(const Point &P, const Point &Q, const Point &A, const Point &B) {
 } // namespace
 
 int main() {
-  std::ios::sync_with_stdio(false);
-  std::cin.tie(nullptr);
-  std::istream &reader = std::cin;
-
-  double x, y, z;
-  while (reader >> x >> y >> z) {
-    const Point P = Point{.x = x, .y = y, .z = z};
-    reader >> x >> y >> z;
-    const Point Q = Point{.x = x, .y = y, .z = z};
-    reader >> x >> y >> z;
-    const Point A = Point{.x = x, .y = y, .z = z};
-    reader >> x >> y >> z;
-    const Point B = Point{.x = x, .y = y, .z = z};
+  int x, y, z;
+  while (scanf("%d%d%d", &x, &y, &z) == 3) {
+    const Point P = Point{.x = (double)x, .y = (double)y, .z = (double)z};
+    scanf("%d%d%d", &x, &y, &z);
+    const Point Q = Point{.x = (double)x, .y = (double)y, .z = (double)z};
+    scanf("%d%d%d", &x, &y, &z);
+    const Point A = Point{.x = (double)x, .y = (double)y, .z = (double)z};
+    scanf("%d%d%d", &x, &y, &z);
+    const Point B = Point{.x = (double)x, .y = (double)y, .z = (double)z};
 
     printf("%.13f\n", solve(P, Q, A, B));
   }
