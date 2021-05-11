@@ -69,12 +69,12 @@ double solve(const Point &P, const Point &Q, const Point &A, const Point &B) {
   return result;
 }
 
-}  // namespace
+} // namespace
 
 int main() {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
-  std::istream& reader = std::cin;
+  std::istream &reader = std::cin;
 
   double x, y, z;
   while (reader >> x >> y >> z) {

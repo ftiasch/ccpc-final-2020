@@ -1,5 +1,7 @@
 #include "testlib.h"
 
+#include <array>
+
 using Point = std::array<int, 3>;
 
 Point gen_point(int m) {
