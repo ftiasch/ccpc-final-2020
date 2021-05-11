@@ -57,9 +57,23 @@ bool cross(const Point &P, const Point &Q, const Point &A, const Point &B) {
   return dcmp(dot(det(PQ, AQ), det(PQ, BQ))) <= 0;
 }
 
+const Point origin = Point{.x = 0, .y = 0, .z = 0};
+
+// P -> A -> Q
+DType walk(const Point &P, const Point &Q, const Point &A) {
+  return length(P - A) + length(Q - A);
+}
+
 double solve(const Point &P, const Point &Q, const Point &A, const Point &B) {
   if (A == B) {
-    return length(P - A) + length(Q - A);
+    return walk(P, Q, A);
+  }
+  if (det(A - Q, B - Q) == origin) {
+    DType ret = std::min(walk(P, Q, A), walk(P, Q, B));
+    if (dcmp(dot(A - Q, B - Q)) < 0) {
+      ret = std::min(ret, length(P - Q));
+    }
+    return ret;
   }
   const Point PP = P - B;
   const Point QQ = Q - B;
