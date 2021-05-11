@@ -1,3 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../../common'
 
 sample '001.hand'
+
+test :random, T: 100_000, m: 2
+test :random, T: 100_000, m: 5
+test :random, T: 100_000, m: 10
+test :random, T: 100_000, m: 1_000_000_000
