@@ -46,13 +46,13 @@ int main() {
 
   double x, y, z;
   while (reader >> x >> y >> z) {
-    const Point P = Point{.x = x, .y = y};
+    const Point P = Point{.x = x, .y = y, .z = z};
     reader >> x >> y >> z;
-    const Point Q = Point{.x = x, .y = y};
+    const Point Q = Point{.x = x, .y = y, .z = z};
     reader >> x >> y >> z;
-    const Point A = Point{.x = x, .y = y};
+    const Point A = Point{.x = x, .y = y, .z = z};
     reader >> x >> y >> z;
-    const Point B = Point{.x = x, .y = y};
+    const Point B = Point{.x = x, .y = y, .z = z};
 
     const Point PP = P - B;
     const Point QQ = Q - B;
