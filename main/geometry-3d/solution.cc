@@ -50,9 +50,15 @@ Point normalized(const Point &p) {
   return Point{.x = p.x / len, .y = p.y / len, .z = p.z / len};
 }
 
+std::string to_string(const Point &p) {
+  return std::string("Point{x=") + std::to_string(p.x) +
+         ",y=" + std::to_string(p.y) + ",z=" + std::to_string(p.z) + "}";
+}
+
 bool cross(const Point &P, const Point &Q, const Point &A, const Point &B) {
-  if (P == Q || A == Q || B == Q)
+  if (P == Q || A == Q || B == Q) {
     return true;
+  }
   const Point PQ = normalized(P - Q);
   const Point AQ = normalized(A - Q);
   const Point BQ = normalized(B - Q);
@@ -85,7 +91,7 @@ double solve(const Point &P, const Point &Q, const Point &A, const Point &B) {
   const Point R = normalized(QQ - dot(QQ, AA) * AA);
   const Point PPP = dot(PP, AA) * AA - dis * R;
 
-  if (!cross(PPP, QQ, AA, Point{.x = 0, .y = 0, .z = 0})) {
+  if (!cross(PPP, QQ, A - B, origin)) {
     return std::min(length(P - A) + length(Q - A),
                     length(P - B) + length(Q - B));
   }
