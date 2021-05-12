@@ -45,6 +45,6 @@ int main() {
         }
       }
     }
-    printf("%.9f\n", result * dim_x * dim_y * dim_z / 6);
+    printf("%.9f\n", std::max(result * dim_x * dim_y * dim_z / 6, 0.0));
   }
 }

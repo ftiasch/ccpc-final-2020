@@ -16,7 +16,7 @@ int main() {
     }
     ensuref(compare(p[0], p[1]), "p[0] & p[1] coincide");
     ensuref(compare(p[2], p[3]), "p[2] & p[3] coincide");
-    ensuref((++tests) <= 10000, "number of tests exceeds");
+    ensuref((++tests) <= 100000, "number of tests exceeds");
   }
   inf.readEof();
 }

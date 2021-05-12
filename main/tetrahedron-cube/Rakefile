@@ -2,7 +2,12 @@
 
 require_relative '../../common'
 
-test :random, T: 10, m: 10
+sample '001.hand'
+
+test :random, T: 100_000, m: 5
+test :random, T: 100_000, m: 10
+test :random, T: 100_000, m: 50
+test :random, T: 100_000, m: 100
 
 add_target :approx
 add_target :check_approx
