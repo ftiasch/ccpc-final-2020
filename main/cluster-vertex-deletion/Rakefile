@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+
+require_relative '../../common'
+
+add_target :random
+add_target :slow
