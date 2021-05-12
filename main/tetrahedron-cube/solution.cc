@@ -12,12 +12,12 @@ int main() {
     for (int i = 0; i < 4; ++i) {                                              \
       W[i] *= -1;                                                              \
     }                                                                          \
-    for (int i = 1; i < 4; ++i) {                                              \
-      W[i] -= W[0];                                                            \
-    }                                                                          \
-    if (W[2] > W[3]) {                                                         \
-      std::swap(W[2], W[3]);                                                   \
-    }                                                                          \
+  }                                                                            \
+  for (int i = 1; i < 4; ++i) {                                                \
+    W[i] -= W[0];                                                              \
+  }                                                                            \
+  if (W[2] > W[3]) {                                                           \
+    std::swap(W[2], W[3]);                                                     \
   }
 
     NORMALIZE(x);
@@ -28,16 +28,23 @@ int main() {
 
     double result = 0.;
 
-    const int dim_x = x[1];
-    const int dim_y = y[1];
-    const int dim_z = z[1];
+    const double dim_x = x[1];
+    const double dim_y = y[1];
+    const double dim_z = z[1];
     for (int mask = 0; mask < 1 << 3; ++mask) {
-      const int xx = dim_x - std::max(x[2 + (mask & 1)], 0);
-      const int yy = dim_y - std::max(y[2 + (mask >> 1 & 1)], 0);
-      const int zz = dim_z - std::max(z[2 + (mask >> 2)], 0);
-      if (xx >= 0 && yy >= 0 && zz >= 0) {
-
+      const int min_x = std::max(x[2 + (mask >> 0 & 1)], 0);
+      const int min_y = std::max(y[2 + (mask >> 1 & 1)], 0);
+      const int min_z = std::max(z[2 + (mask >> 2 & 1)], 0);
+      double length = 1 - min_x / dim_x - min_y / dim_y - min_z / dim_z;
+      if (length >= 0) {
+        double length3 = length * length * length;
+        if (__builtin_parity(mask)) {
+          result -= length3;
+        } else {
+          result += length3;
+        }
       }
     }
+    printf("%.9f\n", result * dim_x * dim_y * dim_z / 6);
   }
 }
