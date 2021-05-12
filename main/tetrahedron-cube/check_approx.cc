@@ -3,7 +3,7 @@
 
 using namespace std;
 
-const double EPS = 1E-6;
+const double EPS = 1E-1;
 
 int main(int argc, char *argv[]) {
   setName("compare two sequences of doubles, max absolute or relative error = "
