@@ -11,3 +11,4 @@ test :random, T: 100_000, m: 100
 
 add_target :approx
 add_target :check_approx
+add_target :solution_zimpha
