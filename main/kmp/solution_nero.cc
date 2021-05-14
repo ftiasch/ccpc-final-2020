@@ -163,7 +163,6 @@ using Binom = Binomial<MOD>;
 // PowerTable<MOD> pw2(200000, 2);
 
 using ULL = unsigned long long;
-using LL = long long;
 
 const ULL seed = 9973;
 const int kN = 1000000 + 5;
@@ -198,10 +197,9 @@ struct KMP {
   }
 };
 
-LL solve(const std::string &s, const std::string &t) {
+void solve(const std::string &s, const std::string &t) {
   StringHash sh(s);
   KMP sk(s);
-  DUMP(sk.next);
   StringHash th(t);
   int default_value = 0;
   for (int len = 1; len <= s.length() && len <= t.length(); ++len) {
@@ -216,15 +214,12 @@ LL solve(const std::string &s, const std::string &t) {
       break;
     }
   }
-  DUMP(default_value, last_jump);
   auto transfer = [&](int j) -> int {
     if (j == s.length())
       return last_jump;
     return j;
   };
 
-  DUMP(s, t);
-  LL ret = 0;
   std::vector<int> cache(s.length(), -1);
   for (int j = 0; j < s.length(); ++j) {
     if (j + t.length() <= s.length() &&
@@ -237,11 +232,9 @@ LL solve(const std::string &s, const std::string &t) {
     if (cache[j] >= 0) {
       val = cache[j] + t.length();
     }
-    DUMP(j, val, transfer(val));
-    ret += transfer(val) ^ j;
+    int result = transfer(val);
+    printf("%d%c", result, " \n"[j + 1 == s.length()]);
   }
-  DUMP(cache);
-  return ret;
 }
 
 } // namespace
@@ -257,6 +250,6 @@ int main() {
 
   std::string s, t;
   while (reader >> s >> t) {
-    printf("%lld\n", solve(s, t));
+    solve(s, t);
   }
 }
