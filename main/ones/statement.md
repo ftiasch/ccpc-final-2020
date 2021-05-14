@@ -2,11 +2,15 @@
 
 Let $o_i = \underbrace{1 \dots 1}_{i\text{ times}}$ be the number which consists of $i$ ones in the decimal representation.
 
-Bobo has an integer $n$. Let $(x_1, x_2, \dots, )$ be a sequence of (possibly negative) integers where 
+Bobo has an integer $n$. Let $(x_1, x_2, \dots, )$ be a sequence of (possibly negative) integers where
 $$
 n = \sum_{i = 1}^{\infty} o_i \cdot x_i
 $$
-Find the minimum value of $\sum_{i = 1}^{\infty} i \cdot |x_i|$.
+and the value
+$$
+\sum_{i = 1}^{\infty} i \cdot |x_i|
+$$
+is minimized. Find the minimum value of $\sum_{i = 1}^{\infty} i \cdot |x_i|$.
 
 ## Input
 

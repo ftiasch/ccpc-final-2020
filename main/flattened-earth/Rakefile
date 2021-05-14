@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../common'
 
 sample '001.hand'
@@ -16,3 +18,4 @@ test :generate, T: 1, n: 200_000, m: 200_000, d: 500
 test :generate, T: 1, n: 200_000, m: 200_000, d: 200_000
 
 add_target :slow
+add_target :solution_ftiasch

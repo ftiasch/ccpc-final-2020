@@ -1,6 +1,6 @@
 # Almost Monochromatic Permutation
 
-Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a permutation $p_1, \dots, p_n$ of $1, \dots, n$, let 
+Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a permutation $p_1, \dots, p_n$ of $1, \dots, n$, let
 $$
 c_i = \begin{cases}
 C_{p_i, p_{i + 1}} & \text{for } 1 \leq i < n \\
@@ -29,6 +29,6 @@ For the following $n$ lines, the $i$-th line contains $n$ integers $C_{i, 1}, \d
 
 For each test case, if there exists an *almost monochromatic* permutation, output $n$ integers $p_1, \dots, p_n$ which denotes the permutation. Otherwise, output `-1`.
 
-If there are multiple *almost monochromatic* permutations, any of them is acceptable.
+If there are multiple *almost monochromatic* permutations, any of them is considered correct.
 
 <!--SAMPLES-->
