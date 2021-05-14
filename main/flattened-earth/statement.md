@@ -1,12 +1,13 @@
-# Circular World
+# Cycle
 
-Bobo lives in a circular world. In the world, there are $n$ towns numbered by $1, \dots, n$. The $i$-th ($1 \leq i \leq n - 1$) town is connected with the $(i+1)$-th town by a bidirectional road. Besides, the $n$-th town is connected with the $1$-st town by a bidirectional road.
+Bobo has an undirected graph $G$ with $n$ vertices labeled by $1, \dots, n$ and $n$ edges. For each $1 \leq i \leq n$, there is an edge between the vertex $i$ and the vertex $(i \bmod n) + 1$. He also has a list of $m$ pairs $(a_1, b_1), \dots, (a_m, b_m)$.
 
-Bobo is going to remove exactly one of these $n$ roads. He also knows $m$ pairs of towns $(a_1, b_1), \dots, (a_m, b_m)$.
+Now, Bobo is going to remove the edge between the vertex $i$ and the vertex $(i \bmod n) + 1$.  Let $\delta_i(u, v)$ be the length of shortest path between thee $v$-th vertex after the removal. Choose an $i$ to minimize the maximum among $\delta_i(a_1, b_1), \dots, \delta_i(a_m, b_m)$.
 
-He wants to remove one of these edges, so that this world would looks like a flattened one.
-Also, he doesn't want this world changes too much. So he prepares $m$ pairs of towns. He wants to
-make the maximum distance between these pairs as minimum as possible after the deletation.
+Formally, find the value of
+$$
+\min_{1 \leq i \leq n}\left\{\max_{1 \leq j \leq m} \delta_i(a_j, b_j)\right\}
+$$
 
 ## Input
 
