@@ -1,0 +1,18 @@
+require_relative '../../common'
+
+sample '001.hand'
+
+test :generate, T: 2000, n: 100, m: 100, d: 100
+test :generate, T: 1, n: 1, m: 1, d: 1
+test :generate, T: 1, n: 10, m: 1, d: 10
+test :generate, T: 1, n: 1, m: 10, d: 1
+test :generate, T: 20, n: 10_000, m: 10_000, d: 500
+test :generate, T: 20, n: 10_000, m: 10_000, d: 10_000
+test :generate, T: 20, n: 10_000, m: 10, d: 500
+test :generate, T: 20, n: 10_000, m: 10, d: 10_000
+test :generate, T: 20, n: 10, m: 10_000, d: 10
+test :generate, T: 1, n: 200_000, m: 500, d: 1000
+test :generate, T: 1, n: 200_000, m: 200_000, d: 500
+test :generate, T: 1, n: 200_000, m: 200_000, d: 200_000
+
+add_target :slow
