@@ -35,11 +35,12 @@ int main() {
       }
       pi[i] = (s[j + 1] == s[i] ? ++j : j);
     }
-    i64 ret = 0;
+    // i64 ret = 0;
     for (int j = 0; j < n; ++j) {
-      ret += solve(n, m, j) ^ j;
+      // ret += solve(n, m, j) ^ j;
+      printf("%d%c", solve(n, m, j), " \n"[j + 1 == n]);
     }
-    printf("%lld\n", ret);
+    // printf("%lld\n", ret);
   }
   return 0;
 }

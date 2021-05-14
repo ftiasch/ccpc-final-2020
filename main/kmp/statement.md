@@ -6,9 +6,8 @@ For two strings $u = u_1 \dots u_n$ and $v = v_1 \dots v_m$, Bobo denotes denote
 $$
 \mathrm{presuf}(u, v) = \max\{i \mid i < n \text{ and } \mathrm{pre}(u, i) = \mathrm{suf}(v, i) \}
 $$
-Given two strings $s = s_1 \dots s_n$ and $t = t_1 \dots t_m$, let $f(i) = \mathrm{presuf}(s, \mathrm{pre}(s, i) + t)$.
 
-Find the value of $\sum_{i = 0}^{n - 1} f(i) \oplus i$ where $\oplus$ denotes the bitwise exclusive-or (XOR).
+Given two strings $s = s_1 \dots s_n$ and $t = t_1 \dots t_m$, let $f(i) = \mathrm{presuf}(s, \mathrm{pre}(s, i) + t)$. Find the value of $f(0), \dots, f(n - 1)$.
 
 ## Input
 
@@ -25,21 +24,6 @@ The second line contains a string $t_1 \dots t_m$.
 
 ## Output
 
-For each test cases, print an integer which denotes the result.
+For each test cases, print $n$ integers which denote $f(0), \dots, f(n - 1)$.
 
 <!--SAMPLES-->
-
-## Note
-
-For the first test case, the value of $f$ is shown below.
-
-* $f(0) = 3$
-* $f(1) = 3$
-* $f(2) = 5$
-* $f(3) = 3$
-* $f(4) = 5$
-* $f(5) = 3$
-* $f(6) = 3$
-* $f(7) = 3$
-* $f(8) = 3$
-* $f(9) = 3$

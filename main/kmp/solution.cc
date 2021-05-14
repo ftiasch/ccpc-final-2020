@@ -61,15 +61,16 @@ int main() {
       else
         ret[i] = i ? ret[ps[i]] : 0;
     }
-    i64 sum = 0;
+    // i64 sum = 0;
     for (int i = 0; i < n; ++i) {
       if (ret[i] == n) {
         ret[i] = ps[n];
       }
       ret[i] = std::max(ret[i], border);
-      sum += ret[i] ^ i;
+      printf("%d%c", ret[i], " \n"[i + 1 == n]);
+      // sum += ret[i] ^ i;
     }
-    printf("%lld\n", sum);
+    // printf("%lld\n", sum);
   }
   return 0;
 }
