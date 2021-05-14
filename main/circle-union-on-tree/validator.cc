@@ -29,14 +29,14 @@ int main() {
   int sum_q = 0;
   int sum_k = 0;
   while (!inf.eof()) {
-    int n = inf.readInt(1, 100'000);
+    int n = inf.readInt(1, 100000);
     inf.readSpace();
-    int q = inf.readInt(1, 100'000);
+    int q = inf.readInt(1, 100000);
     inf.readEoln();
-    ensure((sum_n += n) <= 100'000);
-    ensure((sum_q += q) <= 100'000);
+    ensure((sum_n += n) <= 100000);
+    ensure((sum_q += q) <= 100000);
     for (int i = 0; i < n; ++i) {
-      inf.readInt(1, 10'000);
+      inf.readInt(1, 10000);
       if (i + 1 < n) {
         inf.readSpace();
       } else {
@@ -53,7 +53,7 @@ int main() {
     }
     for (int i = 0; i < q; ++i) {
       int k = inf.readInt(1, n);
-      ensure((sum_k += k) <= 200'000);
+      ensure((sum_k += k) <= 200000);
       for (int j = 0; j < k; ++j) {
         inf.readSpace();
         inf.readInt(1, n);

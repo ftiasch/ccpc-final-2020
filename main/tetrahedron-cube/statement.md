@@ -1,6 +1,6 @@
 # Tetrahedron
 
-Bobo is learning 3-dimension Computational Geometry. 
+Bobo is learning 3-dimension Computational Geometry.
 
 An axis-aligned tetrahedron (also known as triangular pyramid) $DABC$ is a convex polyhedron in three dimension with vertices
 

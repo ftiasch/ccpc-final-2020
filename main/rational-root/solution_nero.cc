@@ -12,16 +12,15 @@ const int kN = 500000 + 5;
 int n, m, k;
 std::vector<int> divisors[kN];
 
-LL clamp(LL val, LL low, LL high) {
-  return std::max(low, std::min(val, high));
-}
+LL clamp(LL val, LL low, LL high) { return std::max(low, std::min(val, high)); }
 
 LL limit_power(LL a, LL b) {
   LL ret = 1;
   for (; b; b >>= 1, a = clamp(a * a, -INF, INF)) {
     if (b & 1) {
       ret = clamp(ret * a, -INF, INF);
-      if (ret <= -INF || ret >= INF) return ret;
+      if (ret <= -INF || ret >= INF)
+        return ret;
     }
   }
   return ret;
@@ -29,7 +28,8 @@ LL limit_power(LL a, LL b) {
 
 LL get_p(LL w, LL x, LL t) {
   LL pw = limit_power(x, t);
-  if (pw <= -INF || pw >= INF) return pw;
+  if (pw <= -INF || pw >= INF)
+    return pw;
   return w - pw;
 }
 
@@ -110,7 +110,7 @@ LL solve() {
           }
         }
       }
-      for (const auto& pair : map) {
+      for (const auto &pair : map) {
         if (pair.second == k) {
           ++ret;
         }
@@ -123,7 +123,7 @@ LL solve() {
 int main() {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
-  std::istream& reader = std::cin;
+  std::istream &reader = std::cin;
 
   for (int i = 1; i < kN; ++i)
     for (int j = i; j < kN; j += i)
@@ -133,4 +133,3 @@ int main() {
     printf("%lld\n", solve());
   }
 }
-
