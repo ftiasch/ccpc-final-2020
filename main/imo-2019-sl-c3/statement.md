@@ -1,6 +1,6 @@
 # When does it end?
 
-For a bit string (a string consists of only zeros and ones) $s_1\dots s_n$, Bobo compute the $f$-value of $s_1\dots s_n$ by the following procedure.
+For a bit string (a string consists of only zeros and ones) $s_1\dots s_n$, Bobo computes the $f$-value of $s_1\dots s_n$ by the following procedure.
 
 * If all the bits are zero, the procedure ends immediately.
 * If there are $k$ ones in the bit string, Bobo flips the $k$-th bit, i.e., $s_k$.
