@@ -2,5 +2,8 @@
 
 require_relative '../../common'
 
-add_target :random
+test :random, type: :random, T: 1, n: 16, k: 6, clusters: 3, extras: 100
+test :random, type: :random, T: 1, n: 50, k: 6, clusters: 3, extras: 300
+
 add_target :slow
+add_target :solution_nero
