@@ -2,7 +2,7 @@
 
 Bobo has an undirected graph $G$ with $n$ vertices labeled by $1, \dots, n$ and $n$ edges. For each $1 \leq i \leq n$, there is an edge between the vertex $i$ and the vertex $(i \bmod n) + 1$. He also has a list of $m$ pairs $(a_1, b_1), \dots, (a_m, b_m)$.
 
-Now, Bobo is going to remove the edge between the vertex $i$ and the vertex $(i \bmod n) + 1$.  Let $\delta_i(u, v)$ be the length of shortest path between thee $v$-th vertex after the removal. Choose an $i$ to minimize the maximum among $\delta_i(a_1, b_1), \dots, \delta_i(a_m, b_m)$.
+Now, Bobo is going to remove the edge between the vertex $i$ and the vertex $(i \bmod n) + 1$.  Let $\delta_i(u, v)$ be the length of shortest path between the $u$-th and the $v$-th vertex after the removal. Choose an $i$ to minimize the maximum among $\delta_i(a_1, b_1), \dots, \delta_i(a_m, b_m)$.
 
 Formally, find the value of
 $$
