@@ -42,9 +42,9 @@ void search(LL mask, int num_deleted) {
   }
   if (num_deleted >= k)
     return;
-  search(mask ^ 1 << a, num_deleted + 1);
-  search(mask ^ 1 << b, num_deleted + 1);
-  search(mask ^ 1 << c, num_deleted + 1);
+  search(mask ^ 1LL << a, num_deleted + 1);
+  search(mask ^ 1LL << b, num_deleted + 1);
+  search(mask ^ 1LL << c, num_deleted + 1);
 }
 
 void make_anti_chain() {
