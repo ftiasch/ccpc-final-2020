@@ -1,9 +1,9 @@
 #include "testlib.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
   registerTestlibCmd(argc, argv);
   int cases = 0;
-  while (!inf.eof()) {
+  while (!inf.seekEof()) {
     ++cases;
     int n = inf.readInt();
     int m = inf.readInt();

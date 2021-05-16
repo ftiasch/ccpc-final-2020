@@ -2,4 +2,4 @@
 
 require_relative '../../common'
 
-add_target :slow
+test :random, T: 100, n: 5, maxm: 10
