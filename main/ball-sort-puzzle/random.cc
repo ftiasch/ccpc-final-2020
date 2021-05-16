@@ -4,9 +4,8 @@ int main(int argc, char *argv[]) {
   registerGen(argc, argv, 1);
   int T = opt<int>("T");
   const int n = opt<int>("n");
-  const int max_m = opt<int>("maxm");
   while (T--) {
-    int m = rnd.next(n, max_m);
+    const int m = has_opt("m") ? opt<int>("m") : rnd.next(n, opt<int>("maxm"));
     std::vector<int> ball_order(n << 1);
     for (int i = 0; i < n << 1; ++i) {
       ball_order[i] = (i >> 1) + 1;
