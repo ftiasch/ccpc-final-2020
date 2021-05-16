@@ -3,3 +3,4 @@
 require_relative '../../common'
 
 test :random, T: 100, n: 5, maxm: 10
+test :random, T: 10, n: 10000, maxm: 20000
