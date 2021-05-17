@@ -35,3 +35,7 @@ For the following $q$ lines, the $i$-th line contains two integers $l_i$, $r_i$.
 For each changes, output an integer which denotes the result.
 
 <!--SAMPLES-->
+
+## Notes
+
+For the first test case, the string becomes `100` after the first change. $f(\texttt{100}) = f(\texttt{000}) + 1 = 1$. And it becomes `111` after the second change. $f(\texttt{111}) = f(\texttt{110}) + 1 = f(\texttt{100}) + 2 = f(\texttt{000}) + 3 = 3$.

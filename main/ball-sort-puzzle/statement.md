@@ -40,3 +40,14 @@ For each test case, if there exists a *valid* sorting plan, output an integer $l
 If there are multiple *valid* sorting plan, any of them is considered correct.
 
 <!--SAMPLES-->
+
+## Notes
+
+For the first test cases,
+
+* Initially, $s[1] = [1, 2]$, $s[2] = [1, 2]$, $s[3] = [\ ]$.
+* After $s[3].\mathtt{push}(s[1].\mathtt{pop}())$. $s[1] = [1]$, $s[2] = [1, 2]$, $s[3] = [2]$.
+* After $s[3].\mathtt{push}(s[2].\mathtt{pop}())$, $s[1] = [1]$, $s[2] = [1]$, $s[3] = [2, 2]$.
+* After $s[1].\mathtt{push}(s[2].\mathtt{pop}())$, $s[1] = [1, 1]$, $s[2] = [\ ]$, $s[3] = [2, 2]$.
+
+For the second test case, the initial configuration is already sorted.
