@@ -15,7 +15,7 @@ A sorting plan of length $l$ consists of $l$ pairs $(f_1, t_1), \dots, (f_l, t_l
 * $s[t_i].\mathtt{size} < 2$
 * either $s[t_i].\mathtt{size} = 0$ or $s[f_i].\mathtt{top} = s[t_i].\mathtt{top}$,
 
-and performs $s[t_i].\mathtt{push}(s[f_i].\mathtt{pop}())$. A sorting plan is *valid* if the above conditions always hold and the length does not exceed $4n$.
+and performs $s[t_i].\mathtt{push}(s[f_i].\mathtt{pop}())$. A sorting plan is *valid* if the above conditions always hold and the length does not exceed $2n$.
 
 Find a *valid* sorting plan such that after the execution each of the stacks either is empty of contains the two copies of the same element.
 
