@@ -12,4 +12,4 @@ test :random, T: 1, n: 50
 test :random, T: 1, n: 50, id: true
 
 add_target :slow
-add_target :slow_231
+add_target 'slow_231'.to_sym
