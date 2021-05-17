@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     }
     int out_cnt = ouf.readInt();
     if (~out_cnt) {
-      if (out_cnt > 2 * n) {
+      if (out_cnt > 4 * n) {
         quitf(_wa, "Too many moves [Case %d]", cases);
       }
       std::vector<std::pair<int, int>> moves;
