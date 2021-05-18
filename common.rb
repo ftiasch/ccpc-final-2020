@@ -88,7 +88,7 @@ def generate(generator, test_input, test_output, *params, **options)
   file test_output => [*common_deps, test_input, target(:check), target(:solution), target(:validator)] do
     sh "#{command :validator} < #{test_input}"
     sh "#{command :solution} < #{test_input} > #{test_output}"
-    sh "#{command :check} #{test_input} #{test_output} #{test_output}"
+    sh "bash -c '#{command :check} #{test_input} #{test_output} /tmp < #{test_output} 2>/dev/null; test $? -eq 42'"
   end
 end
 

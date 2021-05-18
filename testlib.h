@@ -25,7 +25,7 @@
  * Copyright (c) 2005-2020
  */
 
-#define VERSION "0.9.34-SNAPSHOT"
+#define VERSION "0.9.34-DOMJUDGE"
 
 /* 
  * Mike Mirzayanov
@@ -60,6 +60,8 @@
  *   Reads test from inf (mapped to args[1]), writes result to tout (mapped to argv[2],
  *   can be judged by checker later), reads program output from ouf (mapped to stdin),
  *   writes output to program via stdout (use cout, printf, etc).
+ * 
+ *   NOTE: This file is modified to run in domjudge.
  */
 
 const char *latestFeatures[] = {
@@ -220,7 +222,7 @@ const char *latestFeatures[] = {
 #   ifdef CONTESTER
 #       define OK_EXIT_CODE 0xAC
 #   else
-#       define OK_EXIT_CODE 0
+#       define OK_EXIT_CODE 42
 #   endif
 #endif
 
@@ -230,7 +232,7 @@ const char *latestFeatures[] = {
 #   elif defined(CONTESTER)
 #       define WA_EXIT_CODE 0xAB
 #   else
-#       define WA_EXIT_CODE 1
+#       define WA_EXIT_CODE 43
 #   endif
 #endif
 
@@ -240,7 +242,7 @@ const char *latestFeatures[] = {
 #   elif defined(CONTESTER)
 #       define PE_EXIT_CODE 0xAA
 #   else
-#       define PE_EXIT_CODE 2
+#       define PE_EXIT_CODE 43
 #   endif
 #endif
 
@@ -258,7 +260,7 @@ const char *latestFeatures[] = {
 #   ifdef EJUDGE
 #       define DIRT_EXIT_CODE 6
 #   else
-#       define DIRT_EXIT_CODE 4
+#       define DIRT_EXIT_CODE 43
 #   endif
 #endif
 
@@ -267,7 +269,7 @@ const char *latestFeatures[] = {
 #endif
 
 #ifndef UNEXPECTED_EOF_EXIT_CODE
-#   define UNEXPECTED_EOF_EXIT_CODE 8
+#   define UNEXPECTED_EOF_EXIT_CODE 43
 #endif
 
 #ifndef PC_BASE_EXIT_CODE
@@ -1777,6 +1779,7 @@ struct InStream {
     bool stdfile;
     bool strict;
 
+    int wordReserveSize;
     std::string _tmpReadToken;
 
     int readManyIteration;
@@ -4033,6 +4036,11 @@ void registerGen(int argc, char *argv[]) {
 }
 #endif
 
+std::string make_new_file_in_a_dir(std::string dir, std::string file = "judgemessage.txt") { // assume in linux
+    if (dir.back() != '/') dir.push_back('/');
+    return dir + file;
+}
+
 void registerInteraction(int argc, char *argv[]) {
     __testlib_ensuresPreconditions();
 
@@ -4041,26 +4049,31 @@ void registerInteraction(int argc, char *argv[]) {
 
     if (argc > 1 && !strcmp("--help", argv[1]))
         __testlib_help();
-
-    if (argc < 3 || argc > 6) {
+/*    
+    if (argc < 3 || argc > 6)
+    {
         quit(_fail, std::string("Program must be run with the following arguments: ") +
-                    std::string("<input-file> <output-file> [<answer-file> [<report-file> [<-appes>]]]") +
-                    "\nUse \"--help\" to get help information");
+            std::string("<input-file> <output-file> [<answer-file> [<report-file> [<-appes>]]]") + 
+            "\nUse \"--help\" to get help information");
     }
-
-    if (argc <= 4) {
+*/
+    if (argc == 3) {
         resultName = "";
         appesMode = false;
     }
 
-#ifndef EJUDGE
-    if (argc == 5) {
-        resultName = argv[4];
+    if (argc == 4) {
+        resultName = make_new_file_in_a_dir(argv[3]);
+        tout.open(make_new_file_in_a_dir(argv[3], "teammessage.txt"), std::ios_base::out);
+        if (tout.fail() || !tout.is_open())
+            quit(_fail, std::string("Can not write to the test-output-file '") + argv[2] + std::string("'"));
         appesMode = false;
     }
-
-    if (argc == 6) {
-        if (strcmp("-APPES", argv[5]) && strcmp("-appes", argv[5])) {
+/*
+    if (argc == 6)
+    {
+        if (strcmp("-APPES", argv[5]) && strcmp("-appes", argv[5]))
+        {
             quit(_fail, std::string("Program must be run with the following arguments: ") +
                         "<input-file> <output-file> <answer-file> [<report-file> [<-appes>]]");
         } else {
@@ -4068,18 +4081,18 @@ void registerInteraction(int argc, char *argv[]) {
             appesMode = true;
         }
     }
-#endif
+*/
 
     inf.init(argv[1], _input);
-
+/*
     tout.open(argv[2], std::ios_base::out);
     if (tout.fail() || !tout.is_open())
         quit(_fail, std::string("Can not write to the test-output-file '") + argv[2] + std::string("'"));
 
+*/  
     ouf.init(stdin, _output);
-
-    if (argc >= 4)
-        ans.init(argv[3], _answer);
+    if (argc >= 3)
+        ans.init(argv[2], _answer);
     else
         ans.name = "unopened answer stream";
 }
@@ -4143,23 +4156,25 @@ void registerTestlibCmd(int argc, char *argv[]) {
 
     if (argc > 1 && !strcmp("--help", argv[1]))
         __testlib_help();
-
+/*
     if (argc < 4 || argc > 6) {
         quit(_fail, std::string("Program must be run with the following arguments: ") +
                     std::string("<input-file> <output-file> <answer-file> [<report-file> [<-appes>]]") +
                     "\nUse \"--help\" to get help information");
     }
+*/
+    appesMode = false;
 
-    if (argc == 4) {
+    if (argc == 3) {
         resultName = "";
         appesMode = false;
     }
 
-    if (argc == 5) {
-        resultName = argv[4];
+    if (argc == 4) {
+        resultName = make_new_file_in_a_dir(argv[3]);
         appesMode = false;
     }
-
+/*
     if (argc == 6) {
         if (strcmp("-APPES", argv[5]) && strcmp("-appes", argv[5])) {
             quit(_fail, std::string("Program must be run with the following arguments: ") +
@@ -4169,10 +4184,10 @@ void registerTestlibCmd(int argc, char *argv[]) {
             appesMode = true;
         }
     }
-
+*/
     inf.init(argv[1], _input);
-    ouf.init(argv[2], _output);
-    ans.init(argv[3], _answer);
+    ouf.init(stdin, _output);
+    ans.init(argv[2], _answer);
 }
 
 void registerTestlib(int argc, ...) {
