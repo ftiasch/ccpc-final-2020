@@ -40,9 +40,9 @@ def main(chal_path: pathlib.Path, output_path: pathlib.Path):
         z.write(data_ans, f"data/secret/{name}.ans")
     for sol in chal_path.glob("solution*.cc"):
         z.write(sol, f"submissions/accepted/{sol.name}")
-    for sol in chal_path.glob("slow.*.cc"):
+    for sol in chal_path.glob("slow*.cc"):
         z.write(sol, f"submissions/time_limit_exceeded/{sol.name}")
-    for sol in chal_path.glob("wrong.*.cc"):
+    for sol in chal_path.glob("wrong*.cc"):
         z.write(sol, f"submissions/wrong_answer/{sol.name}")
     z.write(testlib, f"output_validators/{chal_name}/testlib.h")
     z.write(chal_path / "check.cc", f"output_validators/{chal_name}/check.cc")
