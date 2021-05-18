@@ -1,3 +1,7 @@
+---
+timelimit: 1
+...
+
 # Sum
 
 Given $n$, $x$ and $y$, let $f_{n, x, y}(a, b)$ denote the value of

@@ -1,3 +1,7 @@
+---
+timelimit: 1
+...
+
 # Cycle
 
 Bobo has an undirected graph $G$ with $n$ vertices labeled by $1, \dots, n$ and $n$ edges. For each $1 \leq i \leq n$, there is an edge between the vertex $i$ and the vertex $(i \bmod n) + 1$. He also has a list of $m$ pairs $(a_1, b_1), \dots, (a_m, b_m)$.

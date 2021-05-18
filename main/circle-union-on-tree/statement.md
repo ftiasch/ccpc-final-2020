@@ -1,3 +1,7 @@
+---
+timelimit: 5
+...
+
 # Tree
 
 Bobo has a tree with $n$ vertices. The $i$-th vertex has a weight $w_i$, and the $i$-th edge is between the $a_i$-th and $b_i$-th vertex.

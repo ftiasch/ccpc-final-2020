@@ -31,18 +31,19 @@ for problem in $(cat PROBLEMS); do
 
     (cd $problem && rake -m)
 
-    problem_release=$RELEASE/$code
-    mkdir -p $problem_release
+    # problem_release=$RELEASE/$code
+    # mkdir -p $problem_release
 
-    cp $problem/solution.{cc,cpp,py} $problem_release/ 2>/dev/null || true
-    cp $problem/slow.{cc,cpp} $problem_release/ 2>/dev/null || true
-    cp $problem/check.{cc,cpp} $problem_release/ 2>/dev/null || true
-    cp -r $problem/samples $problem_release
-    if grep packed $problem/Rakefile; then
-        cp -r $problem/tests/test.{in,out}  $problem_release/
-    else
-        cp -r $problem/tests $problem_release
-    fi
+    # cp $problem/solution.{cc,cpp,py} $problem_release/ 2>/dev/null || true
+    # cp $problem/slow.{cc,cpp} $problem_release/ 2>/dev/null || true
+    # cp $problem/check.{cc,cpp} $problem_release/ 2>/dev/null || true
+    # cp -r $problem/samples $problem_release
+    # if grep packed $problem/Rakefile; then
+    #     cp -r $problem/tests/test.{in,out}  $problem_release/
+    # else
+    #     cp -r $problem/tests $problem_release
+    # fi
+    ../pack4dj.py $problem $RELEASE/$code.zip
 
     if test -f $problem/statement.cn.md; then
         cat $problem/statement.cn.md >> $STATEMENT

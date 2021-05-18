@@ -1,3 +1,7 @@
+---
+timelimit: 1
+...
+
 # Triangle
 
 There are $n$ distinct points on a 2-dimension plane. The coordinates of the $i$-th point is $(x_i, y_i)$.

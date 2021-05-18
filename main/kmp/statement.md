@@ -1,3 +1,7 @@
+---
+timelimit: 1
+...
+
 # Prefix Suffix
 
 For a string $u = u_1 \dots u_n$, Bobo denotes the prefix $u_1 \dots u_i$ by $\mathrm{pre}(u, i)$. Similarly, he denotes the suffix $u_{n - i + 1} \dots u_n$ by $\mathrm{suf}(u, i)$. In particular, $\mathrm{pre}(u, 0)$ and $\mathrm{suf}(u, 0)$ are empty strings.

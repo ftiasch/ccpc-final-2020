@@ -1,3 +1,7 @@
+---
+timelimit: 3
+...
+
 # Rational Root
 
 Given $n$, $m$, $k$, find the number of pairs $(a, b)$ such that

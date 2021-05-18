@@ -1,3 +1,7 @@
+---
+timelimit: 1
+...
+
 # Tetrahedron
 
 Bobo is learning 3-dimension Computational Geometry.

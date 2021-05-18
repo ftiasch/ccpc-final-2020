@@ -1,3 +1,7 @@
+---
+timelimit: 1
+...
+
 # When does it end?
 
 For a bit string (a string consists of only zeros and ones) $s_1\dots s_n$, Bobo computes the $f$-value of $s_1\dots s_n$ by the following procedure.
