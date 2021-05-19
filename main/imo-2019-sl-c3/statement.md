@@ -15,7 +15,7 @@ Formally,
 * If $s_1 = \dots = s_n = 0$, $f(s_1 \dots s_n) = 0$.
 * Otherwise, assume that $k = s_1 + \dots + s_n$, $f(s_1 \dots s_n) = f(s_1 \dots s_{k - 1} \overline{s_k} s_{k + 1} \dots s_n) + 1$ where $\overline{c}$ denotes the flip of the bit $c$ with $\overline{0} = 1$ and $\overline{1} = 0$.
 
-Now, Bobo has a bit string $s_1 \dots s_n$ subjecting to $q$ changes, where the $i$-th change is to flip all the bits among $s_{l_i} \dots s_{r_i}$ for given $l_i$, $r_i$. Find the $f$-value of the bit string modulo $998244353$ after each changes.
+Now, Bobo has a bit string $s_1 \dots s_n$ subjecting to $q$ changes, where the $i$-th change is to flip all the bits among $s_{l_i} \dots s_{r_i}$ for given $l_i$, $r_i$. Find the $f$-value of the bit string **modulo** $998244353$ after each changes.
 
 ## Input
 
