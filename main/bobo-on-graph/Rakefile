@@ -16,3 +16,4 @@ test :clustered, n: 5000, m: 200_000, w: 500
 add_target :solution_nero
 add_target :slow
 add_target :slow2
+add_target :slow3
