@@ -10,6 +10,8 @@ test :random, T: 100, n: 1000, m: 2000
 test :random, T: 10, n: 10_000, m: 20_000
 test :random, T: 1, n: 100_000, m: 200_000
 test :random, T: 1, n: 200_000, m: 200_000
+test :clustered, n: 2000, m: 200_000, w: 50
+test :clustered, n: 5000, m: 200_000, w: 500
 
 add_target :solution_nero
 add_target :slow
