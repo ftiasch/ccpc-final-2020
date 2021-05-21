@@ -12,3 +12,4 @@ test :random, T: 16, m: 12, q: Q / 16
 test :random, T: 1, m: 16, q: Q
 
 add_target :slow
+add_target :solution_nero
