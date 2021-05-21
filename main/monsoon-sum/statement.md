@@ -23,6 +23,7 @@ In the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_i
 * $1 \leq q \leq 2 \times 10^5$
 * $1 \leq a_i, b_i \leq 5000$ for each $1 \leq i \leq q$
 * The sum of $\max(a_1, b_1, \dots, a_q, b_q)$ $\leq 5000$.
+* The sum of $q$ $\leq 2 \times 10^5$.
 
 ## Output
 
