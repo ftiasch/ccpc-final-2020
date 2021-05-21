@@ -16,3 +16,4 @@ test :random, T: 1,   n: 1_000_000_000, xy: mod, q: 200_000, m: 5000
 add_target :slow
 add_target :very_slow
 add_target :wrong
+add_target :solution_nero
