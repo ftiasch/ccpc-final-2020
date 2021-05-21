@@ -2,7 +2,7 @@
 
 require_relative '../../common'
 
-# sample '001.hand'
+sample '001.hand'
 
 Q = 200_000
 

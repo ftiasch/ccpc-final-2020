@@ -16,14 +16,21 @@ int main() {
     while (q--) {
       int l_prime, r_prime;
       scanf("%d%d", &l_prime, &r_prime);
+      std::vector<std::pair<int, int>> sols;
       for (int l = 0; l < 1 << m; ++l) {
         for (int r = 0; r < 1 << m; ++r) {
           if ((r ^ g[l ^ f[r]]) == l_prime &&
               (l ^ f[r] ^ h[r ^ g[l ^ f[r]]]) == r_prime) {
-            printf("%d %d\n", l, r);
+            sols.emplace_back(l, r);
+            // printf("%d %d\n", l, r);
           }
         }
       }
+      printf("%d", static_cast<int>(sols.size()));
+      for (auto &&s : sols) {
+        printf(" %d %d", s.first, s.second);
+      }
+      puts("");
     }
   }
 }
