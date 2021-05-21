@@ -15,6 +15,8 @@ if [[ ! -d "$contest_name" ]]; then
     exit 1
 fi
 
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 cd $contest_name
 
 RELEASE='release'
@@ -43,7 +45,7 @@ for problem in $(cat PROBLEMS); do
     # else
     #     cp -r $problem/tests $problem_release
     # fi
-    ../pack4dj.py $problem $RELEASE/$code.zip
+    $SCRIPT_DIR/pack4dj.py $problem $RELEASE/$code.zip
 
     if test -f $problem/statement.cn.md; then
         cat $problem/statement.cn.md >> $STATEMENT
@@ -69,13 +71,7 @@ for problem in $(cat PROBLEMS); do
     printf "\n\\\newpage\n\n" >> $STATEMENT
 done
 
-if [[ `uname -s` == "Darwin" ]]; then
-    font='Hiragino Sans GB'
-else
-    font='Source Han Sans CN'
-fi
-pandoc $STATEMENT --latex-engine=xelatex -V CJKmainfont="$font" --template=../template.tex -o"$RELEASE/statement.pdf" \
-|| pandoc $STATEMENT --pdf-engine=xelatex -V CJKmainfont="$font" --template=../template.tex -o"$RELEASE/statement.pdf"
+pandoc $STATEMENT --latex-engine=xelatex --template=$SCRIPT_DIR/template.tex -o"$RELEASE/statement.pdf" \
+|| pandoc $STATEMENT --pdf-engine=xelatex --template=$SCRIPT_DIR/template.tex -o"$RELEASE/statement.pdf"
 
-
-cd ..
+cd -
