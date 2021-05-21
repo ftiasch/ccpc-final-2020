@@ -9,7 +9,7 @@ Bobo has three arrays $f$, $g$, $h$ of length $2^m$. Let $\mathrm{enc}(x, y) = (
 * $x'' = y \oplus g[x \oplus f[y]]$
 * $y'' = x \oplus f[y] \oplus h[y \oplus g[x \oplus f[y]]]$.
 
-($\oplus$ denotes the bitwise exclusive-or (xor))
+Note that $\oplus$ denotes the bitwise exclusive-or (xor).
 
 Bobo also has $q$ questions $(a_1, b_1), \dots, (a_q, b_q)$. For each $(a_i, b_i)$, find all the pairs $(x, y)$ where $0 \leq x, y < 2^m$ and $\mathrm{enc}(x, y) = (a_i, b_i)$.
 
