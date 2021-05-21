@@ -17,7 +17,7 @@ Bobo also has $q$ questions $(a_1, b_1), \dots, (a_q, b_q)$. For each $(a_i, b_i
 
 The input consists of several test cases terminated by end-of-file. For each test cases,
 
-The first line contains two integers $n$ and $q$.
+The first line contains two integers $m$ and $q$.
 
 The second line contains $2^m$ integers $f[0], \dots, f[2^m - 1]$.
 
@@ -31,9 +31,12 @@ For the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_
 * $1 \leq q \leq 2 \times 10^5$
 * $0 \leq f[i], g[i], h[i] < 2^m$ for each $0 \leq i < 2^m$
 * $0 \leq a_i, b_i < 2^m$ for each $1 \leq i \leq q$
+* The sum of $2^m$ $\leq 10^5$
+* The sum of $q$ $\leq 2 \times 10^5$
 
 ## Output
 
 For each question, output an integer $k$, which denotes the number of pairs $(x, y)$, followed by $k$ pairs $(x_1, y_1), \dots, (x_k, y_k)$.
 
 <!--SAMPLES-->
+
