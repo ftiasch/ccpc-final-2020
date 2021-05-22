@@ -32,7 +32,7 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 There are $4$ lines, and the $i$-th line contains three integers $x_i$, $y_i$, and $z_i$.
 
-* $-100 \leq x_i, y_i, z_i \leq 100$ for each $1 \leq i \leq 4$
+* $-500 \leq x_i, y_i, z_i \leq 500$ for each $1 \leq i \leq 4$
 * $x_1 \neq x_2$, $y_1 \neq y_2$, $z_1 \neq z_2$
 * $x_3 \neq x_4$, $y_3 \neq y_4$, $z_3 \neq z_4$
 * In each input, The number of test cases does not exceed $10^5$.

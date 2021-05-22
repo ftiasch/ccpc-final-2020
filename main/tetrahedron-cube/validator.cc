@@ -11,7 +11,7 @@ int main() {
   while (!inf.eof()) {
     std::vector<std::vector<int>> p;
     for (int i = 0; i < 4; ++i) {
-      p.push_back(inf.readInts(3, -100, 100, "p[0]", 1));
+      p.push_back(inf.readInts(3, -500, 500, "p[0]", 1));
       inf.readEoln();
     }
     ensuref(compare(p[0], p[1]), "p[0] & p[1] coincide");

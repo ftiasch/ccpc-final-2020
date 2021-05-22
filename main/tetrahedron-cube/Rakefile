@@ -6,8 +6,8 @@ sample '001.hand'
 
 test :random, T: 100_000, m: 5
 test :random, T: 100_000, m: 10
-test :random, T: 100_000, m: 50
 test :random, T: 100_000, m: 100
+test :random, T: 100_000, m: 500
 
 add_target :approx
 add_target :check_approx
