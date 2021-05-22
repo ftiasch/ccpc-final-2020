@@ -7,7 +7,7 @@ int main() {
   while (!inf.eof()) {
     const int m = inf.readInt(1, 16, "m");
     inf.readSpace();
-    const int q = inf.readInt(1, 200000, "q");
+    const int q = inf.readInt(1, 100000, "q");
     inf.readEoln();
     inf.readInts(1 << m, 0, (1 << m) - 1, "f");
     inf.readEoln();
@@ -22,7 +22,7 @@ int main() {
       inf.readEoln();
     }
     ensuref((sum_m += (1 << m)) <= 100000, "sum of m exceeds");
-    ensuref((sum_q += q) <= 200000, "sum of q exceeds");
+    ensuref((sum_q += q) <= 100000, "sum of q exceeds");
   }
   inf.readEof();
 }

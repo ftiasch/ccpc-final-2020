@@ -4,7 +4,7 @@ require_relative '../../common'
 
 sample '001.hand'
 
-Q = 200_000
+Q = 100_000
 
 test :random, T: 16 * 16 * 16, m: 4, q: Q / (16 * 16 * 16)
 test :random, T: 16 * 16, m: 8, q: Q / (16 * 16)
