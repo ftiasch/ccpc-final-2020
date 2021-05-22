@@ -26,11 +26,10 @@ int main() {
           }
         }
       }
-      printf("%d", static_cast<int>(sols.size()));
+      // printf("%d", static_cast<int>(sols.size()));
       for (auto &&s : sols) {
-        printf(" %d %d", s.first, s.second);
+        printf("%d %d\n", s.first, s.second);
       }
-      puts("");
     }
   }
 }

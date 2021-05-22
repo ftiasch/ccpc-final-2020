@@ -11,7 +11,9 @@ Bobo has three arrays $f$, $g$, $h$ of length $2^m$. Let $\mathrm{enc}(x, y) = (
 
 Note that $\oplus$ denotes the bitwise exclusive-or (xor).
 
-Bobo also has $q$ questions $(a_1, b_1), \dots, (a_q, b_q)$. For each $(a_i, b_i)$, find all the pairs $(x, y)$ where $0 \leq x, y < 2^m$ and $\mathrm{enc}(x, y) = (a_i, b_i)$.
+Bobo also has $q$ questions $(a_1, b_1), \dots, (a_q, b_q)$. For each $(a_i, b_i)$, find a pair $(x, y)$ where $0 \leq x, y < 2^m$ and $\mathrm{enc}(x, y) = (a_i, b_i)$.
+
+It is guaranteed that for each $(a_i, b_i)$, there exists a unique pair $(x, y)$ satisfying the condition.
 
 ## Input
 
@@ -36,7 +38,7 @@ For the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_
 
 ## Output
 
-For each question, output an integer $k$, which denotes the number of pairs $(x, y)$, followed by $k$ pairs $(x_1, y_1), \dots, (x_k, y_k)$.
+For each question, output two integers which denotes the result.
 
 <!--SAMPLES-->
 

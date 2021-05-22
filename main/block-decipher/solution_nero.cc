@@ -28,7 +28,7 @@ int main() {
       int t = yy ^ h[xx];
       int y = xx ^ g[t];
       int x = t ^ f[y];
-      printf("1 %d %d\n", x, y);
+      printf("%d %d\n", x, y);
     }
   }
 }

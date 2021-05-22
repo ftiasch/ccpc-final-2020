@@ -19,7 +19,7 @@ int main() {
       int l_xor_fr = r_prime ^ h[l_prime];
       int r = l_prime ^ g[l_xor_fr];
       int l = l_xor_fr ^ f[r];
-      printf("1 %d %d\n", l, r);
+      printf("%d %d\n", l, r);
     }
   }
 }

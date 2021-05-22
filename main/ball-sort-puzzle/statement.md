@@ -2,7 +2,7 @@
 timelimit: 1
 ...
 
-# Stacks
+# Stack
 
 In compute science, a stack $s$ is a data structure maintaining a list of elements with two operations:
 
