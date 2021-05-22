@@ -36,3 +36,7 @@ For each test case, if there exists an *almost monochromatic* permutation, outpu
 If there are multiple *almost monochromatic* permutations, any of them is considered correct.
 
 <!--SAMPLES-->
+
+## Note
+
+For the first test case, $c_1 = C_{3, 1} = 1$, $c_2 = C_{1, 2} = 0$, $c_3 = C_{2, 3} = 0$. Only when $i = 1$, $c_i \neq c_{i + 1}$. Therefore, the permutation $3, 1, 2$ is an almost monochromatic permutation.

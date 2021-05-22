@@ -39,7 +39,7 @@ There are $4$ lines, and the $i$-th line contains three integers $x_i$, $y_i$, a
 
 ## Output
 
-For each test case, output a float which denotes the result.
+For each test case, output a float which denotes the volume.
 
 Your answer is considered correct if its *absolute* or *relative error* doesn't exceed $10^{-6}$.
 

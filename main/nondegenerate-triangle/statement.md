@@ -22,7 +22,7 @@ For the following $n$ lines, the $i$-th line contains two integers $x_i, y_i$.
 
 ## Output
 
-For each test cases, output an integer which denotes the result.
+For each test cases, output an integer which denotes the minimum number of points left.
 
 <!--SAMPLES-->
 

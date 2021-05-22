@@ -6,7 +6,7 @@ timelimit: 1
 
 Bobo has an undirected graph with $n$ vertices and $m$ edges. The vertices are numbered by $1, \dots, n$, and the $i$-th edge is between the $a_i$-th and the $b_i$-th vertex. Plus, the $i$-th vertex is associated with a character $c_i$.
 
-Find out the number of ways to choose four **distinct** vertices $\{u, v, w, x\}$ such that
+Find out the number of ways to choose four **distinct** vertices $(u, v, w, x)$ such that
 
 * $u$ and $v$, $v$ and $w$, $w$ and $x$ are connected by an edge,
 * $c_u = \mathtt{b}$, $c_v = \mathtt{o}$, $c_w = \mathtt{b}$, $c_x = \mathtt{o}$.
@@ -30,6 +30,14 @@ For the following $m$ lines, the $i$-th line contains two integers $a_i$ and $b_
 
 ## Output
 
-For each test case, output an integer which denotes the result.
+For each test case, output an integer which denotes the number of ways.
 
 <!--SAMPLES-->
+
+## Note
+
+For the first test case, there are $2$ quadrangles $(1, 3, 4, 5)$, $(2, 3, 4, 5)$.
+
+For the second test case, there are $4$ quadrangles $(1, 2, 3, 4)$, $(1, 4, 3, 2)$, $(3, 2, 1, 4)$, $(3, 4, 2, 1)$.
+
+The the third test cases, there are no valid quadrangles.

@@ -6,7 +6,7 @@ timelimit: 1
 
 A sequence $a_1, \dots, a_m$ of distinct numbers is *without 231* if there is no triples $(i, j, k)$ where $1 \leq i < j < k \leq m$ and $a_k < a_i < a_j$.
 
-Bobo has a permutation $p_1, \dots, p_n$ of $1, \dots, n$, and he can remove some (possibly none, but not all) elements from the permutation. Find out the number of sequence without $231$ among $(2^n - 1)$ resulting permutations.
+Bobo has a permutation $p_1, \dots, p_n$ of $1, \dots, n$, and he can remove some (possibly none, but not all) elements from the permutation. Find out the number of sequences without $231$ among $(2^n - 1)$ resulting permutations.
 
 ## Input
 
@@ -22,6 +22,6 @@ The second line contains $n$ integers $p_1, \dots, p_n$.
 
 ## Output
 
-For each test cases, output an integer which denotes the result.
+For each test cases, output an integer which denotes the number of sequences.
 
 <!--SAMPLES-->

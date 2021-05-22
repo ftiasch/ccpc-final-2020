@@ -27,6 +27,6 @@ In the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_i
 
 ## Output
 
-For each pairs, print an integer which denotes the result.
+For each pairs, print an integer which denotes the value modulo $998244353$.
 
 <!--SAMPLES-->

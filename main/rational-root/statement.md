@@ -23,7 +23,7 @@ The first line contains three integers $n$, $m$ and $k$.
 
 ## Output
 
-For each test case, output an integer which denotes the answer.
+For each test case, output an integer which denotes the number of pairs.
 
 <!--SAMPLES-->
 

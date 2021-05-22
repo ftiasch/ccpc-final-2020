@@ -36,7 +36,7 @@ For the following $q$ lines, the $i$-th line contains two integers $l_i$, $r_i$.
 
 ## Output
 
-For each changes, output an integer which denotes the result.
+For each changes, output an integer which denotes the $f$-value modulo $998244353$.
 
 <!--SAMPLES-->
 

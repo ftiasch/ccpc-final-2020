@@ -38,6 +38,6 @@ For the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_
 
 ## Output
 
-For each question, output two integers which denotes the result.
+For each question, output two integers which denote the found $x$ and $y$.
 
 <!--SAMPLES-->

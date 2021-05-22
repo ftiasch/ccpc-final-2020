@@ -27,7 +27,7 @@ The first line contains an integer $n$.
 
 ## Output
 
-For each test case, output an integer which denotes the result.
+For each test case, output an integer which denotes the minimum value.
 
 <!--SAMPLES-->
 
