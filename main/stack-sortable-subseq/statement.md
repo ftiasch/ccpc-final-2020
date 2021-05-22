@@ -10,7 +10,7 @@ Bobo has a permutation $p_1, \dots, p_n$ of $1, \dots, n$, and he can remove som
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains an integer $n$.
 
@@ -22,6 +22,6 @@ The second line contains $n$ integers $p_1, \dots, p_n$.
 
 ## Output
 
-For each test cases, output an integer which denotes the number of sequences.
+For each test case, output an integer which denotes the number of sequences.
 
 <!--SAMPLES-->

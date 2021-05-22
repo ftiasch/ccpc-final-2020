@@ -14,7 +14,7 @@ Note that $x$ is a rational number if and only if there exists integers $p$ and 
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains three integers $n$, $m$ and $k$.
 

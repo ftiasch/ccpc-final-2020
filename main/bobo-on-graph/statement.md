@@ -13,7 +13,7 @@ Find out the number of ways to choose four **distinct** vertices $(u, v, w, x)$ 
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains two integers $n$ and $m$.
 
@@ -40,4 +40,4 @@ For the first test case, there are $2$ quadrangles $(1, 3, 4, 5)$, $(2, 3, 4, 5)
 
 For the second test case, there are $4$ quadrangles $(1, 2, 3, 4)$, $(1, 4, 3, 2)$, $(3, 2, 1, 4)$, $(3, 4, 2, 1)$.
 
-The the third test cases, there are no valid quadrangles.
+For the third test case, there are no valid quadrangles.

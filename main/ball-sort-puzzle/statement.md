@@ -25,7 +25,7 @@ Find a *valid* sorting plan such that after the execution each of the stacks eit
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains two integers $n$ and $m$.
 
@@ -41,7 +41,7 @@ For the next $m$ lines, the $i$-th line contains an integer $k_i$, and $k_i$ int
 
 For each test case, if there exists a *valid* sorting plan, output an integer $l$, which denotes the length of the sorting plan. Followed by $l$ lines, the $i$-th line contains two integers $f_i$ and $t_i$. Otherwise, output `-1`.
 
-If there are multiple *valid* sorting plan, any of them is considered correct.
+If there are multiple *valid* sorting plans, any of them is considered correct.
 
 <!--SAMPLES-->
 

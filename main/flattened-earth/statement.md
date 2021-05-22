@@ -15,7 +15,7 @@ $$
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains two integers $n$ and $m$.
 
@@ -35,7 +35,7 @@ For each test case, output an integer which denotes the minimum value.
 
 ## Note
 
-For the first case, 
+For the first case,
 
 | $i$  | $\delta_i(1, 2)$ | $\delta_i(2, 3)$ | $\delta_i(3, 2)$ |
 | ---- | ---------------- | ---------------- | ---------------- |

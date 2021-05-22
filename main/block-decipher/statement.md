@@ -17,7 +17,7 @@ It is guaranteed that for each $(a_i, b_i)$, there exists a unique pair $(x, y)$
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains two integers $m$ and $q$.
 

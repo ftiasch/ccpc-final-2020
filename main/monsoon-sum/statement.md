@@ -12,7 +12,7 @@ Bobo also has $q$ pairs $(a_1, b_1), \dots, (a_q, b_q)$. Find the value of $f_{n
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains four integers $n$, $x$, $y$ and $q$.
 
@@ -27,6 +27,6 @@ In the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_i
 
 ## Output
 
-For each pairs, print an integer which denotes the value modulo $998244353$.
+For each pair, print an integer which denotes the value modulo $998244353$.
 
 <!--SAMPLES-->

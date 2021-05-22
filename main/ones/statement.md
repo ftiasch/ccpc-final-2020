@@ -18,7 +18,7 @@ is minimized. Find the minimum value of $\sum_{i = 1}^{\infty} i \cdot |x_i|$.
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains an integer $n$.
 

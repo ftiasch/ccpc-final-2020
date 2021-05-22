@@ -17,7 +17,7 @@ Find an *almost monochromatic* permutation $p_1, \dots, p_n$ for the given matri
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains an integer $n$.
 

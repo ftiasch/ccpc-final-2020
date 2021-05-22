@@ -28,7 +28,7 @@ Given an axis-aligned tetrahedron $DABC$ and an axis-aligned cube $PQRSDEFG$, fi
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 There are $4$ lines, and the $i$-th line contains three integers $x_i$, $y_i$, and $z_i$.
 

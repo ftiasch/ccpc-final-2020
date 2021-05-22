@@ -15,7 +15,7 @@ Given two strings $s = s_1 \dots s_n$ and $t = t_1 \dots t_m$, let $f(i) = \math
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains a string $s_1 \dots s_n$.
 
@@ -28,13 +28,13 @@ The second line contains a string $t_1 \dots t_m$.
 
 ## Output
 
-For each test cases, print $n$ integers which denote $f(0), \dots, f(n - 1)$.
+For each test case, print $n$ integers which denote $f(0), \dots, f(n - 1)$.
 
 <!--SAMPLES-->
 
 ## Note
 
-For the second case, $f(4) = \mathrm{presuf}(s, \mathrm{pre}(s, 4) + t) = \mathrm{presuf}(\texttt{ababa}, \texttt{abab} + \texttt{a}) = \mathrm{presuf}(\texttt{ababa}, \texttt{ababa})$. 
+For the second case, $f(4) = \mathrm{presuf}(s, \mathrm{pre}(s, 4) + t) = \mathrm{presuf}(\texttt{ababa}, \texttt{abab} + \texttt{a}) = \mathrm{presuf}(\texttt{ababa}, \texttt{ababa})$.
 
 | $i$  | $\mathrm{pre}(\mathtt{ababa}, i)$ | $\mathrm{suf}(\mathtt{ababa}, i)$ |
 | ---- | --------------------------------- | --------------------------------- |
@@ -45,4 +45,3 @@ For the second case, $f(4) = \mathrm{presuf}(s, \mathrm{pre}(s, 4) + t) = \mathr
 | $4$  | $\mathtt{abab}$                   | $\mathtt{baba}$                   |
 
 Therefore, $f(4) = 3$.
-

@@ -10,7 +10,7 @@ If there are three points $A$, $B$ and $C$ which form a triangle $ABC$ with posi
 
 ## Input
 
-The input consists of several test cases terminated by end-of-file. For each test cases,
+The input consists of several test cases terminated by end-of-file. For each test case,
 
 The first line contains an integer $n$.
 
@@ -22,7 +22,7 @@ For the following $n$ lines, the $i$-th line contains two integers $x_i, y_i$.
 
 ## Output
 
-For each test cases, output an integer which denotes the minimum number of points left.
+For each test case, output an integer which denotes the minimum number of points left.
 
 <!--SAMPLES-->
 
