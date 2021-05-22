@@ -4,14 +4,14 @@ timelimit: 1
 
 # Almost Monochromatic Permutation
 
-Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a permutation $p_1, \dots, p_n$ of $1, \dots, n$, let
+Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a **permutation** $p_1, \dots, p_n$ of $1, \dots, n$, let
 $$
 c_i = \begin{cases}
 C_{p_i, p_{i + 1}} & \text{for } 1 \leq i < n \\
 C_{p_n, p_1} & \text{for } i = n \\
 \end{cases}
 $$
-The permutation $p$ is *almost monochromatic* if and only if the number of indices $i$ ($1 \leq i < n$) where $c_i \neq c_{i + 1}$ is at most one.
+The permutation $p$ is *almost monochromatic* if and only if the number of indices $i$ ($1 \leq i < n$) where $c_i \neq c_{i + 1}$ is **at most one**.
 
 Find an *almost monochromatic* permutation $p_1, \dots, p_n$ for the given matrix $C$.
 

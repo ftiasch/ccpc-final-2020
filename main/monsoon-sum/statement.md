@@ -8,7 +8,7 @@ Given $n$, $x$ and $y$, let $f_{n, x, y}(a, b)$ denote the value of
 $$
 \sum_{i = a}^{n - b} \binom{i}{a} x^{i - a} \binom{n - i}{b} y^{n - i - b}
 $$
-Bobo also has $q$ pairs $(a_1, b_1), \dots, (a_q, b_q)$. Find the value of $f_{n, x, y}(a_1, b_1), \dots, f_{n, x, y}(a_q, b_q)$ modulo $998244353$.
+Bobo also has $q$ pairs $(a_1, b_1), \dots, (a_q, b_q)$. Find the value of $f_{n, x, y}(a_1, b_1), \dots, f_{n, x, y}(a_q, b_q)$ **modulo** $998244353$.
 
 ## Input
 
