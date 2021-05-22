@@ -4,16 +4,16 @@ timelimit: 1
 
 # Cipher
 
-Bobo has three arrays $f$, $g$, $h$ of length $2^m$. Let $\mathrm{enc}(x, y) = (x'', y'')$ where
+Given three arrays $f$, $g$, $h$ of length $2^m$, Bobo defines $\mathrm{enc}(x, y) = (a, b)$ where
 
-* $x'' = y \oplus g[x \oplus f[y]]$
-* $y'' = x \oplus f[y] \oplus h[y \oplus g[x \oplus f[y]]]$.
+* $a = y \oplus g[x \oplus f[y]]$
+* $b = x \oplus f[y] \oplus h[y \oplus g[x \oplus f[y]]]$.
 
-Note that $\oplus$ denotes the bitwise exclusive-or (xor).
+He also has $q$ questions $(a_1, b_1), \dots, (a_q, b_q)$.
 
-Bobo also has $q$ questions $(a_1, b_1), \dots, (a_q, b_q)$. For each $(a_i, b_i)$, find a pair $(x, y)$ where $0 \leq x, y < 2^m$ and $\mathrm{enc}(x, y) = (a_i, b_i)$.
+For each $(a_i, b_i)$, find a pair $(x, y)$ where $0 \leq x, y < 2^m$ and $\mathrm{enc}(x, y) = (a_i, b_i)$. It is guaranteed that for each $(a_i, b_i)$, there exists a **unique** pair $(x, y)$ satisfying the condition.
 
-It is guaranteed that for each $(a_i, b_i)$, there exists a unique pair $(x, y)$ satisfying the condition.
+*Note*: $\oplus$ denotes the bitwise exclusive-or, i.e., xor.
 
 ## Input
 

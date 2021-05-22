@@ -6,7 +6,7 @@ timelimit: 1
 
 Bobo has an undirected graph with $n$ vertices and $m$ edges. The vertices are numbered by $1, \dots, n$, and the $i$-th edge is between the $a_i$-th and the $b_i$-th vertex. Plus, the $i$-th vertex is associated with a character $c_i$.
 
-Find out the number of ways to choose four **distinct** vertices $(u, v, w, x)$ such that
+Find the number of ways to choose four **distinct** vertices $(u, v, w, x)$ such that
 
 * $u$ and $v$, $v$ and $w$, $w$ and $x$ are connected by an edge,
 * $c_u = \mathtt{b}$, $c_v = \mathtt{o}$, $c_w = \mathtt{b}$, $c_x = \mathtt{o}$.
