@@ -38,6 +38,6 @@ For each test case, output an integer which denotes the number of ways.
 
 For the first test case, there are $2$ quadrangles $(1, 3, 4, 5)$, $(2, 3, 4, 5)$.
 
-For the second test case, there are $4$ quadrangles $(1, 2, 3, 4)$, $(1, 4, 3, 2)$, $(3, 2, 1, 4)$, $(3, 4, 2, 1)$.
+For the second test case, there are $4$ quadrangles $(1, 2, 3, 4)$, $(1, 4, 3, 2)$, $(3, 2, 1, 4)$, $(3, 4, 1, 2)$.
 
 For the third test case, there are no valid quadrangles.

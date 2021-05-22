@@ -29,7 +29,7 @@ For each test case, output an integer which denotes the number of pairs.
 
 ## Notes
 
-For the first test case, except for $p=-1$, all other equations have exactly $1$ rational root $-\frac{q}{p+1}$.
+For the first test case, except for $a=-1$, all other equations have exactly $1$ rational root $-\frac{b}{a+1}$.
 
 For the second test case, only equation $x^2=0$ has $1$ rational root $0$.
 
