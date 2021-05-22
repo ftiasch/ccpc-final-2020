@@ -31,8 +31,7 @@ For the following $q$ lines, the $i$-th line contains two integers $l_i$, $r_i$.
 * $1 \le q \le 2 \times 10^5$
 * $s_i \in \{0, 1\}$ for each $1 \leq i \leq n$
 * $1 \leq l_i \leq r_i \leq n$ for each $1 \leq i \leq q$
-* The sum of $n$ $\leq 2 \times 10^5$
-* The sum of $q$ $\leq 2 \times 10^5$
+* In each input, the sum of $n$ does not exceed $2 \times 10^5$. The sum of $q$ does not exceed $2 \times 10^5$.
 
 ## Output
 

@@ -24,7 +24,7 @@ The second line contains a string $t_1 \dots t_m$.
 * $1 \leq n, m \leq 10^6$
 * $s_i \in \{a, \dots, z\}$ for each $1 \leq i \leq n$
 * $t_i \in \{a, \dots, z\}$ for each $1 \leq i \leq m$
-* The sum of $\max(n, m)$ $\leq 10^6$.
+* In each input, the sum of $\max(n, m)$ $\leq 10^6$.
 
 ## Output
 

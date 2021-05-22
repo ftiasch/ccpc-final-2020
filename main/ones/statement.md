@@ -23,7 +23,7 @@ The input consists of several test cases terminated by end-of-file. For each tes
 The first line contains an integer $n$.
 
 * $1 \leq n < 10^{5000}$
-* The sum of decimal digits of $n$ $\leq 5000$
+* In each input, the sum of decimal digits of $n$ does not exceed $5000$.
 
 ## Output
 

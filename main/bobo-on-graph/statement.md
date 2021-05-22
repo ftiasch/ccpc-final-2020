@@ -27,6 +27,7 @@ For the following $m$ lines, the $i$-th line contains two integers $a_i$ and $b_
 * $1 \leq a_i, b_i \leq n$ for each $1 \leq i \leq m$
 * $a_i \neq b_i$ for each $1 \leq i \leq m$
 * $\{a_i, b_i\} \neq \{a_j, b_j\}$ for each $1 \leq i < j \leq m$
+* In each input, the sum of $n$ does not exceed $2 \times 10^5$. The sum of $m$ does not exceed $2 \times 10^5$.
 
 ## Output
 

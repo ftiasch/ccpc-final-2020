@@ -19,7 +19,7 @@ The input consists of several test cases terminated by end-of-file. For each tes
 The first line contains three integers $n$, $m$ and $k$.
 
 * $1 \leq n, m, k \leq 5 \times 10^5$
-* The sum of $m \leq 5 \times 10^5$
+* In each input, the sum of $m$ does not exceed $5 \times 10^5$.
 
 ## Output
 

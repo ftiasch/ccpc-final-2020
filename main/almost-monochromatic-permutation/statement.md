@@ -27,7 +27,7 @@ For the following $n$ lines, the $i$-th line contains $n$ integers $C_{i, 1}, \d
 * $C_{i, j} \in \{0, 1\}$ for each $1 \leq i, j \leq n$
 * $C_{i, j} = C_{j, i}$ for each $1 \leq i, j \leq n$
 * $C_{i, i} = 0$ for each $1 \leq i \leq n$
-* The sum of $n$ $\leq 2000$
+* In each input, the sum of $n$ does not exceed $2000$.
 
 ## Output
 

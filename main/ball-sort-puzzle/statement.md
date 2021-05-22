@@ -35,7 +35,7 @@ For the next $m$ lines, the $i$-th line contains an integer $k_i$, and $k_i$ int
 * $0 \leq k_i \leq 2$ for each $1 \leq i \leq m$
 * $k_1 + \dots + k_m = 2 n$
 * $1 \leq s[i][j] \leq n$ for each $1 \leq i \leq m$, $1 \leq j \leq k_i$
-* The sum of $m$ $\leq 2 \times 10^5$
+* In each input, the sum of $m$ does not exceed $2 \times 10^5$.
 
 ## Output
 

@@ -18,7 +18,7 @@ The second line contains $n$ integers $p_1, \dots, p_n$.
 
 * $1 \leq n \leq 50$
 * $1 \leq p_i \leq n$ for each $1 \leq i \leq n$
-* The sum of $n$ $\leq 50$
+* In each input, the sum of $n$ does not exceed $50$.
 
 ## Output
 
