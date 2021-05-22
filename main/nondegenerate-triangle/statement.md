@@ -18,6 +18,7 @@ For the following $n$ lines, the $i$-th line contains two integers $x_i, y_i$.
 
 * $1 \leq n \leq 2 \times 10^5$
 * $0 \leq x_i, y_i \leq 10^9$ for each $1 \leq i \leq n$
+* $(x_i, y_i) \neq (x_j, y_j)$ for each $1 \leq i < j \leq n$
 * In each input, the sum of $n$ does not exceed $2 \times 10^5$.
 
 ## Output
