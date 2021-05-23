@@ -18,6 +18,6 @@ The first line contains four integers $a$, $b$, $c$, $d$.
 
 ## Output
 
-For each test case, print an integer which denotes the result.
+For each test case, output an integer which denotes the result.
 
 <!--SAMPLES-->
