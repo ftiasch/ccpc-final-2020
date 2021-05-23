@@ -4,16 +4,17 @@ require_relative '../../common'
 
 sample '001.hand'
 
+test :random, T: 20_000, n: 10, m: 10
 test :random, T: 4000, n: 20, m: 50
 test :random, T: 1000, n: 100, m: 200
 test :random, T: 100, n: 1000, m: 2000
 test :random, T: 10, n: 10_000, m: 20_000
 test :random, T: 1, n: 100_000, m: 200_000
 test :random, T: 1, n: 200_000, m: 200_000
-test :random, T: 1, n: 1000, m: 200000
+test :random, T: 1, n: 1000, m: 200_000
 test :clustered, n: 2000, m: 200_000, w: 50
 test :clustered, n: 5000, m: 200_000, w: 500
-test :bipartite, n0: 10, n1: 200000 - 10, m: 200_000
+test :bipartite, n0: 10, n1: 200_000 - 10, m: 200_000
 
 add_target :solution_nero
 add_target :slow
