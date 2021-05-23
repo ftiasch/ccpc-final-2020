@@ -14,3 +14,4 @@ test :random, 1, 200_000, 200_000
 
 add_target :slow
 add_target :wrong
+add_target :solution_nero
