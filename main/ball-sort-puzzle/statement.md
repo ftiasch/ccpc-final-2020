@@ -4,10 +4,10 @@ timelimit: 1
 
 # Stack
 
-In compute science, a stack $s$ is a data structure maintaining a list of elements with two operations:
+In compute science, a stack $s$ is a data structure maintaining a list of elements $[e_1, \dots, e_k]$ with two operations:
 
-- $s.\mathtt{push}(e)$ which appends an element $e$ to the end of the list, and
-- $s.\mathtt{pop}()$ which removes the most recently appended element that was not yet removed.
+- $s.\mathtt{push}(e)$ appends an element $e$ to the end of the list. After the operation, the list becomes $[e_1, \dots, e_k, e]$.
+- $s.\mathtt{pop}()$ removes the element at the end of the list. 
 
 For convenience, Bobo denotes the number of elements in the stack by $s.\mathtt{size}$, and the last appended element by $s.\mathtt{top}$.
 

@@ -4,17 +4,12 @@ timelimit: 2
 
 # 1...1
 
-Let $o_i = \underbrace{1 \dots 1}_{i\text{ times}}$ be the number which consists of $i$ ones in the decimal representation.
+Let $o_i = \underbrace{1 \dots 1}_{i\text{ times}}$ be the number which consists of $i$ ones in its decimal representation.
 
-Bobo has an integer $n$. Let $(x_1, x_2, \dots, )$ be a sequence of (possibly negative) integers where
-$$
-n = \sum_{i = 1}^{\infty} o_i \cdot x_i
-$$
-and the value
-$$
-\sum_{i = 1}^{\infty} i \cdot |x_i|
-$$
-is minimized. Find the minimum value of $\sum_{i = 1}^{\infty} i \cdot |x_i|$.
+Bobo has an integer $n$. Find a sequence of possibly negative integers $(x_1, x_2, \dots, )$ where
+
+* $\sum_{i = 1}^{\infty} o_i \cdot x_i = n$, and
+* $\sum_{i = 1}^{\infty} i \cdot |x_i|$ is minimized.
 
 ## Input
 
@@ -27,7 +22,7 @@ The first line contains an integer $n$.
 
 ## Output
 
-For each test case, output an integer which denotes the minimum value.
+For each test case, output an integer which denotes the minimum value of $\sum_{i = 1}^\infty i \cdot |x_i|$.
 
 <!--SAMPLES-->
 

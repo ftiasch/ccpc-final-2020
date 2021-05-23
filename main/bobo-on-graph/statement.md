@@ -8,7 +8,7 @@ Bobo has an **undirected** graph with $n$ vertices and $m$ edges. The vertices a
 
 Find the number of ways to choose four **distinct** vertices $(u, v, w, x)$ such that
 
-* $u$ and $v$, $v$ and $w$, $w$ and $x$ are connected by an edge,
+* $u$ and $v$, $v$ and $w$, $w$ and $x$ are connected by an edge, and 
 * $c_u = \mathtt{b}$, $c_v = \mathtt{o}$, $c_w = \mathtt{b}$, $c_x = \mathtt{o}$.
 
 ## Input
