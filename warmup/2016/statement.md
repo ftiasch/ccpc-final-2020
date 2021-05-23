@@ -28,9 +28,8 @@ The third line contains two integers $a_{21}, a_{22}$.
 * $(a_{11} a_{22} - a_{12} a_{21}) \bmod 7 \neq 0$
 * In each input, the sum of the number of decimal digits of $n$ does not exceed $10^5$.
 
-* Output
+## Output
 
 For each test case, output a $2 \times 2$ matrix which denotes the result.
 
 <!--SAMPLES-->
-
