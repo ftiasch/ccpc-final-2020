@@ -7,3 +7,4 @@ sample '001.hand'
 test '002.hand'
 
 add_target :solution2
+add_target :solution_nero
