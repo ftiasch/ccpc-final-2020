@@ -6,6 +6,7 @@ sample '001.hand'
 
 Q = 100_000
 
+test :random, T: 50_000, m: 1, q: 2
 test :random, T: 16 * 16 * 16, m: 4, q: Q / (16 * 16 * 16)
 test :random, T: 16 * 16, m: 8, q: Q / (16 * 16)
 test :random, T: 16, m: 12, q: Q / 16
