@@ -4,7 +4,7 @@ timelimit: 1
 
 # 2020
 
-Bobo has a string $s_1 \dots s_n$ of length $n$ consisting of only digits $0$, $1$, and $2$, and he wants to pick some **disjoint** subsequences which equal to $2020$, as many as possible.
+Bobo has a string $s_1 \dots s_n$ of length $n$ consisting of only digits $0$, $1$, and $2$, and he wants to pick some **disjoint** **subsequences** which equal to $2020$, as many as possible.
 
 Formally, Bobo would like to find $k$ quadrangles $(a_1, b_1, c_1, d_1), \dots, (a_k, b_k, c_k, d_k)$ where
 

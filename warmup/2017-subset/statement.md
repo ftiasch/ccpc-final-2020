@@ -4,9 +4,9 @@ timelimit: 2
 
 # 2017
 
-Bobo has a set of $n$ integers $A=\{a_1, \dots, a_n\}$. Given an integer $r$, find the number of non-empty subsets of $A$ whose product's remainder divided by $2017$ is $r$.
+Bobo has a set of $n$ integers $A=\{a_1, \dots, a_n\}$. Given an integer $r$, find the number of **non-empty** subsets of $A$ whose product's remainder divided by $2017$ is $r$.
 
-As the exact number is large, find the number modulo $2$ instead.
+As the exact number is large, find the number **modulo** $2$ instead.
 
 ## Input
 

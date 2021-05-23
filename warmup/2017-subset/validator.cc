@@ -12,7 +12,7 @@ int main() {
     inf.readInts(n, 1, 2016, "a");
     inf.readEoln();
     ensuref((sum_n += n) <= 2000000, "sum of n exceeds");
-    ensuref((++ tests) <= 10000, "the number of test cases exceeds");
+    ensuref((++tests) <= 10000, "the number of test cases exceeds");
   }
   inf.readEof();
 }
