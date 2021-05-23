@@ -33,7 +33,7 @@ For the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_
 * $1 \leq q \leq 10^5$
 * $0 \leq f[i], g[i], h[i] < 2^m$ for each $0 \leq i < 2^m$
 * $0 \leq a_i, b_i < 2^m$ for each $1 \leq i \leq q$
-* In each input, the sum of $2^m$ does not exceed $10^5$. The sum of $q$ does not exceed $10^5$
+* In each input, the sum of $2^m$ does not exceed $10^5$. The sum of $q$ does not exceed $10^5$.
 
 ## Output
 
