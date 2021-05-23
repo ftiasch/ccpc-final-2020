@@ -9,3 +9,5 @@ test :random, T: 1000, n: 100
 test :random, T: 100, n: 1000
 test :random, T: 10, n: 10_000
 test :random, T: 1, n: 100_000
+
+add_target :solution_nero
