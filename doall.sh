@@ -63,6 +63,9 @@ done
 } >> $COVER_TOC
 
 cp $SCRIPT_DIR/{cover.tex,ccpc.png,bupt.png} $RELEASE
+if [[ $contest_name == "warmup" ]]; then
+  cat $SCRIPT_DIR/cover.tex | sed -e 's/30th/20th/g' -e 's/Contest Session/Practice Session/g' > $RELEASE/cover.tex
+fi
 (cd $RELEASE && xelatex cover.tex && find . -name cover\* -not -name cover.pdf -delete && rm -rf *.png)
 
 pandoc $STATEMENT --latex-engine=xelatex --template=$SCRIPT_DIR/template.tex -o"$RELEASE/statement.pdf" \
