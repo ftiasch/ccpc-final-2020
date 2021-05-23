@@ -4,7 +4,11 @@ timelimit: 1
 
 # 2019
 
-Given $a, b, c, d$, find the number of pairs of integers $(x, y)$ where $a \leq x \leq b, c \leq y \leq d$ and $(x \cdot y)$ is a multiple of $2019$.
+Given four integers $a, b, c, d$, find the number of pairs of integers $(x, y)$ where 
+
+* $a \leq x \leq b$
+* $c \leq y \leq d$
+* $(x \cdot y) \bmod 2019 = 0$.
 
 ## Input
 
