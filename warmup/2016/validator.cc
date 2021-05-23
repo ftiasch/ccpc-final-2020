@@ -3,6 +3,7 @@
 int main() {
   registerValidation();
   int sum_n = 0;
+  int tests = 0;
   while (!inf.eof()) {
     sum_n += inf.readToken("[1-9][0-9]{0, 99999}").size();
     inf.readEoln();
@@ -13,6 +14,7 @@ int main() {
     inf.readEoln();
     ensure((a11 * a22 - a12 * a21) % 7);
     ensuref(sum_n <= 100000, "the sum of the length of n exceeds");
+    ensuref((++tests) <= 10000, "the number of test cases exceeds");
   }
   inf.readEof();
 }
