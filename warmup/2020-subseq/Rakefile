@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+require_relative '../../common'
+
+sample '001.hand'
+
+test :random, 20000, 10, 0
+test :random, 2000, 100, 0
+test :random, 200, 1000, 0
+test :random, 20, 10000, 0
+test :random, 1, 200_000, 0
+test :random, 1, 200_000, 200_000
+
+add_target :slow
+add_target :wrong
