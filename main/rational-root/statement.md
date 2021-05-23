@@ -40,5 +40,5 @@ For the third test case, each of the following $7$ equations has two distinct ra
 * $x^2-x-2=0$
 * $x^2-1=0$
 * $x^2+x=0$
-* $x^2+2x=0$$x^2+x-2=0$.
-
+* $x^2+2x=0$
+* $x^2+x-2=0$
