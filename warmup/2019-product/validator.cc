@@ -16,6 +16,6 @@ int main() {
     inf.readInt(c, INF);
     inf.readEoln();
   }
-  ensure(tests <= 100000);
+  ensure(tests <= 200000);
   inf.readEof();
 }

@@ -14,7 +14,7 @@ The first line contains four integers $a$, $b$, $c$, $d$.
 
 * $1 \leq a \leq b \leq 10^9$
 * $1 \leq c \leq d \leq 10^9$
-* In each input, the number of tests cases does not exceed $10^5$.
+* In each input, the number of tests cases does not exceed $2 \times 10^5$.
 
 ## Output
 
