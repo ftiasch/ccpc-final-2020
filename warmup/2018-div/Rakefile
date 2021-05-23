@@ -8,3 +8,4 @@ test :grid, n: 100
 test :random, T: 200_000, n: 5000
 
 add_target :solution2
+add_target :solution_nero
