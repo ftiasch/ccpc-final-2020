@@ -19,7 +19,7 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 The first line contains two integers $n$ and $m$.
 
-* $1 \leq n \leq 5000$
+* $1 \leq n, m \leq 5000$
 * In each input, the number of test cases does not exceed $2 \times 10^5$.
 
 ## Output
