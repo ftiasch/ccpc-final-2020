@@ -74,4 +74,8 @@ fi
 pandoc $STATEMENT --latex-engine=xelatex --template=$SCRIPT_DIR/template.tex -o"$RELEASE/statement.pdf" \
 || pandoc $STATEMENT --pdf-engine=xelatex --template=$SCRIPT_DIR/template.tex -o"$RELEASE/statement.pdf"
 
+if command -v pdftk &> /dev/null; then
+  pdftk $RELEASE/cover.pdf $RELEASE/statement.pdf cat output $RELEASE/${contest_name}.$(git rev-parse --short HEAD).pdf
+fi
+
 cd -
