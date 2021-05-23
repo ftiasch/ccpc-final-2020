@@ -62,9 +62,12 @@ done
   echo '\\end{tabular}'
 } >> $COVER_TOC
 
-cp $SCRIPT_DIR/{cover.tex,ccpc.png,bupt.png} $RELEASE
+cp $SCRIPT_DIR/{ccpc.png,bupt.png} $RELEASE
+if [[ $contest_name == "main" ]]; then
+  cat $SCRIPT_DIR/cover.tex | sed -e "s/REVNUM/$(git rev-parse --short HEAD)/g" > $RELEASE/cover.tex
+fi
 if [[ $contest_name == "warmup" ]]; then
-  cat $SCRIPT_DIR/cover.tex | sed -e 's/30th/20th/g' -e 's/Contest Session/Practice Session/g' > $RELEASE/cover.tex
+  cat $SCRIPT_DIR/cover.tex | sed -e 's/30th/20th/g' -e 's/Contest Session/Practice Session/g' -e "s/REVNUM/$(git rev-parse --short HEAD)/g" > $RELEASE/cover.tex
 fi
 (cd $RELEASE && xelatex cover.tex && find . -name cover\* -not -name cover.pdf -delete && rm -rf *.png)
 
