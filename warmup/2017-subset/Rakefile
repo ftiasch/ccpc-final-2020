@@ -8,3 +8,4 @@ test :random, T: 20_000, n: 100
 test :random, T: 2000, n: 1000
 
 add_target :slow
+add_target :solution_nero
