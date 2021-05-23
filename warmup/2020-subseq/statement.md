@@ -10,7 +10,7 @@ Formally, Bobo would like to find $k$ quadrangles $(a_1, b_1, c_1, d_1), \dots, 
 
 * $1 \leq a_i < b_i < c_i < d_i \leq n$
 * $s_{a_i} s_{b_i} s_{c_i} s_{d_i} = 2020$
-* $\{a_i, b_i, c_i, d_i\} \cap \{a_j, b_j, c_j, d_j\} = \emptyset$ for $i \neq j$.
+* $\{a_i, b_i, c_i, d_i\} \cap \{a_j, b_j, c_j, d_j\} = \emptyset$ for each $1 \leq i < j \leq k$.
 
 Find the maximum value of $k$.
 
@@ -23,7 +23,7 @@ The first line contains an integer $n$.
 The second line contains a string $s_1 \dots s_n$.
 
 * $1 \leq n \leq 2 \times 10^5$
-* $s_i \in \{0, 1, 2\}$
+* $s_i \in \{0, 1, 2\}$ for each $1 \leq i \leq n$
 * In each input, the sum of $n$ does not exceed $2 \times 10^5$.
 
 ## Output
