@@ -4,7 +4,7 @@ require_relative '../../common'
 
 sample '001.hand'
 
-test :random, T: 20_000, n: 100
+test :random, T: 10_000, n: 200
 test :random, T: 2000, n: 1000
 
 add_target :slow

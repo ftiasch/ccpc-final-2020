@@ -19,7 +19,7 @@ The second line contains $n$ integers $a_1, a_2, \dots, a_n$.
 * $1 \leq n \leq 2\times 10^6$
 * $1 \leq r < 2017$
 * $1 \leq a_i < 2017$ for each $1 \leq i \leq n$
-* In each input, the sum of $n$ does not exceed $2 \times 10^6$.
+* In each input, the number of test cases does not exceed $10^4$. The sum of $n$ does not exceed $2 \times 10^6$.
 
 ## Output
 

@@ -4,6 +4,7 @@ require_relative '../../common'
 
 sample '001.hand'
 
+test :random, 200000, 1, 0
 test :random, 20000, 10, 0
 test :random, 2000, 100, 0
 test :random, 200, 1000, 0
