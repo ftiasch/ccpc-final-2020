@@ -4,22 +4,22 @@ timelimit: 1
 
 # Stack
 
-In compute science, a stack $s$ is a data structure maintaining a list of elements $[e_1, \dots, e_k]$ with two operations:
+In compute science, a stack $s$ is a data structure maintaining a list of elements with two operations:
 
-- $s.\mathtt{push}(e)$ appends an element $e$ to the end of the list. After the operation, the list becomes $[e_1, \dots, e_k, e]$.
-- $s.\mathtt{pop}()$ removes the element at the end of the list. 
+- $s.\mathtt{push}(e)$ appends an element $e$ to the right end of the list.
+- $s.\mathtt{pop}()$ removes the rightmost element in the list.
 
-For convenience, Bobo denotes the number of elements in the stack by $s.\mathtt{size}$, and the last appended element by $s.\mathtt{top}$.
+For convenience, Bobo denotes the number of elements in the stack by $\mathtt{size}(s)$, and the rightmost element by $\mathtt{right}(s)$.
 
-Bobo has $m$ stacks $s[1], \dots, s[m]$. Initially, the stack $s[i]$ contains $k_i$ elements $s[i][1], \dots, s[i][k_i]$. The elements in the stacks are from $\{1, \dots, n\}$, and each of the elements occurs **exactly twice**. Thus, $k_1 + \dots + k_m = 2 n$.
+Bobo has $m$ stacks $s_1, \dots, s_m$. Initially, the stack $s_i$ contains $k_i$ elements $a_{i, 1}, \dots, a_{i, k_i}$. The elements in the stacks are from $\{1, \dots, n\}$, and each of the elements occurs **exactly twice**. Thus, $k_1 + \dots + k_m = 2 n$.
 
 A sorting plan of length $l$ consists of $l$ pairs $(f_1, t_1), \dots, (f_l, t_l)$.  To execute a sorting plan, for each $i \in \{1, \dots ,l\}$ in the increasing order, Bobo ensures that
 
-* $s[f_i].\mathtt{size} > 0$
-* $s[t_i].\mathtt{size} < 2$
-* either $s[t_i].\mathtt{size} = 0$ or $s[f_i].\mathtt{top} = s[t_i].\mathtt{top}$,
+* $\mathtt{size}(s_{f_i}) > 0$
+* $\mathtt{size}(s_{t_i}) < 2$
+* either $\mathtt{size}(s_{t_i}) = 0$ or $\mathtt{right}(s_{f_i}) = \mathtt{right}(s_{t_i})$,
 
-and performs $s[t_i].\mathtt{push}(s[f_i].\mathtt{pop}())$. A sorting plan is *valid* if the above conditions always hold and the length does **not exceed** $2n$.
+and performs $s_{t_i}.\mathtt{push}(s_{f_i}.\mathtt{pop}())$. A sorting plan is *valid* if the above conditions always hold and the length does **not exceed** $2n$.
 
 Find a *valid* sorting plan such that after the execution each of the stacks either is empty or contains the two copies of the same element.
 
@@ -29,12 +29,12 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 The first line contains two integers $n$ and $m$.
 
-For the next $m$ lines, the $i$-th line contains an integer $k_i$, and $k_i$ integers $s[i][1], \dots, s[i][k_i]$.
+For the next $m$ lines, the $i$-th line contains an integer $k_i$, and $k_i$ integers $a_{i, 1}, \dots, a_{i, k_i}$.
 
 * $1 \le n \leq m \le 2 \times 10^5$
 * $0 \leq k_i \leq 2$ for each $1 \leq i \leq m$
 * $k_1 + \dots + k_m = 2 n$
-* $1 \leq s[i][j] \leq n$ for each $1 \leq i \leq m$, $1 \leq j \leq k_i$
+* $1 \leq a_{i, j} \leq n$ for each $1 \leq i \leq m$, $1 \leq j \leq k_i$
 * In each input, the sum of $m$ does not exceed $2 \times 10^5$.
 
 ## Output
@@ -49,9 +49,9 @@ If there are multiple *valid* sorting plans, any of them is considered correct.
 
 For the first test cases,
 
-* Initially, $s[1] = [1, 2]$, $s[2] = [1, 2]$, $s[3] = [\ ]$.
-* After $s[3].\mathtt{push}(s[1].\mathtt{pop}())$. $s[1] = [1]$, $s[2] = [1, 2]$, $s[3] = [2]$.
-* After $s[3].\mathtt{push}(s[2].\mathtt{pop}())$, $s[1] = [1]$, $s[2] = [1]$, $s[3] = [2, 2]$.
-* After $s[1].\mathtt{push}(s[2].\mathtt{pop}())$, $s[1] = [1, 1]$, $s[2] = [\ ]$, $s[3] = [2, 2]$.
+* Initially, $s_1 = [1, 2]$, $s_2 = [1, 2]$, $s_3 = [\ ]$.
+* After $s_3.\mathtt{push}(s_1.\mathtt{pop}())$. $s_1 = [1]$, $s_2 = [1, 2]$, $s_3 = [2]$.
+* After $s_3.\mathtt{push}(s_2.\mathtt{pop}())$, $s_1 = [1]$, $s_2 = [1]$, $s_3 = [2, 2]$.
+* After $s_1.\mathtt{push}(s_2.\mathtt{pop}())$, $s_1 = [1, 1]$, $s_2 = [\ ]$, $s_3 = [2, 2]$.
 
 For the second test case, the initial configuration is already sorted.
