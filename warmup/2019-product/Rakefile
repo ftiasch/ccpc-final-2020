@@ -8,3 +8,4 @@ test :gen, 200_000, 10**9
 
 add_target :slow
 add_target :bf
+add_target :solution_nero
