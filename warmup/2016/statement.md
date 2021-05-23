@@ -1,5 +1,5 @@
 ---
-timelimit: 1
+timelimit: 2
 ...
 
 # 2016
