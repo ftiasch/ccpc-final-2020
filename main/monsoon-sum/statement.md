@@ -18,7 +18,7 @@ The first line contains four integers $n$, $x$, $y$ and $q$.
 
 In the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_i$.
 
-* $1 \leq n \leq 10^9$
+* $2 \leq n \leq 10^9$
 * $0 \leq x, y < 998244353$
 * $1 \leq q \leq 2 \times 10^5$
 * $1 \leq a_i, b_i \leq 5000$ for each $1 \leq i \leq q$
@@ -27,6 +27,6 @@ In the following $q$ lines, the $i$-th line contains two integers $a_i$ and $b_i
 
 ## Output
 
-For each pair, print an integer which denotes the value modulo $998244353$.
+For each pair, output an integer which denotes the value modulo $998244353$.
 
 <!--SAMPLES-->

@@ -4,9 +4,9 @@ timelimit: 1
 
 # Triangle
 
-There are $n$ distinct points on a 2-dimension plane. The coordinates of the $i$-th point is $(x_i, y_i)$.
+There are $n$ **distinct** points on a 2-dimension plane. The coordinates of the $i$-th point is $(x_i, y_i)$.
 
-If there are three points $A$, $B$ and $C$ which form a triangle $ABC$ with **positive area**, Bobo can remove them simultaneously from the plane. Bobo can perform the operation for **any number of times**. Also, if there are multiple triangles with positive area, Bobo can remove any of them. Find out the minimum number of points left on the plane.
+If there are three points $A$, $B$ and $C$ which form a triangle $ABC$ with **positive area**, Bobo can remove them simultaneously from the plane. Also, if there are multiple triangles with positive area, Bobo can choose to remove any of them. Find the minimum number of points left on the plane if he can perform the operation for **any number of times**. 
 
 ## Input
 
@@ -14,7 +14,7 @@ The input consists of several test cases terminated by end-of-file. For each tes
 
 The first line contains an integer $n$.
 
-For the following $n$ lines, the $i$-th line contains two integers $x_i, y_i$.
+For the following $n$ lines, the $i$-th line contains two integers $x_i$ and $y_i$.
 
 * $1 \leq n \leq 2 \times 10^5$
 * $0 \leq x_i, y_i \leq 10^9$ for each $1 \leq i \leq n$

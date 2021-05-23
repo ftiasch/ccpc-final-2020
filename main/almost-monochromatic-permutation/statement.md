@@ -31,7 +31,7 @@ For the following $n$ lines, the $i$-th line contains $n$ integers $C_{i, 1}, \d
 
 ## Output
 
-For each test case, if there exists an *almost monochromatic* permutation, output $n$ integers $p_1, \dots, p_n$ which denotes the permutation. Otherwise, output `-1`.
+For each test case, if there exists an *almost monochromatic* permutation, output $n$ integers $p_1, \dots, p_n$ which denote the permutation. Otherwise, output `-1`.
 
 If there are multiple *almost monochromatic* permutations, any of them is considered correct.
 
