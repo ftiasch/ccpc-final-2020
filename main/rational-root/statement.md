@@ -6,8 +6,8 @@ timelimit: 3
 
 Given three integers $n$, $m$, $k$, find the number of pairs $(a, b)$ where
 
-* $a, b \in \mathbb{Z}$, i.e., $a$ and $b$ are integers, and
-* $|a|, |b| \leq m$, and
+* $|a|, |b| \leq m$
+* $a, b \in \mathbb{Z}$, i.e., $a$ and $b$ are integers.
 * $|S| = k$ where $S$ be the set of rational roots of the equation $x^n + a \cdot x + b = 0$. In particular, there exists exactly $k$ *distinct* *rational* numbers $x$ which solve the last equation.
 
 *Note*: $x$ is a rational number if and only if there exists two integers $p$ and $q$ ($q \neq 0$) where $x = \frac{p}{q}$.

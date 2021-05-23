@@ -10,7 +10,7 @@ Now, Bobo is going to choose an $i$ and remove the edge between the vertex $i$ a
 
 Formally, find the value of
 $$
-\min_{1 \leq i \leq n}\left\{\max_{1 \leq j \leq m} \delta_i(a_j, b_j)\right\}
+\min_{1 \leq i \leq n}\left\{\max_{1 \leq j \leq m} \delta_i(a_j, b_j)\right\}.
 $$
 
 ## Input

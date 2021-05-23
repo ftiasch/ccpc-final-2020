@@ -8,7 +8,7 @@ Let $o_i = \underbrace{1 \dots 1}_{i\text{ times}}$ be the number which consists
 
 Bobo has an integer $n$. Find a sequence of possibly negative integers $(x_1, x_2, \dots, )$ where
 
-* $\sum_{i = 1}^{\infty} o_i \cdot x_i = n$, and
+* $\sum_{i = 1}^{\infty} o_i \cdot x_i = n$
 * $\sum_{i = 1}^{\infty} i \cdot |x_i|$ is minimized.
 
 ## Input
