@@ -3,11 +3,16 @@
 int main(int argc, char *argv[]) {
   registerGen(argc, argv, 1);
   int T = opt<int>("T");
-  int n = opt<int>("n");
   int v = opt<int>("v");
   int tv = opt<int>("vt");
   bool colinear = opt<bool>("colinear");
   while (T--) {
+    int n;
+    if (has_opt("n")) {
+      n = opt<int>("n");
+    } else {
+      n = rnd.next(1, opt<int>("maxn"));
+    }
     std::set<std::pair<int, int>> points;
     {
       int count = rnd.next(colinear ? n - n / 3 + 1 : 0, n);
