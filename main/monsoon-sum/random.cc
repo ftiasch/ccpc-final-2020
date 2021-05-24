@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
     // int n = rnd.next(std::max(m, 2), v);
     int x = rnd.next(0, xy);
     int y = rnd.next(0, xy);
-    printf("%d %d %d %d\n", n, x, y, q);
+    printf("%d %d %d %d\n", rnd.next(1, n), x, y, q);
     for (int _ = 0; _ < q; ++_) {
       int a, b;
       do {
