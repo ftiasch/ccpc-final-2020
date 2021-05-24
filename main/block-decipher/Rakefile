@@ -4,7 +4,7 @@ require_relative '../../common'
 
 sample '001.hand'
 
-[8, 12, 16].each do |m|
+[1, 4, 8, 12, 16].each do |m|
   t = 100_000 / (2**m)
   test :random, T: t, m: m, q: 100_000 / t
 end
