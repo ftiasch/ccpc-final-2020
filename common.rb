@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'rbconfig'
 
 $sample_count = 0
 $test_count = 0
@@ -31,18 +32,24 @@ end
 
 def make_target(symbol)
   b, e = find(symbol)
+  is_windows = (RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/)
+  cpp = if is_windows
+          "c++"
+        else
+          "g++-10"
+        end
   case e
   when 'cc'
     target = "#{b}.exe"
     file target => "#{b}.cc" do
       sh "clang-format -i #{b}.cc || true"
-      sh "c++ -I../.. -Ofast -std=c++11 #{b}.cc -o#{b}.exe"
+      sh "#{cpp} -I../.. -Ofast -std=c++11 #{b}.cc -o#{b}.exe"
     end
   when 'cpp'
     target = "#{b}.exe"
     file target => "#{b}.cpp" do
       sh "clang-format -i #{b}.cpp || true"
-      sh "c++ -I../.. -Ofast -std=c++11 #{b}.cpp -o#{b}.exe"
+      sh "#{cpp} -I../.. -Ofast -std=c++11 #{b}.cpp -o#{b}.exe"
     end
   when 'java'
     target = "#{b}.class"
