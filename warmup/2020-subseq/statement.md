@@ -8,8 +8,8 @@ Bobo has a string $s_1 \dots s_n$ of length $n$ consisting of only digits $0$, $
 
 Formally, Bobo would like to find $k$ quadrangles $(a_1, b_1, c_1, d_1), \dots, (a_k, b_k, c_k, d_k)$ where
 
-* $1 \leq a_i < b_i < c_i < d_i \leq n$ for each $1 \leq i \leq k$
-* $s_{a_i} s_{b_i} s_{c_i} s_{d_i} = 2020$ for each $1 \leq i \leq k$
+* $1 \leq a_i < b_i < c_i < d_i \leq n$ for each $1 \leq i \leq k$,
+* $s_{a_i} s_{b_i} s_{c_i} s_{d_i} = 2020$ for each $1 \leq i \leq k$,
 * $\{a_i, b_i, c_i, d_i\} \cap \{a_j, b_j, c_j, d_j\} = \emptyset$ for each $1 \leq i < j \leq k$.
 
 Find the maximum value of $k$.
@@ -28,6 +28,6 @@ The second line contains a string $s_1 \dots s_n$.
 
 ## Output
 
-For each test case, output an integer which denotes the result.
+For each test case, output an integer which denotes the maximum.
 
 <!--SAMPLES-->

@@ -4,10 +4,10 @@ timelimit: 1
 
 # 2019
 
-Given four integers $a, b, c, d$, find the number of pairs of integers $(x, y)$ where 
+Given four integers $a, b, c, d$, find the number of pairs of **integers** $(x, y)$ where 
 
-* $a \leq x \leq b$
-* $c \leq y \leq d$
+* $a \leq x \leq b$,
+* $c \leq y \leq d$,
 * $(x \cdot y) \bmod 2019 = 0$.
 
 ## Input
@@ -22,7 +22,7 @@ The first line contains four integers $a$, $b$, $c$, $d$.
 
 ## Output
 
-For each test case, output an integer which denotes the result.
+For each test case, output an integer which denotes the number of pairs.
 
 <!--SAMPLES-->
 

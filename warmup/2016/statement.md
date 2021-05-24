@@ -11,7 +11,9 @@ A = \begin{pmatrix}
     a_{21} & a_{22} \\
 \end{pmatrix},
 $$
-find $A^n$ **modulo** $7$ where $A^1 = A, A^n = A \times A^{n - 1}$.
+find the value of $A^n$ **modulo** $7$.
+
+*Note*:  $A^1 = A, A^n = A \times A^{n - 1}$ for $n > 1$. $\times$ denotes normal matrix multiplication.
 
 ## Input
 
@@ -30,6 +32,6 @@ The third line contains two integers $a_{21}, a_{22}$.
 
 ## Output
 
-For each test case, output a $2 \times 2$ matrix which denotes the result.
+For each test case, output a $2 \times 2$ matrix which denotes the result matrix.
 
 <!--SAMPLES-->
