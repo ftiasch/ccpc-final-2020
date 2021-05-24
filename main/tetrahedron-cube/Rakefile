@@ -12,3 +12,4 @@ test :random, T: 100_000, m: 500
 add_target :approx
 add_target :check_approx
 add_target :solution_zimpha
+add_target :solution_sd_invol
