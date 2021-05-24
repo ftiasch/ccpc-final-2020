@@ -3,6 +3,7 @@
 int main(int argc, char *argv[]) {
   registerTestlibCmd(argc, argv);
   int cases = 0;
+  double max_ratio = 0.;
   while (!inf.seekEof()) {
     ++cases;
     int n = inf.readInt();
@@ -26,6 +27,7 @@ int main(int argc, char *argv[]) {
       if (out_cnt > 2 * n) {
         quitf(_wa, "Too many moves [Case %d]", cases);
       }
+      max_ratio = std::max(max_ratio, 1.0 * out_cnt / n);
       std::vector<std::pair<int, int>> moves;
       for (int i = 0; i < out_cnt; ++i) {
         int src = ouf.readInt();
@@ -63,5 +65,5 @@ int main(int argc, char *argv[]) {
       quitf(_wa, "Should find solution [Case %d]", cases);
     }
   }
-  quitf(_ok, "%d cases passed.", cases);
+  quitf(_ok, "%d cases passed. max #moves/#balls = %.9f", cases, max_ratio);
 }

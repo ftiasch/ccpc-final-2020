@@ -16,5 +16,6 @@ test :random, T: 10, n: (20_000 * 0.99).to_i, maxm: 20_000
 end
 test :random, T: 1, n: 200_000, maxm: 200_000
 
+add_target :small2
 add_target :very_slow
 add_target :solution_zimpha
