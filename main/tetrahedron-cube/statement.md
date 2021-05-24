@@ -4,8 +4,6 @@ timelimit: 1
 
 # 3D Geometry
 
-Bobo is learning 3-dimension Computational Geometry.
-
 An axis-aligned tetrahedron (also known as triangular pyramid) $DABC$ is a convex polyhedron in three dimension with vertices
 
 * $D: (x_1, y_1, z_1)$
