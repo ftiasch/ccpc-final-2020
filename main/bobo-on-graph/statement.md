@@ -21,7 +21,7 @@ The second line contains $n$ characters $c_1 \dots c_n$.
 
 For the following $m$ lines, the $i$-th line contains two integers $a_i$ and $b_i$.
 
-* $1 \le n \le 2 \times 10^5$
+* $4 \le n \le 2 \times 10^5$
 * $0 \le m \le 2 \times 10^5$
 * $c_i \in \{\mathtt{b}, \mathtt{o}\}$ for each $1 \leq i \leq n$
 * $1 \leq a_i, b_i \leq n$ for each $1 \leq i \leq m$

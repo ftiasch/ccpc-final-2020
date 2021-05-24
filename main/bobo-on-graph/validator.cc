@@ -5,7 +5,7 @@ int main() {
   int sum_n = 0;
   int sum_m = 0;
   while (!inf.eof()) {
-    int n = inf.readInt(1, 200000, "n");
+    int n = inf.readInt(4, 200000, "n");
     inf.readSpace();
     int m = inf.readInt(0, 200000, "m");
     inf.readEoln();
