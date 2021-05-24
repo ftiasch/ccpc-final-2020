@@ -9,7 +9,9 @@ test :random, T: 10_000, maxn: 20, v: 100_000, vt: 5000
 test :random, T: 1000, maxn: 200, v: 100_000, vt: 5000
 test :random, T: 100, maxn: 2_000, v: 100_000, vt: 5000
 test :random, T: 10, n: 20_000, v: 200_000, vt: 2500, colinear: true
-test :random, T: 1, n: 200_000, v: 200_000, vt: 2500, colinear: true
+10.times do
+  test :random, T: 1, n: 200_000, v: 200_000, vt: 2500, colinear: true
+end
 
 add_target :very_slow
 add_target :slow
