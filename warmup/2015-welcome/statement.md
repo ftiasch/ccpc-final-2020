@@ -13,7 +13,7 @@ The input consists of several test cases terminated by end-of-file. For each tes
 The first line contains an integer $n$.
 
 * $1 \leq n \leq 10^9$
-* In each input, the number of test cases does not exceed $10$.
+* In each input, the number of test cases does not exceed $100$.
 
 ## Output
 

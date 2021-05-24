@@ -4,7 +4,7 @@ require_relative '../../common'
 
 sample '001.hand'
 
-test '002.hand'
+test :random, T: 100
 
 add_target :solution2
 add_target :solution_nero

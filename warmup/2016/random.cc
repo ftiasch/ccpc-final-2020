@@ -15,9 +15,14 @@ int main(int argc, char *argv[]) {
     }
   }
   int T = opt<int>("T");
-  const int n = opt<int>("n");
   while (T--) {
-    printf("%s\n", rnd.next(format("[1-9][0-9]{0,%d}", n - 1)).c_str());
+    int n;
+    if (has_opt("n")) {
+      n = opt<int>("n");
+    } else {
+      n = rnd.next(1, opt<int>("maxn"));
+    }
+    printf("%s\n", rnd.next(format("[1-9][0-9]{%d}", n - 1)).c_str());
     auto a = rnd.any(candidates.begin(), candidates.end());
     for (int i = 0; i < 4; ++i) {
       printf("%d%c", a.at(i), " \n"[i & 1]);
