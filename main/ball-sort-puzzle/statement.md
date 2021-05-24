@@ -7,7 +7,7 @@ timelimit: 1
 In compute science, a stack $s$ is a data structure maintaining a list of elements with two operations:
 
 - $s.\mathtt{push}(e)$ appends an element $e$ to the right end of the list.
-- $s.\mathtt{pop}()$ removes the rightmost element in the list.
+- $s.\mathtt{pop}()$ removes the rightmost element in the list and returns the removed element.
 
 For convenience, Bobo denotes the number of elements in the stack by $\mathtt{size}(s)$, and the rightmost element by $\mathtt{right}(s)$.
 
