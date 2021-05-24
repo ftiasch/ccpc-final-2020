@@ -57,6 +57,9 @@ double F(double z) {
   }
 }
 double simpson(double a, double b) {
+  if (dcmp(a - b) == 0) {
+    return 0;
+  }
   double c = (a + b) * 0.5;
   return (F(a) + 4 * F(c) + F(b)) * (b - a) / 6;
 }
