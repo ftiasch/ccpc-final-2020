@@ -23,8 +23,11 @@ int main(int argc, char *argv[]) {
       }
     }
     int out_cnt = ouf.readInt();
-    if (~out_cnt) {
-      if (out_cnt > 2 * n) {
+    if (out_cnt != -1) {
+      if (out_cnt < -1) {
+        quitf(_wa, "Invalid number of moves [Case %d]", cases);
+      }
+      if (2 * out_cnt > 3 * n) {
         quitf(_wa, "Too many moves [Case %d]", cases);
       }
       max_ratio = std::max(max_ratio, 1.0 * out_cnt / n);
