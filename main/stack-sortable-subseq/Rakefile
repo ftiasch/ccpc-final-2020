@@ -3,6 +3,8 @@
 require_relative '../../common'
 
 sample '001.hand'
+
+test '002.hand'
 test :random, T: 10, n: 5
 test :random, T: 5, n: 10
 10.times do |w|

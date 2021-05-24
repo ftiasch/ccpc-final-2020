@@ -11,3 +11,4 @@ test :random, 10, 500
 10.times do
   test :random, 1, 5000
 end
+test '002.hand'

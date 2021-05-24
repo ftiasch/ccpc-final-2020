@@ -6,13 +6,15 @@ sample '001.hand'
 
 mod = 998_244_353 - 1
 
+test '002.hand'
+test '003.hand'
 test :random, T: 1000, n: 1_000_000_000, xy: 10, q: 200, m: 5
 test :random, T: 1000, n: 1_000_000_000, xy: 100, q: 200, m: 5
 test :random, T: 1000, n: 1_000_000_000, xy: mod, q: 200, m: 5
 test :random, T: 100, n: 1_000_000_000, xy: mod, q: 2000, m: 50
 test :random, T: 10,  n: 1_000_000_000, xy: mod, q: 20_000, m: 500
 10.times do
-  test :random, T: 1,   n: 1_000_000_000, xy: mod, q: 200_000, m: 5000
+  test :random, T: 1, n: 1_000_000_000, xy: mod, q: 200_000, m: 5000
 end
 
 add_target :slow

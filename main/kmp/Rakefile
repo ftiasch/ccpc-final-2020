@@ -3,6 +3,7 @@
 require_relative '../../common'
 
 sample '001.hand'
+test '002.hand'
 test :gen, 1, 10, 20, 0, 2
 test :gen, 1, 10, 20, 0, 26
 test :gen, 1, 100, 200, 0, 2
