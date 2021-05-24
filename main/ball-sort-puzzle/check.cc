@@ -22,36 +22,25 @@ int main(int argc, char *argv[]) {
         ans.readInt();
       }
     }
-    int out_cnt = ouf.readInt();
+    int out_cnt = ouf.readInt(-1, 2 * n);
     if (out_cnt != -1) {
-      if (out_cnt < -1) {
-        quitf(_wa, "Invalid number of moves [Case %d]", cases);
-      }
       if (2 * out_cnt > 3 * n) {
         quitf(_wa, "Too many moves [Case %d]", cases);
       }
-      max_ratio = std::max(max_ratio, 1.0 * out_cnt / n);
-      std::vector<std::pair<int, int>> moves;
       for (int i = 0; i < out_cnt; ++i) {
-        int src = ouf.readInt();
-        int dst = ouf.readInt();
-        moves.emplace_back(src, dst);
-      }
-      for (int i = 0; i < out_cnt; ++i) {
-        int src = moves[i].first - 1;
-        int dst = moves[i].second - 1;
-        if (src < 0 || src >= m) {
-          quitf(_wa, "Invalid source [Case %d, Move %d]", cases, i + 1);
-        } else if (dst < 0 || dst >= m) {
-          quitf(_wa, "Invalid destination [Case %d, Move %d]", cases, i + 1);
-        } else if (s[src].empty()) {
+        int src = ouf.readInt(1, m) - 1;
+        int dst = ouf.readInt(1, m) - 1;
+        if (s[src].empty()) {
           quitf(_wa, "Empty source stack [Case %d, Move %d]", cases, i + 1);
-        } else if (static_cast<int>(s[dst].size()) == 2) {
+        }
+        if (static_cast<int>(s[dst].size()) == 2) {
           quitf(_wa, "Full destination stack [Case %d, Move %d]", cases, i + 1);
-        } else if (src == dst) {
+        }
+        if (src == dst) {
           quitf(_wa, "src == dst [Case %d, Move %d]", cases, i + 1);
-        } else if (static_cast<int>(s[dst].size()) == 1 &&
-                   s[src].back() != s[dst].back()) {
+        }
+        if (static_cast<int>(s[dst].size()) == 1 &&
+            s[src].back() != s[dst].back()) {
           quitf(_wa, "src.top() != dst.top() [Case %d, Move %d]", cases, i + 1);
         }
         s[dst].push_back(s[src].back());
@@ -64,6 +53,7 @@ int main(int argc, char *argv[]) {
           quitf(_wa, "stack[0] != stack[1] [Case %d, Stack %d]", cases, i + 1);
         }
       }
+      max_ratio = std::max(max_ratio, 1.0 * out_cnt / n);
     } else if (~ans_cnt) {
       quitf(_wa, "Should find solution [Case %d]", cases);
     }
