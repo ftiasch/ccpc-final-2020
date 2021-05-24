@@ -2,7 +2,7 @@
 timelimit: 1
 ...
 
-# Sum
+# Nonsense
 
 Given $n$, $x$ and $y$, let $f_{n, x, y}(a, b)$ denote the value of
 $$

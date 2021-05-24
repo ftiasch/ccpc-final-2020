@@ -2,7 +2,7 @@
 timelimit: 2
 ...
 
-# 1...1
+# Number Theory
 
 Let $o_i = \underbrace{1 \dots 1}_{i\text{ times}}$ be the number which consists of $i$ ones in its decimal representation.
 

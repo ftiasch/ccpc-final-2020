@@ -2,11 +2,11 @@
 timelimit: 1
 ...
 
-# Triangle
+# 2D Geometry
 
 There are $n$ **distinct** points on a 2-dimension plane. The coordinates of the $i$-th point is $(x_i, y_i)$.
 
-If there are three points $A$, $B$ and $C$ which form a triangle $ABC$ with **positive area**, Bobo can remove them simultaneously from the plane. Also, if there are multiple triangles with positive area, Bobo can choose to remove any of them. Find the minimum number of points left on the plane if he can perform the operation for **any number of times**. 
+If there are three points $A$, $B$ and $C$ which form a triangle $ABC$ with **positive area**, Bobo can remove them simultaneously from the plane. Also, if there are multiple triangles with positive area, Bobo can choose to remove any of them. Find the minimum number of points left on the plane if he can perform the operation for **any number of times**.
 
 ## Input
 

@@ -2,7 +2,7 @@
 timelimit: 1
 ...
 
-# How many Bobo(s)?
+# Autobiography
 
 Bobo has an **undirected** graph with $n$ vertices and $m$ edges. The vertices are numbered by $1, \dots, n$, and the $i$-th edge is between the $a_i$-th and the $b_i$-th vertex. Plus, the $i$-th vertex is associated with a character $c_i$.
 

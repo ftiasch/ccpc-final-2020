@@ -2,7 +2,7 @@
 timelimit: 3
 ...
 
-# Rational Root
+# Algebra
 
 Given three integers $n$, $m$, $k$, find the number of pairs $(a, b)$ where
 

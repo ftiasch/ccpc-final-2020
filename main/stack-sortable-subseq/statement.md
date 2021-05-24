@@ -2,7 +2,7 @@
 timelimit: 1
 ...
 
-# Without 231
+# Permutation Pattern
 
 A sequence $a_1, \dots, a_m$ of $m$ distinct numbers is called *without 231* if there is **no** triples $(i, j, k)$ where $1 \leq i < j < k \leq m$ and $a_k < a_i < a_j$.
 

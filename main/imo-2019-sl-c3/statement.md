@@ -2,13 +2,13 @@
 timelimit: 1
 ...
 
-# When does it end?
+# Game Theory
 
-For a string $s_1\dots s_n$ of bits (i.e., zeros and ones), Bobo computes the $f$-value of $s_1\dots s_n$ by the following procedure:
+For a string $s_1\dots s_n$ of bits (i.e., zeros and ones), Bobo computes the $f$-value of $s_1\dots s_n$ by playing the following game.
 
-* If all the bits are zero, the procedure ends.
+* If all the bits are zero, the game ends.
 * If there are $k$ ones in the bit string, Bobo flips the $k$-th bit, i.e., $s_k$.
-* The $f$-value of the bit string is the number of flips Bobo has performed before the procedure ends.
+* The $f$-value of the bit string is the number of flips Bobo has performed before the game ends.
 
 Formally,
 

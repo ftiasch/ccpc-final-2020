@@ -2,7 +2,7 @@
 timelimit: 1
 ...
 
-# Cipher
+# Cryptography
 
 Given three arrays $f$, $g$, $h$ of length $2^m$, Bobo defines $\mathrm{enc}(x, y) = (a, b)$ where
 

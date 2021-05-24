@@ -2,7 +2,7 @@
 timelimit: 1
 ...
 
-# Almost Monochromatic Permutation
+# Hamilton
 
 Bobo has an $n \times n$ symmetric matrix $C$ consisting of zeros and ones. For a **permutation** $p_1, \dots, p_n$ of $1, \dots, n$, let
 $$
