@@ -9,8 +9,10 @@ test :random, T: 10_000, maxn: 20, w: 0
 test :random, T: 1000, maxn: 200, w: 0
 test :random, T: 100, maxn: 2000, w: 0
 test :random, T: 10, n: 20_000, w: 0
-test :random, T: 1, n: 200_000, w: 0
-test :random, T: 1, n: 200_000, w: 200_000
+5.times do
+  test :random, T: 1, n: 200_000, w: 0
+  test :random, T: 1, n: 200_000, w: 200_000
+end
 
 add_target :slow
 add_target :wrong

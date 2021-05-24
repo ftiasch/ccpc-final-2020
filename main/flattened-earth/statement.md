@@ -21,7 +21,7 @@ The first line contains two integers $n$ and $m$.
 
 For the following $m$ lines, the $i$-th line contains two integers $a_i$ and $b_i$.
 
-* $1 \leq n \leq 2 \times 10^5$
+* $2 \leq n \leq 2 \times 10^5$
 * $1 \leq m \leq 2 \times 10^5$
 * $1 \leq a_i, b_i \leq n$ for each $1 \leq i \leq m$
 * In each input, the sum of $n$ does not exeed $2 \times 10^5$. The sum of $m$ does not exceed $2 \times 10^5$.
