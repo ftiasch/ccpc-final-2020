@@ -27,3 +27,4 @@ test :gen, 2000, 2000, 1
 test :gen, 2000, 2000, 2
 
 add_target :solution_nero
+add_target :solution_sd_invol
