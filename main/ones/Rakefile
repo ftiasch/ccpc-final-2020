@@ -4,11 +4,13 @@ require_relative '../../common'
 
 sample '001.hand'
 
-test :sequence, 1000
-test :random, 1000, 5
-test :random, 100, 50
-test :random, 10, 500
-10.times do
-  test :random, 1, 5000
-end
-test '002.hand'
+test :sequence, 10000
+test :random, T: 10000, n: 5
+test :random, T: 1000, maxn: 50
+test :random, T: 100, maxn: 500
+# test :random_delta, 10, 5000
+test :random, T: 10, n: 5000
+test :nine, n: 5000
+
+add_target :wrong
+add_target :solution_zimpha
