@@ -7,7 +7,7 @@ int main() {
     std::string s = inf.readToken("[0-9]{1,5000}");
     inf.readEoln();
     ensure(s[0] != '0');
-    ensure((sum_length += s.length()) <= 5000);
+    ensure((sum_length += s.length()) <= 50000);
   }
   inf.readEof();
 }
