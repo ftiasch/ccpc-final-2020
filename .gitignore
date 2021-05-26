@@ -10,3 +10,4 @@ release/
 samples/
 tests/
 *.swp
+.vscode/

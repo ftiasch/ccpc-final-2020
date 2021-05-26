@@ -19,3 +19,4 @@ test :random, T: 1, n: 200_000, maxm: 200_000
 add_target :small2
 add_target :very_slow
 add_target :wrong_zimpha
+add_target :wrong_sd_invol
