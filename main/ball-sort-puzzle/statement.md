@@ -13,13 +13,15 @@ For convenience, Bobo denotes the number of elements in the stack by $\mathtt{si
 
 Bobo has $m$ stacks $s_1, \dots, s_m$. Initially, the stack $s_i$ contains $k_i$ elements $a_{i, 1}, \dots, a_{i, k_i}$. The elements in the stacks are from $\{1, \dots, n\}$, and each of the elements occurs **exactly twice**. Thus, $k_1 + \dots + k_m = 2 n$.
 
-A sorting plan of length $l$ consists of $l$ pairs $(f_1, t_1), \dots, (f_l, t_l)$.  To execute a sorting plan, for each $i \in \{1, \dots ,l\}$ in the increasing order, Bobo ensures that
+A sorting plan of length $l$ consists of $l$ pairs $(f_1, t_1), \dots, (f_l, t_l)$.  To execute a sorting plan, for each $i \in \{1, \dots ,l\}$ in the increasing order, Bobo performs $s_{t_i}.\mathtt{push}(s_{f_i}.\mathtt{pop}())$.
+
+A sorting plan is *valid* if before the $i$-th operation,
 
 * $\mathtt{size}(s_{f_i}) > 0$
 * $\mathtt{size}(s_{t_i}) < 2$
 * either $\mathtt{size}(s_{t_i}) = 0$ or $\mathtt{right}(s_{f_i}) = \mathtt{right}(s_{t_i})$,
 
-and performs $s_{t_i}.\mathtt{push}(s_{f_i}.\mathtt{pop}())$. A sorting plan is *valid* if the above conditions always hold and the length does **not exceed** $\lfloor \frac{3n}{2} \rfloor$.
+and the length does **not exceed** $\lfloor \frac{3n}{2} \rfloor$.
 
 Find a *valid* sorting plan such that after the execution each of the stacks either is empty or contains the two copies of the same element.
 
