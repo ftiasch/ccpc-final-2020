@@ -5,16 +5,20 @@ require_relative '../../common'
 sample '001.hand'
 
 test '002.hand'
-test :random, T: 10, n: 5
-10.times do
-  test :random, T: 5, n: 10
+test :random, T: 100, n: 5
+test :perm, n: 4, offset: 0, count: 24
+test :perm, n: 5, offset: 0, count: 100
+test :perm, n: 5, offset: 100, count: 100
+6.upto(10) do |n|
+  test :random, T: 500 / n, n: n
 end
-test :random, T: 5, maxn: 10
+test :random, T: 50, maxn: 10
 10.times do |w|
-  test :long, T: 1, n: 50, w: w + 1
+  test :long, T: 10, n: 50, w: w + 1
 end
-test :random, T: 1, n: 50
+test :random, T: 10, n: 50
 test :random, T: 1, n: 50, id: true
 
 add_target :slow
 add_target 'slow_231'.to_sym
+add_target :solution_leg

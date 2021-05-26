@@ -11,7 +11,7 @@ int main() {
     std::sort(p.begin(), p.end());
     ensuref(std::unique(p.begin(), p.end()) == p.end(),
             "p is not a permutation");
-    ensuref((sum_n += n) <= 50, "sum of n exceeds");
+    ensuref((sum_n += n) <= 500, "sum of n exceeds");
   }
   inf.readEof();
 }
