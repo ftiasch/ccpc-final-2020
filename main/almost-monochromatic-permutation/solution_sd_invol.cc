@@ -29,9 +29,9 @@ void work() {
       assert(g[cur][nxt] == '1');
       int mask =
           (g[x][pre] - '0') << 2 | (g[x][cur] - '0') << 1 | (g[x][nxt] - '0');
-      if ((~mask & 4) || mask == 6) {  // 0?? or 110
+      if ((~mask & 4) || mask == 6) { // 0?? or 110
         loop.emplace_back(x);
-      } else if ((mask & 1) || mask == 4) {  // ??1 or 100
+      } else if ((mask & 1) || mask == 4) { // ??1 or 100
         loop.insert(loop.begin() + 1, x);
       } else {
         assert(0);
