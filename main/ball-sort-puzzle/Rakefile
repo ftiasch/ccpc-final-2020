@@ -7,7 +7,9 @@ sample '001.hand'
 1.upto(5) do |n|
   test :small, n: n
 end
-test :random, T: 10_000, n: 17, maxm: 20
+6.upto(20) do |n|
+  test :random2, T: 200_000 / (2 * n + 2), n: n, maxm: 2 * n + 2
+end
 test :random, T: 1000, n: (200 * 0.99).to_i, maxm: 200
 test :random, T: 100, n: (2000 * 0.99).to_i, maxm: 2000
 test :random, T: 10, n: (20_000 * 0.99).to_i, maxm: 20_000
@@ -16,6 +18,5 @@ test :random, T: 10, n: (20_000 * 0.99).to_i, maxm: 20_000
 end
 test :random, T: 1, n: 200_000, maxm: 200_000
 
-add_target :small2
 add_target :very_slow
 add_target :wrong_zimpha
