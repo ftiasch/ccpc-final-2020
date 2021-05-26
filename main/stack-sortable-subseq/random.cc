@@ -5,8 +5,8 @@
 int main(int argc, char *argv[]) {
   registerGen(argc, argv, 1);
   int T = opt<int>("T");
-  int n = opt<int>("n");
   while (T--) {
+    const int n = has_opt("n") ? opt<int>("n") : rnd.next(1, opt<int>("maxn"));
     printf("%d\n", n);
     std::vector<int> p(n);
     if (has_opt("id")) {

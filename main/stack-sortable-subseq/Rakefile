@@ -6,7 +6,10 @@ sample '001.hand'
 
 test '002.hand'
 test :random, T: 10, n: 5
-test :random, T: 5, n: 10
+10.times do
+  test :random, T: 5, n: 10
+end
+test :random, T: 5, maxn: 10
 10.times do |w|
   test :long, T: 1, n: 50, w: w + 1
 end

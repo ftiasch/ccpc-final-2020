@@ -3,6 +3,8 @@
 int main() {
   registerValidation();
 
+  int sum_n = 0;
+  int sum_q = 0;
   while (!inf.eof()) {
     int n = inf.readInt(1, 200000, "n");
     inf.readSpace();
@@ -16,6 +18,8 @@ int main() {
       inf.readInt(l, n, format("r[%d]", i + 1));
       inf.readEoln();
     }
+    ensuref((sum_n += n) <= 200000, "the sum of n exceeds");
+    ensuref((sum_q += q) <= 200000, "the sum of q exceeds");
   }
 
   inf.readEof();
