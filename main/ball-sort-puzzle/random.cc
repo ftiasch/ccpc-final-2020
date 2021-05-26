@@ -5,15 +5,15 @@ int main(int argc, char *argv[]) {
   int T = opt<int>("T");
   const int n = opt<int>("n");
   while (T--) {
-    const int m = has_opt("m") ? opt<int>("m") : rnd.next(n, opt<int>("maxm"));
+    const int m = rnd.next(n + 2, opt<int>("maxm"));
     std::vector<int> ball_order(n << 1);
     for (int i = 0; i < n << 1; ++i) {
       ball_order[i] = (i >> 1) + 1;
     }
     shuffle(ball_order.begin(), ball_order.end());
-    std::vector<int> stack_order(m << 1);
-    for (int i = 0; i < m << 1; ++i) {
-      stack_order[i] = (i >> 1);
+    std::vector<int> stack_order;
+    for (int i = 0; i < (m - 2) << 1; ++i) {
+      stack_order.push_back(i >> 1);
     }
     shuffle(stack_order.begin(), stack_order.end());
     std::vector<std::vector<int>> s(m);

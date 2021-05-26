@@ -12,11 +12,13 @@ end
 end
 test :random2, T: 1000, maxn: 100, maxm: 200
 test :random2, T: 100, maxn: 1000, maxm: 2000
-9.times do
-  test :random2, T: 1, n: 100_000, maxm: 200_000
+[10, 100, 1000, 10000, 100000].each do |d|
+  test :random, T: 1, n: 200_000 - d, maxm: 200_000
 end
-test :random2, T: 1, n: 200_000, maxm: 200_000
+test :random, T: 1, n: 200_000 - 2, maxm: 200_000
 
 add_target :very_slow
 add_target :wrong_zimpha
 add_target :wrong_sd_invol
+
+add_target :check_component
