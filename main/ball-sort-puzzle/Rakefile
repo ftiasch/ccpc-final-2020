@@ -10,13 +10,12 @@ end
 6.upto(20) do |n|
   test :random2, T: 200_000 / (2 * n + 2), n: n, maxm: 2 * n + 2
 end
-test :random, T: 1000, n: (200 * 0.99).to_i, maxm: 200
-test :random, T: 100, n: (2000 * 0.99).to_i, maxm: 2000
-test :random, T: 10, n: (20_000 * 0.99).to_i, maxm: 20_000
+test :random2, T: 1000, maxn: 100, maxm: 200
+test :random2, T: 100, maxn: 1000, maxm: 2000
 9.times do
-  test :random, T: 1, n: 100_000, maxm: 200_000
+  test :random2, T: 1, n: 100_000, maxm: 200_000
 end
-test :random, T: 1, n: 200_000, maxm: 200_000
+test :random2, T: 1, n: 200_000, maxm: 200_000
 
 add_target :very_slow
 add_target :wrong_zimpha
