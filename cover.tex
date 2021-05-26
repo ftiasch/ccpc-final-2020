@@ -11,6 +11,18 @@
 \usepackage{amsmath}
 \usepackage{float,booktabs}
 
+\usepackage{scrlayer}
+\DeclareNewLayer[
+    foreground,
+    %textarea,% use only the textarea
+    contents={%
+      \parbox[b][\layerheight][c]{\layerwidth}
+        {\centering The page
+          intentionally is left blank.}%
+    }
+  ]{blankpage.fg}
+\DeclarePageStyleByLayers{blank}{blankpage.fg}
+
 \begin{document}
 \title{title}
 \author{author}
@@ -43,13 +55,15 @@
 
   \vspace{10mm}
 
-  \centering{
-    {\large{Beijing University of Posts and Telecommuncations\\  May 30th}}\\
-    {\small{Revision \texttt{REVNUM}}}
-  }
+  \begin{figure*}[b]
+    \centering{
+      {\large{Beijing University of Posts and Telecommuncations\\  May 30th}}\\
+      {\small{Revision \texttt{REVNUM}}}
+    }
+  \end{figure*}
 
 \end{titlepage}
 
-\newpage\null\thispagestyle{empty}\newpage
+\newpage\null\thispagestyle{blank}\newpage
 
 \end{document}
