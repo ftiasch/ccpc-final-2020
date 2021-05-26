@@ -16,5 +16,6 @@ test :random, T: 1, n: 200_000, m: 200_000, maxlen: 20_000
 test :random, T: 1, n: 200_000, m: 200_000
 
 add_target :slow
+add_target :wrong
 add_target :solution_ftiasch
 add_target :solution_ftiasch_linear
