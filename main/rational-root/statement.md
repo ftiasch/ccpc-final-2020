@@ -29,11 +29,9 @@ For each test case, output an integer which denotes the number of pairs.
 
 ## Note
 
-For the first test case, except for $a=-1$, all other equations have exactly one rational root $-\frac{b}{a+1}$.
+For the first test case, only the equation $x^2=0$ has one rational root.
 
-For the second test case, only the equation $x^2=0$ has one rational root.
-
-For the third test case, each of the following $7$ equations has two distinct rational roots.
+For the second test case, each of the following $7$ equations has two distinct rational roots.
 
 * $x^2-2x=0$
 * $x^2-x=0$
