@@ -26,5 +26,6 @@ test :gen, 4, 4, 499_999, 500_000, 3
 test :gen, 500_000, 500_000, 499_999, 500_000, 2
 test :gen, 500_000, 500_000, 499_999, 500_000, 3
 
+add_target :very_slow
 add_target :slow
 add_target :solution_nero
