@@ -45,7 +45,7 @@ If there are multiple *valid* sorting plans, any of them is considered correct.
 
 <!--SAMPLES-->
 
-## Notes
+## Note
 
 For the first test cases,
 

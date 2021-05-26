@@ -27,7 +27,7 @@ For each test case, output an integer which denotes the number of pairs.
 
 <!--SAMPLES-->
 
-## Notes
+## Note
 
 For the first test case, except for $a=-1$, all other equations have exactly one rational root $-\frac{b}{a+1}$.
 

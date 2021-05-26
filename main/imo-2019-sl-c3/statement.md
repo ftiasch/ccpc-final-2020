@@ -39,6 +39,6 @@ For each change, output an integer which denotes the $f$-value modulo $998244353
 
 <!--SAMPLES-->
 
-## Notes
+## Note
 
 For the first test case, the string becomes `100` after the first change. $f(\texttt{100}) = f(\texttt{000}) + 1 = 1$. And it becomes `111` after the second change. $f(\texttt{111}) = f(\texttt{110}) + 1 = f(\texttt{100}) + 2 = f(\texttt{000}) + 3 = 3$.
