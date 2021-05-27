@@ -12,7 +12,9 @@ test :random, T: 10, n: 20_000, m: 20_000
 test :random, T: 1, n: 200_000, m: 200_000
 test :clustered, n: 2000, m: 200_000, w: 50
 test :clustered, n: 5000, m: 200_000, w: 500
-test :bipartite, n0: 10, n1: 200_000 - 10, m: 200_000
+[5, 10, 20, 50, 100].each do |n0|
+  test :bipartite, n0: n0, n1: 200_000 / n0, m: 200_000
+end
 test :bipartite, n0: 500, n1: 500, m: 200_000
 
 add_target :solution_nero
