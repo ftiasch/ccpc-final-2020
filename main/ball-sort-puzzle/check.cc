@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     }
     int out_cnt = ouf.readInt(-1, 2 * n);
     if (out_cnt != -1) {
-      if (2 * out_cnt > 3 * n) {
+      if (out_cnt > 3 * n / 2) {
         quitf(_wa, "Too many moves [Case %d]", cases);
       }
       for (int i = 0; i < out_cnt; ++i) {

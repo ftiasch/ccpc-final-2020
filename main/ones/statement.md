@@ -8,7 +8,7 @@ Let $o_i = \underbrace{1 \dots 1}_{i\text{ times}}$ be the number which consists
 
 Bobo has an integer $n$. Find a sequence of possibly negative integers $(x_1, x_2, \dots, )$ where
 
-* $\sum_{i = 1}^{\infty} o_i \cdot x_i = n$
+* $\sum_{i = 1}^{\infty} o_i \cdot x_i = n$,
 * $\sum_{i = 1}^{\infty} i \cdot |x_i|$ is minimized.
 
 ## Input
@@ -28,6 +28,7 @@ For each test case, output an integer which denotes the minimum value of $\sum_{
 
 ## Note
 
-For the first test case, $x_1 = 3$, $x_2 = x_3 = \dots = 0$. The minimum value is $1 \times 3 = 3$.
+For the first test case, $x_1 = x_2 = 1$, $x_3 = x_4 = \dots = 0$. The minimum value is $1 \times 1 + 2 \times 1 = 3$.
 
-For the second test case, $x_1 = 0$, $x_2 = -1$, $x_3 = 1$, $x_4 = x_5 = \dots = 0$. The minimum value is  $1 \times 2 + 1 \times 3 = 5$.
+For the second test case, $x_1 = 0$, $x_2 = -1$, $x_3 = 1$, $x_4 = x_5 = \dots = 0$. The minimum value is  $2 \times 1 + 3 \times 1 = 5$.
+

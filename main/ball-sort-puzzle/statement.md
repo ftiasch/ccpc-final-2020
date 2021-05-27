@@ -6,24 +6,24 @@ timelimit: 1
 
 In compute science, a stack $s$ is a data structure maintaining a list of elements with two operations:
 
-- $s.\mathtt{push}(e)$ appends an element $e$ to the right end of the list.
+- $s.\mathtt{push}(e)$ appends an element $e$ to the right end of the list,
 - $s.\mathtt{pop}()$ removes the rightmost element in the list and returns the removed element.
 
 For convenience, Bobo denotes the number of elements in the stack by $\mathtt{size}(s)$, and the rightmost element by $\mathtt{right}(s)$.
 
-Bobo has $m$ stacks $s_1, \dots, s_m$. Initially, the stack $s_i$ contains $k_i$ elements $a_{i, 1}, \dots, a_{i, k_i}$. The elements in the stacks are from $\{1, \dots, n\}$, and each of the elements occurs **exactly twice**. Thus, $k_1 + \dots + k_m = 2 n$.
+Bobo has $m$ stacks $s_1, \dots, s_m$. Initially, the stack $s_i$ contains $k_i$ elements $a_{i, 1}, \dots, a_{i, k_i}$ where $a_{i, j} \in \{1, \dots, n\}$. Furthermore, for each $e \in \{1, \dots, n\}$, the element $e$ occurs in the $m$ stacks **exactly twice**.  Thus, $k_1 + \dots + k_m = 2 n$.
 
 A sorting plan of length $l$ consists of $l$ pairs $(f_1, t_1), \dots, (f_l, t_l)$.  To execute a sorting plan, for each $i \in \{1, \dots ,l\}$ in the increasing order, Bobo performs $s_{t_i}.\mathtt{push}(s_{f_i}.\mathtt{pop}())$.
 
-A sorting plan is *valid* if before the $i$-th operation,
+A sorting plan is *valid* if the length does not exceed $\lfloor \frac{3n}{2} \rfloor$, and for each $i \in \{1, \dots, l\}$, $1 \leq f_i, t_i \leq m$, $f_i \neq t_i$. Before the $i$-th operation,
 
-* $\mathtt{size}(s_{f_i}) > 0$
-* $\mathtt{size}(s_{t_i}) < 2$
-* either $\mathtt{size}(s_{t_i}) = 0$ or $\mathtt{right}(s_{f_i}) = \mathtt{right}(s_{t_i})$,
+* $\mathtt{size}(s_{f_i}) > 0$,
+- $\mathtt{size}(s_{t_i}) < 2$,
+* either $\mathtt{size}(s_{t_i}) = 0$ or $\mathtt{right}(s_{f_i}) = \mathtt{right}(s_{t_i})$.
 
-and the length does **not exceed** $\lfloor \frac{3n}{2} \rfloor$.
+Also, after the execution of a *valid* sorting plan, each of the $m$ stacks either is empty or contains the two copies of the same element.
 
-Find a *valid* sorting plan such that after the execution each of the stacks either is empty or contains the two copies of the same element.
+Find a *valid* sorting plan, given the initial configuration of the $m$ stacks.
 
 ## Input
 

@@ -4,7 +4,7 @@ timelimit: 1
 
 # Game Theory
 
-For a string $s_1\dots s_n$ of bits (i.e., zeros and ones), Bobo computes the $f$-value of $s_1\dots s_n$ by playing the following game.
+For a string $s_1\dots s_n$ of $n$ bits (i.e., zeros and ones), Bobo computes the $f$-value of $s_1\dots s_n$ by playing the following game.
 
 * If all the bits are zero, the game ends.
 * If there are $k$ ones in the bit string, Bobo flips the $k$-th bit, i.e., $s_k$.

@@ -6,20 +6,20 @@ timelimit: 1
 
 An axis-aligned tetrahedron (also known as triangular pyramid) $DABC$ is a convex polyhedron in three dimension with vertices
 
-* $D: (x_1, y_1, z_1)$
-* $A: (x_2, y_1, z_1)$
-* $B: (x_1, y_2, z_1)$
+* $D: (x_1, y_1, z_1)$,
+* $A: (x_2, y_1, z_1)$,
+* $B: (x_1, y_2, z_1)$,
 * $C: (x_1, y_1, z_2)$.
 
 Also, an axis-aligned cube $PQRSDEFG$ is a convex polyhedron with vertices
 
-* $P: (x_3, y_3, z_3)$
-* $Q: (x_3, y_3, z_4)$
-* $R: (x_3, y_4, z_3)$
-* $S: (x_3, y_4, z_4)$
-* $D: (x_4, y_3, z_3)$
-* $E: (x_4, y_3, z_4)$
-* $F: (x_4, y_4, z_3)$
+* $P: (x_3, y_3, z_3)$,
+* $Q: (x_3, y_3, z_4)$,
+* $R: (x_3, y_4, z_3)$,
+* $S: (x_3, y_4, z_4)$,
+* $D: (x_4, y_3, z_3)$,
+* $E: (x_4, y_3, z_4)$,
+* $F: (x_4, y_4, z_3)$,
 * $G: (x_4, y_4, z_4)$.
 
 Given an axis-aligned tetrahedron $DABC$ and an axis-aligned cube $PQRSDEFG$, find the volume of their intersection.

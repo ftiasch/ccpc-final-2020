@@ -9,7 +9,7 @@ $$
 c_i = \begin{cases}
 C_{p_i, p_{i + 1}} & \text{for } 1 \leq i < n \\
 C_{p_n, p_1} & \text{for } i = n \\
-\end{cases}
+\end{cases}.
 $$
 The permutation $p$ is *almost monochromatic* if and only if the number of indices $i$ ($1 \leq i < n$) where $c_i \neq c_{i + 1}$ is **at most one**.
 
