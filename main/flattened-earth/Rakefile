@@ -15,6 +15,7 @@ end
 
 add_target :slow
 add_target :wrong
+add_target :wrong2
 add_target :solution_ftiasch
 add_target :solution_ftiasch_linear
 add_target :solution_leg
