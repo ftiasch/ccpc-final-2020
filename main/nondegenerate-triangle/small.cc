@@ -69,13 +69,15 @@ int main(int argc, char *argv[]) {
       for (int i = 0; i < n; ++i) {
         printf("%d %d\n", points[i].x, points[i].y);
       }
-      // fprintf(stderr, "hyper graph = ");
-      // for (auto &&h : min_repr) {
-      //   int a, b, c;
-      //   std::tie(a, b, c) = h;
-      //   fprintf(stderr, "{%d, %d, %d}, ", a, b, c);
-      // }
-      // fprintf(stderr, "\n");
+      if (has_opt("dumpgraph")) {
+        fprintf(stderr, "hyper graph = ");
+        for (auto &&h : min_repr) {
+          int a, b, c;
+          std::tie(a, b, c) = h;
+          fprintf(stderr, "{%d, %d, %d}, ", a, b, c);
+        }
+        fprintf(stderr, "\n");
+      }
     }
   }
   fprintf(stderr, "cases %d\n", static_cast<int>(found_hyper_graph.size()));
