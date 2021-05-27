@@ -9,7 +9,7 @@ In compute science, a stack $s$ is a data structure maintaining a list of elemen
 - $s.\mathtt{push}(e)$ appends an element $e$ to the right end of the list,
 - $s.\mathtt{pop}()$ removes the rightmost element in the list and returns the removed element.
 
-For convenience, Bobo denotes the number of elements in the stack by $\mathtt{size}(s)$, and the rightmost element by $\mathtt{right}(s)$.
+For convenience, Bobo denotes the number of elements in the stack $s$ by $\mathtt{size}(s)$, and the rightmost element by $\mathtt{right}(s)$.
 
 Bobo has $m$ stacks $s_1, \dots, s_m$. Initially, the stack $s_i$ contains $k_i$ elements $a_{i, 1}, \dots, a_{i, k_i}$ where $a_{i, j} \in \{1, \dots, n\}$. Furthermore, for each $e \in \{1, \dots, n\}$, the element $e$ occurs in the $m$ stacks **exactly twice**.  Thus, $k_1 + \dots + k_m = 2 n$.
 
