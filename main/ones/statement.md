@@ -1,5 +1,5 @@
 ---
-timelimit: 5
+timelimit: 6
 ...
 
 # Number Theory
