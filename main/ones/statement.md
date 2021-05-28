@@ -1,5 +1,5 @@
 ---
-timelimit: 2
+timelimit: 5
 ...
 
 # Number Theory
@@ -31,4 +31,3 @@ For each test case, output an integer which denotes the minimum value of $\sum_{
 For the first test case, $x_1 = x_2 = 1$, $x_3 = x_4 = \dots = 0$. The minimum value is $1 \times 1 + 2 \times 1 = 3$.
 
 For the second test case, $x_1 = 0$, $x_2 = -1$, $x_3 = 1$, $x_4 = x_5 = \dots = 0$. The minimum value is  $2 \times 1 + 3 \times 1 = 5$.
-
