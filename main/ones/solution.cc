@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 
 static const int WIDTH = 18;
-static const uint64_t MAX = 1000000000000000000ULL;
-static const constexpr std::array<uint64_t, WIDTH + 1> LIMIT_LIMBS{
+static const int64_t MAX = 1000000000000000000ULL;
+static const constexpr std::array<int64_t, WIDTH + 1> LIMIT_LIMBS{
     0,
     1,
     11,
@@ -32,7 +32,7 @@ struct BigInt {
 
   int limbs() const { return limb.size(); }
 
-  uint64_t operator[](int i) const { return limb[i]; }
+  int64_t operator[](int i) const { return limb[i]; }
 
   template <bool tracking = true> void add_one() {
     int i = 0;
@@ -94,7 +94,7 @@ struct BigInt {
     return q;
   }
 
-  uint64_t limit_limb(int i) const {
+  int64_t limit_limb(int i) const {
     int full = limit / WIDTH;
     if (i < full) {
       return LIMIT_LIMBS[WIDTH];
@@ -119,8 +119,9 @@ struct BigInt {
 
   // std::string to_string() const {
   //   std::vector<char> buffer(WIDTH * limbs() + 1);
+  //   char* s = buffer.data();
   //   for (int i = limbs(); i--;) {
-  //     sprintf(buffer.data(), "%018lu", limb[i]);
+  //     sprintf(s, "%018llu", limb[i]);
   //   }
   //   return buffer.data();
   // }
@@ -132,7 +133,7 @@ struct BigInt {
 
   bool limit_reached() const { return tracker == 0; }
 
-  std::vector<uint64_t> limb;
+  std::vector<int64_t> limb;
   int limit, tracker;
 };
 
@@ -204,6 +205,7 @@ int main() {
   while (std::cin >> s) {
     std::reverse(s.begin(), s.end());
     int digits = (s.size() + 1 + WIDTH - 1) / WIDTH;
+    // fprintf(stderr, "digits=%d\n", digits);
     BigInt zero{digits, ""};
     std::vector<Segment> psegs, nsegs;
     {
@@ -211,13 +213,21 @@ int main() {
       seg.add(0);
       psegs.push_back(seg);
     }
-    BigInt pre_one{digits, ""};
     for (int length = s.size() + 1; length > 0; --length) {
       std::vector<Segment> new_psegs, new_nsegs;
       BigInt cur_one{digits, std::string(length, '1')};
+      // fprintf(stderr, "one.limbs=%d\n", cur_one.limb.size());
+      // for (int i = cur_one.limb.size(); i --; ) {
+      //   fprintf(stderr, "one[%d]=%llu\n", i, cur_one.limb[i]);
+      // }
       for (auto &&seg : psegs) {
         BigInt r = seg.start;
+        // fprintf(stderr, "r.limbs=%d\n", r.limb.size());
+        // for (int i = r.limb.size(); i --; ) {
+        //   fprintf(stderr, "r[%d]=%llu\n", i, r.limb[i]);
+        // }
         int k = r.mod(cur_one);
+        // fprintf(stderr, "k=%d\n", k);
         Segment new_pseg{r}, new_nseg{r};
         r.set_limit(length);
         r.add_one();
@@ -251,6 +261,7 @@ int main() {
           r.sub_one();
           k = 9 - r.mod(cur_one);
         }
+        // fprintf(stderr, "k=%d\n", k);
         Segment new_pseg{r}, new_nseg{r};
         r.set_limit(length);
         r.add_one();
@@ -275,6 +286,19 @@ int main() {
       }
       psegs = merge(zero, new_psegs);
       nsegs = merge(zero, new_nsegs);
+      // fprintf(stderr, "length=%d\n", length);
+      // for (auto &&seg : psegs) {
+      //   for (auto &&v : seg.values) {
+      //     fprintf(stderr, "%d,", v);
+      //   }
+      // }
+      // fprintf(stderr, "\n");
+      // for (auto &&seg : nsegs) {
+      //   for (auto &&v : seg.values) {
+      //     fprintf(stderr, "%d,", v);
+      //   }
+      // }
+      // fprintf(stderr, "\n");
     }
     assert(psegs.size());
     assert(psegs[0].start == zero);

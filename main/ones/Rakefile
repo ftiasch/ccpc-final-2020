@@ -10,8 +10,10 @@ test :sequence, lo: 1, hi: 9999
 end
 test :random, T: 1000, maxn: 50
 test :random2, T: 1000, n: 50, s: 0, seed: nil
+test :random2, T: 500, n: 100, s: 0, seed: nil
 test :random, T: 100, maxn: 500
 test :random2, T: 100, n: 500, s: 0, seed: nil
+test :random2, T: 50, n: 1000, s: 0, seed: nil
 test :random, T: 10, n: 5000
 test :random2, T: 10, n: 5000, s: 0, seed: nil
 test :nine, n: 5000
