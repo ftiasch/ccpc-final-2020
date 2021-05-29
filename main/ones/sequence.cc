@@ -4,8 +4,9 @@
 
 int main(int argc, char *argv[]) {
   registerGen(argc, argv, 1);
-  int T = std::atoi(argv[1]);
-  for (int n : rnd.perm(T, 1)) {
-    printf("%d\n", n);
+  const int lo = opt<int>("lo");
+  const int hi = opt<int>("hi");
+  for (int n : rnd.perm(hi - lo + 1)) {
+    printf("%d\n", lo + n);
   }
 }

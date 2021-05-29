@@ -223,5 +223,11 @@ def solve_start(n):
 
 
 if __name__ == '__main__':
-    for n in range(1, 10 ** 5):
-        assert solve0_start(n) == solve_start(n)
+    while True:
+        try:
+            n = input()
+        except EOFError:
+            break
+        print(solve_start(int(n)))
+    # for n in range(1, 10 ** 5):
+    #     assert solve0_start(n) == solve_start(n)
