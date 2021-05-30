@@ -38,7 +38,9 @@ int main(int argc, char **argv) {
     }
     std::vector<bool> mark(n);
     for (int i = 0; i < n; ++i) {
-      ensuref(!mark[p[i]], "case #%d: not a permutation", cas);
+      if (mark[p[i]]) {
+        quitf(_wa, "case #%d: not a permutation", cas);
+      }
       mark[p[i]] = true;
     }
     int cnt = 0;
