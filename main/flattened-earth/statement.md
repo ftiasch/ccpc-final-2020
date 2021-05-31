@@ -36,10 +36,10 @@ For each test case, output an integer which denotes the minimum value.
 
 For the first case,
 
-| $i$  | $\delta_i(1, 2)$ | $\delta_i(2, 3)$ | $\delta_i(3, 2)$ |
-| ---- | ---------------- | ---------------- | ---------------- |
-| $1$  | $2$              | $1$              | $1$              |
-| $2$  | $1$              | $2$              | $2$              |
-| $3$  | $1$              | $1$              | $1$              |
+| $i$  | $\delta_i(1, 2)$ | $\delta_i(2, 3)$ |
+| ---- | ---------------- | ---------------- |
+| $1$  | $2$              | $1$              |
+| $2$  | $1$              | $2$              |
+| $3$  | $1$              | $1$              |
 
 Choosing $i = 3$ yields the minimum value $1$.
