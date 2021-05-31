@@ -19,4 +19,4 @@ test :random2, T: 10, n: 5000, s: 0, seed: nil
 test :nine, n: 5000
 
 add_target :possibly_wrong
-add_target :solution_zimpha
+add_target :slow_zimpha
