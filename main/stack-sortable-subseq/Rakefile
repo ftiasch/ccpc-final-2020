@@ -22,3 +22,5 @@ test :random, T: 1, n: 50, id: true
 add_target :slow
 add_target 'slow_231'.to_sym
 add_target :solution_leg
+add_target :wrong_leg
+add_target :solution_leg

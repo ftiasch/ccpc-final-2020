@@ -36,3 +36,4 @@ test :gen, 7, 1_000_000, 1_000_000, 1, 2, 2, 3, 41_000, 2
 
 add_target :slow
 add_target :solution_nero
+add_target :solution_leg

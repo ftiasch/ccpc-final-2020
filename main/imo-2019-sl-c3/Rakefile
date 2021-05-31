@@ -17,3 +17,5 @@ end
 add_target :slow
 add_target :very_slow
 add_target :solution_nero
+add_target :wrong_leg
+add_target :solution_leg

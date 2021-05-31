@@ -13,3 +13,4 @@ add_target :approx
 add_target :check_approx
 add_target :solution_zimpha
 add_target :solution_sd_invol
+add_target :solution_leg
