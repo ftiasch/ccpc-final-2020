@@ -20,3 +20,4 @@ test :nine, n: 5000
 
 add_target :possibly_wrong
 add_target :slow_zimpha
+add_target :solution_thu
