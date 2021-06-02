@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 $sample_count = 0
 $test_count = 0
 $targets = {}

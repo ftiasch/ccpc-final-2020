@@ -9,9 +9,9 @@ test :random2, T: 10_000, maxn: 20, maxm: 20
 test :random2, T: 1000, maxn: 200, maxm: 200
 test :random2, T: 100, maxn: 2000, maxm: 2000
 [20, 200, 2000, 20_000, 100_000].each do |maxlen|
-    test :random2, T: 1, maxn: 200_000, m: 200_000, maxlen: maxlen
-    test :random2, T: 1, n: 200_000, m: 200_000, maxlen: maxlen
-    test :random2, T: 1, n: 200_000, m: 200_000, maxlen: maxlen, allow_cross: true
+  test :random2, T: 1, maxn: 200_000, m: 200_000, maxlen: maxlen
+  test :random2, T: 1, n: 200_000, m: 200_000, maxlen: maxlen
+  test :random2, T: 1, n: 200_000, m: 200_000, maxlen: maxlen, allow_cross: true
 end
 
 add_target :slow
